@@ -1,5 +1,5 @@
 <template>
   <div>
-    <router-view />
+    <h1>SignUp View</h1>
   </div>
 </template>
