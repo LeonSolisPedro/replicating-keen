@@ -2,7 +2,8 @@ import Vue from "vue"
 import VueRouter from "vue-router"
 import DashboardView from "@/views/Shared/DashboardView.vue"
 import BaseController from "@/views/Shared/BaseController.vue"
-import globalguard from "./globalguard"
+import globalBeforeEach from "./globalguard"
+import redirects from "./redirects"
 
 Vue.use(VueRouter)
 
@@ -12,33 +13,27 @@ const router = new VueRouter({
   routes: [
     {
       path: "/",
-      name: "dashboard",
       component: DashboardView,
       meta: { Authorize: true },
       children: [
         {
-          path: "/unauthorized",
-          component: () => import("@/views/Error/Unauthorized.vue"),
+          path: "/admin",
+          component: () => import("@/views/Dashboards/Admin.vue"),
+          meta: {Authorize: true, Roles: ["Administrator"] }
         },
         {
-          path: "/employees",
-          component: BaseController,
-          meta: {Authorize: true, Roles: ["Administrador"]},
-          children: [
-            {
-              path: "/employees/index",
-              component: () => import("@/views/Employees/Index.vue"),
-            },
-            {
-              path: "/employees/create",
-              component: () => import("@/views/Employees/Create.vue"),
-            }
-          ],
+          path: "/employee",
+          component: () => import("@/views/Dashboards/Employee.vue"),
+          meta: {Authorize: true, Roles: ["Employee"] }
+        },
+        {
+          path: "/unauthorized",
+          component: () => import("@/views/Shared/Error/Unauthorized.vue"),
         },
         {
           path: "/items",
           component: BaseController,
-          meta: {Authorize: true, Roles: ["Administrador"]},
+          meta: {Authorize: true, Roles: ["Administrator,Employee"]},
           children: [
             {
               path: "/items/index",
@@ -54,19 +49,20 @@ const router = new VueRouter({
     },
     {
       path: "/login",
-      name: "login",
       component: () => import("@/views/Account/LoginView.vue")
     },
     {
       path: "/signup",
-      name: "signup",
       component: () => import("@/views/Account/SignUpView.vue")
-    }
+    },
   ]
 })
 
 
-router.beforeEach(globalguard)
+router.beforeEach((to, from, next) => {
+  globalBeforeEach(to, from, next)
+  redirects(to, from, next)
+})
 
 
 export default router

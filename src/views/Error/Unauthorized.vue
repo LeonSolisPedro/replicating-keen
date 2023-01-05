@@ -1,3 +1,0 @@
-<template>
-  <h1>You don't belong here...</h1>
-</template>

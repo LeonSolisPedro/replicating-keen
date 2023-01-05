@@ -9,6 +9,7 @@ const globalBeforeEach = (to, from, next) => {
   if(to.meta?.Authorize){
     if(testAuth() == false){
       next({ path: '/login', replace: true, query: { returnUrl: to.fullPath } })
+      return
     }
   }
   // Check if the current router has the meta: Roles
@@ -16,6 +17,7 @@ const globalBeforeEach = (to, from, next) => {
     const rolesMeta = to.meta.Roles
     if(testRoles(rolesMeta) == false) {
       next({ path: '/unauthorized', replace: true })
+      return
     }
   }
 
@@ -40,6 +42,7 @@ const globalBeforeEach = (to, from, next) => {
   if(authorizeIndex >= anonymousIndex){
     if(testAuth() == false){
       next({ path: '/login', replace: true, query: { returnUrl: to.fullPath } })
+      return
     }
   }
 
@@ -48,15 +51,8 @@ const globalBeforeEach = (to, from, next) => {
     const rolesMeta = to.matched[rolesIndex].meta.Roles;
     if(testRoles(rolesMeta) == false) {
       next({ path: '/unauthorized', replace: true })
+      return
     }
-  }
-
-  //We are redirecting to index (if possible)
-  const superarray = to.matched.flatMap(record => Object.values(record.components))
-  const redirectindex = typeof superarray[superarray.length - 1].RedirectToIndex !== "undefined"
-  if(redirectindex){
-    const coolurl = to.path.replace(/\/$/, "");
-    next({ path: `${coolurl}/index`, replace: true })
   }
 
   next()
@@ -75,7 +71,7 @@ function testAuth(){
 
 function testRoles(rolesMeta){
   //Todo: Import here jwt library
-  const jwtroles = ["Administrador"]
+  const jwtroles = JSON.parse(localStorage.getItem("roles"))
   for (const roles of rolesMeta) {
     const rolesToTest = roles.split(',')
     const found = jwtroles.some(r=> rolesToTest.includes(r))

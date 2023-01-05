@@ -1,0 +1,5 @@
+<template>
+  <div>
+    <h1>You don't belong here...</h1>
+  </div>
+</template>

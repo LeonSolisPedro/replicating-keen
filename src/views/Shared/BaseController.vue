@@ -2,6 +2,9 @@
   <router-view />
 </template>
 
-<script> //Redirect to index when possible
-export default { RedirectToIndex() { return "RedirectToIndex"; }, };
+<script>
+export default {
+  //We are redirecting to index (if possible)
+  RedirectToIndex() {return "RedirectToIndex"; },
+};
 </script>
