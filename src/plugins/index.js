@@ -1,8 +1,8 @@
 /**
- * All Plugins Goes here
+ * Global plugins goes here
  */
-import "./bootstrap-keen"
-import router from "./router"
+import "./keen-bootstrap"
+import vuerouter from "./vue-router"
 
 
-export { router }
+export { vuerouter }

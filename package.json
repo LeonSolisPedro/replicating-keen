@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@fontsource/inter": "^4.5.14",
+    "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.3",
     "vue": "^2.7.7",
     "vue-router": "^3.5.4"
