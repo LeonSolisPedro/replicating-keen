@@ -1,8 +1,14 @@
 import Vue from "vue"
 import App from "./App.vue"
-import * as plugins from "./plugins"
+
+/**
+ * Global plugins goes here
+ */
+import "./plugins/keen-bootstrap"
+import router from "./plugins/vue-router"
+
 
 new Vue({
-  router: plugins.vuerouter,
+  router,
   render: (h) => h(App)
 }).$mount("#app")
