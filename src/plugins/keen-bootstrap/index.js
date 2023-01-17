@@ -1,5 +1,5 @@
 import Vue from "vue"
 
-import KeenBootstrap from "./install"
+import KeenBootstrap from "./plugin"
 
 Vue.use(KeenBootstrap)
