@@ -1,29 +1,5 @@
 # replicatingkeen
 
-This template should help get you started developing with Vue 3 in Vite.
+Hi! This project is a replication of keen, running on Vue 2!
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+This project is in alpha stage and all features listed [on the release page](https://github.com/LeonSolisPedro/replicatingkeen/releases), are incomplete and and not ready for production.
