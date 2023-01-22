@@ -46,19 +46,22 @@ var KTScrolltop = function(element, options) {
     }
 
     var _handlers = function() {
-        var timer;
 
-        window.addEventListener('scroll', function() {
-            KTUtil.throttle(timer, function() {
-                _scroll();
-            }, 200);
-        });
+
+        window.addEventListener('scroll', coolfunction);
 
         KTUtil.addEvent(the.element, 'click', function(e) {
             e.preventDefault();
 
             _go();
         });
+    }
+
+    function coolfunction(){
+        var timer;
+        KTUtil.throttle(timer, function() {
+            _scroll();
+        }, 200);
     }
 
     var _scroll = function() {
@@ -108,6 +111,7 @@ var KTScrolltop = function(element, options) {
     }
 
     var _destroy = function() {
+        window.removeEventListener('scroll', coolfunction);
         KTUtil.data(the.element).remove('scrolltop');
     }
 
