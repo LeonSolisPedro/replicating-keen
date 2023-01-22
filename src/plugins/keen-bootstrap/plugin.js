@@ -21,19 +21,19 @@ import KTApp from "./src/js/components/appcustomvue"
 import KTEventHandler from "./src/js/components/event-handler"
 import KTBlockUI from "./src/js/components/blockui"
 import KTCookie from "./src/js/components/cookie"
-// import KTDialer from "./src/js/components/dialer"                        //Replaced with Vue
+// import KTDialer from "./src/js/components/dialer"                        //Replaced by Vue
 // import KTDrawer from "./src/js/components/drawer"                       //Replaced by bootstrap offcanvas
 // import KTFeedback from "./src/js/components/feedback"                  //???
 //import KTImageInput from "./src/js/components/image-input"              //Memory leak detected
 // import KTMenu from "./src/js/components/menu"                          //On going...
 // import KTPasswordMeter from "./src/js/components/password-meter"       //Memory leak detected.
-// import KTScroll from "./src/js/components/scroll"                      //On going...
-import KTScrolltop from "./src/js/components/scrolltop"
+// import KTScroll from "./src/js/components/scroll"                      //???
+// import KTScrolltop from "./src/js/components/scrolltop"               //Replaced by vue
 // import KTSearch from "./src/js/components/search"                     //Memory leak detected.
 // import KTStepper from "./src/js/components/stepper"                   //Memory leak detected.
 // import KTSticky from "./src/js/components/sticky"                     //Replaced by bootstrap sticky
 // import KTSwapper from "./src/js/components/swapper"                   //Replaced by bootstrap
- import KTToggle from "./src/js/components/toggle"
+// import KTToggle from "./src/js/components/toggle"                     //Replaced by vue
 
 
 export default {
@@ -48,8 +48,6 @@ export default {
     window.KTEventHandler = KTEventHandler
     window.KTBlockUI = KTBlockUI
     window.KTCookie = KTCookie
-    window.KTScrolltop = KTScrolltop
-    window.KTToggle = KTToggle
 
 
     //Adding Directives
