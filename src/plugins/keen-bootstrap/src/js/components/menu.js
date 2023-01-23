@@ -1,5 +1,7 @@
 "use strict";
 
+import { createPopper } from '@popperjs/core';
+
 var KTMenuHandlersInitialized = false;
 
 // Class definition
@@ -570,7 +572,7 @@ var KTMenu = function(element, options) {
             reference = item;
         }
 
-        var popper = Popper.createPopper(reference, sub, _getDropdownPopperConfig(item)); 
+        var popper = createPopper(reference, sub, _getDropdownPopperConfig(item)); 
         KTUtil.data(item).set('popper', popper);
     }
 
