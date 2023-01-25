@@ -5,6 +5,7 @@ import App from "./App.vue"
  * Global plugins goes here
  */
 import "./plugins/keen-bootstrap"
+import "./plugins/fontawesome"
 import router from "./plugins/vue-router"
 
 
