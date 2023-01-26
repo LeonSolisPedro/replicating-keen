@@ -1,7 +1,56 @@
 <template>
 	<div id="kt_app_page" class="app-page  flex-column flex-column-fluid ">
 		<header id="kt_app_header" class="app-header">
-			<a @click="logout()" href="#">Logout</a>
+			<div id="kt_app_header_container"
+				class="app-container container-fluid d-flex align-items-stretch justify-content-between">
+				<div class="d-flex align-items-center d-lg-none ms-n2 me-2" title="Show sidebar menu">
+					<div class="btn btn-icon btn-active-color-primary w-35px h-35px" id="kt_app_sidebar_mobile_toggle">
+						<span class="svg-icon svg-icon-1">
+							<font-awesome-icon icon="fa-solid fa-bars" />
+						</span>
+					</div>
+				</div>
+				<div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0 d-lg-none">
+					<router-link to="/">
+						<img alt="Logo" src="@/assets/media/logos/default-small.svg" class="theme-light-show h-30px" />
+						<img alt="Logo" src="@/assets/media/logos/default-small-dark.svg" class="theme-dark-show h-30px" />
+					</router-link>
+				</div>
+				<div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1" id="kt_app_header_wrapper">
+					<div>
+					</div>
+					<div class="app-navbar flex-shrink-0">
+						<div class="app-navbar-item ms-1 ms-lg-3" id="kt_header_user_menu_toggle">
+							<div class="cursor-pointer symbol symbol-35px symbol-md-40px"
+								data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-attach="parent"
+								data-kt-menu-placement="bottom-end">
+								<img src="@/assets/media/avatars/300-3.jpg" alt="user" />
+							</div>
+							<div
+								class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-color fw-semibold py-4 fs-6 w-275px"
+								v-ktmenu data-kt-menu="true">
+								<div class="menu-item px-3">
+									<div class="menu-content d-flex align-items-center px-3">
+										<div class="symbol symbol-50px me-5">
+											<img alt="Logo" src="@/assets/media/avatars/300-3.jpg" />
+										</div>
+										<div class="d-flex flex-column">
+											<div class="fw-bold d-flex align-items-center fs-5">Max Smith
+												<span class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2">Pro</span>
+											</div>
+											<a href="#" class="fw-semibold text-muted text-hover-primary fs-7">max@kt.com</a>
+										</div>
+									</div>
+								</div>
+								<div class="separator my-2"></div>
+								<div class="menu-item px-5">
+									<span @click="logout()" class="menu-link px-5">Sign Out</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</header>
 		<div id="kt_app_wrap" class="app-wrapper  flex-column flex-row-fluid ">
 			<aside id="kt_app_sidebar" class="app-sidebar flex-column" v-ktdrawer data-kt-drawer="true"
@@ -28,7 +77,7 @@
 						<div class="menu menu-column menu-rounded menu-sub-indention fw-semibold px-3" id="#kt_app_sidebar_menu"
 							v-ktmenu data-kt-menu="true" data-kt-menu-expand="false">
 
-              <!--#region Admin dashboard -->
+							<!--#region Admin dashboard -->
 							<div class="menu-item">
 								<router-link to="/" class="menu-link">
 									<span class="menu-icon">
@@ -39,8 +88,8 @@
 							</div>
 							<div class="menu-item">
 								<router-link to="/items" class="menu-link">
-									<span class="menu-bullet">
-										<span class="bullet bullet-dot"></span>
+									<span class="menu-icon">
+										<font-awesome-icon icon="fa-solid fa-scissors" />
 									</span>
 									<span class="menu-title">Items</span>
 								</router-link>
@@ -56,7 +105,12 @@
 					<router-view />
 				</div>
 				<footer id="kt_app_footer" class="app-footer ">
-					<p>footer</p>
+					<div class="app-container container-fluid d-flex flex-column flex-md-row flex-center flex-md-stack py-3">
+						<div class="text-dark order-2 order-md-1">
+							Hecho con <font-awesome-icon class="text-muted" icon="fa-regular fa-heart" /> en <a
+								href="https://vuejs.org/" target="_blank">Vue.js</a>
+						</div>
+					</div>
 				</footer>
 			</main>
 		</div>
