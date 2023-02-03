@@ -103,6 +103,7 @@
 			<main id="kt_app_main" class="app-main flex-column flex-row-fluid">
 				<div class="d-flex flex-column flex-column-fluid">
 					<router-view />
+					
 				</div>
 				<footer id="kt_app_footer" class="app-footer ">
 					<div class="app-container container-fluid d-flex flex-column flex-md-row flex-center flex-md-stack py-3">

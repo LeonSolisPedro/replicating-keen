@@ -102,5 +102,19 @@ export default {
       const classes = ["d-flex", "flex-column", "flex-root", "app-root"]
       approot.classList.remove(...classes)
     }
+    Vue.prototype.$setupBlankPage = function () {
+      document.body.classList.add("app-blank")
+      document.body.id = "kt_body"
+      const approot = document.getElementById("app")
+      const classes = ["d-flex", "flex-column", "flex-root"]
+      approot.classList.add(...classes)
+    }
+    Vue.prototype.$destroyBlankPage = function () {
+      document.body.classList.remove("app-blank")
+      document.body.id = ""
+      const approot = document.getElementById("app")
+      const classes = ["d-flex", "flex-column", "flex-root"]
+      approot.classList.remove(...classes)
+    }
   }
 }
