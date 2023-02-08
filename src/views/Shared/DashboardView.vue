@@ -77,22 +77,96 @@
 						<div class="menu menu-column menu-rounded menu-sub-indention fw-semibold px-3" id="#kt_app_sidebar_menu"
 							v-ktmenu data-kt-menu="true" data-kt-menu-expand="false">
 
-							<!--#region Admin dashboard -->
+              <!--#region Keen component -->
 							<div class="menu-item">
 								<router-link to="/" class="menu-link">
-									<span class="menu-icon">
-										<font-awesome-icon icon="fa-solid fa-house" />
-									</span>
 									<span class="menu-title">Dashboard</span>
 								</router-link>
 							</div>
-							<div class="menu-item">
-								<router-link to="/items" class="menu-link">
+							<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+								<span href="#" class="menu-link">
 									<span class="menu-icon">
-										<font-awesome-icon icon="fa-solid fa-scissors" />
+										<font-awesome-icon icon="fa-solid fa-puzzle-piece" />
 									</span>
-									<span class="menu-title">Items</span>
-								</router-link>
+									<span class="menu-title">Keen components</span>
+									<span class="menu-arrow"></span>
+								</span>
+								<div class="menu-sub menu-sub-accordion">
+									<div class="menu-item">
+										<router-link to="/items" class="menu-link">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">Example link</span>
+										</router-link>
+									</div>
+								</div>
+							</div>
+              <!--#endregion -->
+
+							<!--#region Custom plugins -->
+							<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+								<span href="#" class="menu-link">
+									<span class="menu-icon">
+										<font-awesome-icon icon="fa-brands fa-vuejs" />
+									</span>
+									<span class="menu-title">Custom plugins</span>
+									<span class="menu-arrow"></span>
+								</span>
+								<div class="menu-sub menu-sub-accordion">
+									<div class="menu-item">
+										<router-link to="/items" class="menu-link">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">Example link</span>
+										</router-link>
+									</div>
+								</div>
+							</div>
+							<!--#endregion -->
+
+              <!--#region Empty Pages -->
+							<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+								<span href="#" class="menu-link">
+									<span class="menu-icon">
+										<font-awesome-icon icon="fa-solid fa-file" />
+									</span>
+									<span class="menu-title">Empty Pages</span>
+									<span class="menu-arrow"></span>
+								</span>
+								<div class="menu-sub menu-sub-accordion">
+									<div class="menu-item">
+										<router-link to="/items" class="menu-link">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">Example link</span>
+										</router-link>
+									</div>
+								</div>
+							</div>
+							<!--#endregion -->
+
+              <!--#region Role-Based Sample -->
+							<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+								<span href="#" class="menu-link">
+									<span class="menu-icon">
+										<font-awesome-icon icon="fa-solid fa-hand" />
+									</span>
+									<span class="menu-title">Role-Based Sample</span>
+									<span class="menu-arrow"></span>
+								</span>
+								<div class="menu-sub menu-sub-accordion">
+									<div class="menu-item">
+										<router-link to="/items" class="menu-link">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">Example link</span>
+										</router-link>
+									</div>
+								</div>
 							</div>
 							<!--#endregion -->
 
@@ -107,7 +181,8 @@
 							<div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
 								<ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
 									<li v-for="(match, id) in matchedRoutes" :key="id" class="breadcrumb-item text-muted">
-										<router-link :to="match.path" class="text-muted text-hover-primary"> {{ match?.name ?? "PLACEHOLDER" }} </router-link>
+										<router-link :to="match.path" class="text-muted text-hover-primary"> {{ match?.name ?? "PLACEHOLDER"
+											}} </router-link>
 										<span v-if="id != matchedRoutes.length - 1" class="bullet bg-gray-400 w-5px h-2px ms-2"></span>
 									</li>
 								</ul>
