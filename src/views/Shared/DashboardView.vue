@@ -102,13 +102,38 @@
 			</aside>
 			<main id="kt_app_main" class="app-main flex-column flex-row-fluid">
 				<div class="d-flex flex-column flex-column-fluid">
-					<router-view />
-					
+					<section id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
+						<div id="kt_app_toolbar_container" class="app-container container-xxl d-flex flex-stack">
+							<div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
+								<ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
+									<li v-for="(match, id) in matchedRoutes" :key="id" class="breadcrumb-item text-muted">
+										<router-link :to="match.path" class="text-muted text-hover-primary"> {{ match?.name ?? "PLACEHOLDER" }} </router-link>
+										<span v-if="id != matchedRoutes.length - 1" class="bullet bg-gray-400 w-5px h-2px ms-2"></span>
+									</li>
+								</ul>
+							</div>
+							<div class="d-flex align-items-center">
+								<select class="form-select form-select-sm bg-body border-body w-175px">
+									<option>Select Campaign</option>
+									<option>Twitter Campaign</option>
+									<option>Facebook Campaign</option>
+								</select>
+								<span class="btn btn-icon btn-sm btn-success flex-shrink-0 ms-4">
+									<font-awesome-icon icon="fa-solid fa-plus" class="fa-lg" />
+								</span>
+							</div>
+						</div>
+					</section>
+					<div id="kt_app_content" class="app-content flex-column-fluid">
+						<div id="kt_app_content_container" class="app-container container-xxl">
+							<router-view />
+						</div>
+					</div>
 				</div>
 				<footer id="kt_app_footer" class="app-footer ">
 					<div class="app-container container-fluid d-flex flex-column flex-md-row flex-center flex-md-stack py-3">
 						<div class="text-dark order-2 order-md-1">
-							Hecho con <font-awesome-icon class="text-muted" icon="fa-regular fa-heart" /> en <a
+							Made with <font-awesome-icon class="text-muted" icon="fa-regular fa-heart" /> in <a
 								href="https://vuejs.org/" target="_blank">Vue.js</a>
 						</div>
 					</div>
@@ -126,6 +151,15 @@ export default {
   destroyed () {
     this.$destroyTemplate()
   },
+	computed: {
+		matchedRoutes(){
+			const routes = this.$route.matched.filter(item => { return item.path !== "" })
+			const found = routes[routes.length-1]?.path?.match(/\b\w+$/) ?? []
+			if(found[0] === "index")
+			  routes.pop()
+			return routes
+		}
+	},
   methods: {
     logout() {
       localStorage.removeItem("token");
