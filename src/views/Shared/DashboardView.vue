@@ -124,12 +124,16 @@
 							</div>
 						</div>
 					</section>
-					<router-view />
+					<div id="kt_app_content" class="app-content flex-column-fluid">
+						<div id="kt_app_content_container" class="app-container container-xxl">
+							<router-view />
+						</div>
+					</div>
 				</div>
 				<footer id="kt_app_footer" class="app-footer ">
 					<div class="app-container container-fluid d-flex flex-column flex-md-row flex-center flex-md-stack py-3">
 						<div class="text-dark order-2 order-md-1">
-							Hecho con <font-awesome-icon class="text-muted" icon="fa-regular fa-heart" /> en <a
+							Made with <font-awesome-icon class="text-muted" icon="fa-regular fa-heart" /> in <a
 								href="https://vuejs.org/" target="_blank">Vue.js</a>
 						</div>
 					</div>
