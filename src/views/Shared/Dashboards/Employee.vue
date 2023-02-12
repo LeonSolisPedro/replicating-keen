@@ -23,7 +23,7 @@
               <div class="fs-4 text-gray-600 py-3">
                 Core keen components that will help you build forms, inputs, cards and more...
               </div>
-              <router-link to="/" class="btn btn-lg btn-flex btn-link btn-color-primary">
+              <router-link to="/components/utilities" class="btn btn-lg btn-flex btn-link btn-color-primary">
                 Browse now <font-awesome-icon class="ms-3 fa-xs" icon="fa-solid fa-arrow-right" />
               </router-link>
             </div>
