@@ -80,6 +80,9 @@
               <!--#region Keen component -->
 							<div class="menu-item">
 								<router-link to="/" class="menu-link">
+								  <span class="menu-icon">
+										<font-awesome-icon icon="fa-solid fa-home" />
+									</span>
 									<span class="menu-title">Dashboard</span>
 								</router-link>
 							</div>
@@ -92,6 +95,14 @@
 									<span class="menu-arrow"></span>
 								</span>
 								<div class="menu-sub menu-sub-accordion">
+									<div class="menu-item">
+										<router-link to="/components/index" class="menu-link">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">Overview</span>
+										</router-link>
+									</div>
 									<div class="menu-item">
 										<router-link to="/components/utilities" class="menu-link">
 											<span class="menu-bullet">
@@ -404,11 +415,11 @@
 								</span>
 								<div class="menu-sub menu-sub-accordion">
 									<div class="menu-item">
-										<router-link to="/items" class="menu-link">
+										<router-link to="/plugins/index" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
-											<span class="menu-title">Example link</span>
+											<span class="menu-title">Overview</span>
 										</router-link>
 									</div>
 								</div>
@@ -426,11 +437,11 @@
 								</span>
 								<div class="menu-sub menu-sub-accordion">
 									<div class="menu-item">
-										<router-link to="/items" class="menu-link">
+										<router-link to="/emptypages/index" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
-											<span class="menu-title">Example link</span>
+											<span class="menu-title">Overview</span>
 										</router-link>
 									</div>
 								</div>
@@ -448,11 +459,11 @@
 								</span>
 								<div class="menu-sub menu-sub-accordion">
 									<div class="menu-item">
-										<router-link to="/items" class="menu-link">
+										<router-link to="/items/index" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
-											<span class="menu-title">Example link</span>
+											<span class="menu-title">Overview</span>
 										</router-link>
 									</div>
 								</div>
