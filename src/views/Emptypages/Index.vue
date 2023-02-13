@@ -4,13 +4,13 @@
     <div class="col-xl-8 mb-xl-10">
       <div class="card card-flush h-xl-100">
         <div
-          class="card-header bgi-no-repeat bgi-size-cover bgi-position-y-top bgi-position-x-center align-items-start bg-light-danger"
+          class="card-header bgi-no-repeat bgi-size-cover bgi-position-y-top bgi-position-x-center align-items-start bg-light-warning"
           style="height: 134px">
           <h3 class="card-title align-items-start flex-column pt-15">
-            <span class="fw-bold fs-2x mb-3">Role-Based Sample</span>
+            <span class="fw-bold fs-2x mb-3">Empty pages</span>
           </h3>
           <div class="card-toolbar">
-            <font-awesome-icon class="text-danger" id="cuteicon" icon="fa-solid fa-hand" />
+            <font-awesome-icon class="text-warning" id="cuteicon" icon="fa-solid fa-file" />
           </div>
         </div>
         
@@ -31,11 +31,11 @@
         <div class="card-body d-flex flex-column flex-center">
           <div class="mb-2">
             <div class="py-10 text-center">
-              <img src="@/assets/media/illustrations/easy/1.svg" class="theme-light-show w-200px">
-              <img src="@/assets/media/illustrations/easy/1-dark.svg" class="theme-dark-show w-200px">
+              <img src="@/assets/media/illustrations/easy/3.svg" class="theme-light-show w-200px">
+              <img src="@/assets/media/illustrations/easy/3-dark.svg" class="theme-dark-show w-200px">
             </div>
             <h1 class="fw-semibold text-gray-800 text-center lh-lg">
-              Custom role-based authentication plugin that allows, certain accounts to see specific pages
+              Empty pages for cruds, that will help you copy paste with ease!
             </h1>
           </div>
           <div class="text-center mb-1">

@@ -31,6 +31,10 @@ const routes = {
           component: BaseController,
           children: [
             {
+              path: "/components/index",
+              component: () => import("@/views/Components/Index.vue")
+            },
+            {
               path: "/components/utilities",
               component: () => import("@/views/Components/Utilities.vue"),
             },
@@ -186,7 +190,10 @@ const routes = {
           path: "/plugins",
           component: BaseController,
           children: [
-            
+            {
+              path: "/plugins/index",
+              component: () => import("@/views/Plugins/Index.vue"),
+            },
           ]
         },
 
@@ -196,7 +203,10 @@ const routes = {
           path: "/emptypages",
           component: BaseController,
           children: [
-
+            {
+              path: "/emptypages/index",
+              component: () => import("@/views/Emptypages/Index.vue"),
+            },
           ]
         },
 
@@ -209,10 +219,6 @@ const routes = {
             {
               path: "/items/index",
               component: () => import("@/views/Items/Index.vue"),
-            },
-            {
-              path: "/items/create",
-              component: () => import("@/views/Items/Create.vue"),
             }
           ]
         }
