@@ -593,6 +593,11 @@
   </div>
 </template>
 
+<style lang="scss">
+@import "@/plugins/keen-bootstrap/src/sass/init";
+@import "@/plugins/keen-bootstrap/src/sass/vendors/plugins/root";
+@import "@/plugins/keen-bootstrap/src/sass/vendors/plugins/prismjs";
+</style>
 <style>
 
 #image1{
