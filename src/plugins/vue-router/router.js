@@ -207,6 +207,10 @@ const routes = {
               path: "/emptypages/index",
               component: () => import("@/views/Emptypages/Index.vue"),
             },
+            {
+              path: "/emptypages/simplelist",
+              component: () => import("@/views/Emptypages/Simplelist.vue"),
+            },
           ]
         },
 
