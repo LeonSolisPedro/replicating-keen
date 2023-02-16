@@ -444,6 +444,14 @@
 											<span class="menu-title">Overview</span>
 										</router-link>
 									</div>
+									<div class="menu-item">
+										<router-link to="/emptypages/simplelist" class="menu-link">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">Simple List</span>
+										</router-link>
+									</div>
 								</div>
 							</div>
 							<!--#endregion -->

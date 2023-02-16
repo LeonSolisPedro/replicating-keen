@@ -15,6 +15,13 @@
     "@fortawesome/vue-fontawesome": "^2.0.10",
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.3",
+    "datatables.net": "^1.12.1",
+    "datatables.net-bs5": "^1.12.1",
+    "datatables.net-responsive": "^2.3.0",
+    "datatables.net-responsive-bs5": "^2.3.0",
+    "datatables.net-buttons": "^2.2.3",
+    "datatables.net-buttons-bs5": "^2.2.3",
+    "jquery": "^3.6.3",
     "vue": "^2.7.7",
     "vue-router": "^3.5.4"
   },
