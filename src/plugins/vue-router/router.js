@@ -208,8 +208,12 @@ const routes = {
               component: () => import("@/views/Emptypages/Index.vue"),
             },
             {
-              path: "/emptypages/simplelist",
-              component: () => import("@/views/Emptypages/Simplelist.vue"),
+              path: "/emptypages/normalmode",
+              component: () => import("@/views/Emptypages/Normalmode.vue"),
+            },
+            {
+              path: "/emptypages/manualmode",
+              component: () => import("@/views/Emptypages/Manualmode.vue"),
             },
           ]
         },

@@ -445,11 +445,17 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/emptypages/simplelist" class="menu-link">
+										<router-link to="/emptypages/normalmode" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
-											<span class="menu-title">Simple List</span>
+											<span class="menu-title">Normal Mode</span>
+										</router-link>
+										<router-link to="/emptypages/manualmode" class="menu-link">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">Manual Mode</span>
 										</router-link>
 									</div>
 								</div>
