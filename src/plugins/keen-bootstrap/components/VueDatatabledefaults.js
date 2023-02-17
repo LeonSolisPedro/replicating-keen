@@ -4,7 +4,7 @@ import jQuery from "jquery"
 "use strict";
 
 //
-// Datatables.net Initialization
+// Datatables.net defaults
 //
 
 // Set Defaults
