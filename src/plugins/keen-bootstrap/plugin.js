@@ -68,6 +68,9 @@ export default {
     Vue.directive("ktscroll", ktscroll)
     Vue.directive("ktdrawer", ktdrawer)
 
+    //Adding Components
+    Vue.component("vue-datatable", () => import("./components/VueDatatable.vue"))
+
 
     Vue.prototype.$setupTemplate = function () {
       document.body.classList.add("app-default")
