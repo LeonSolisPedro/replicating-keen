@@ -53,7 +53,17 @@ export default {
 
   mounted(){
     if(this.manualMode != true){
-      $("#kt_datatable_dom_positioning").DataTable()
+      this.initTable()
+    }
+  },
+  methods: {
+    initTable(){
+      const domElement = this.$el;
+      $(domElement).DataTable()
+    },
+    destroyTable(){
+      const domElement = this.$el;
+      $(domElement).DataTable().destroy();
     }
   }
 }
