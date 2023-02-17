@@ -48,12 +48,21 @@ import "./VueDatatabledefaults"
 
 export default {
   props: {
-    manualMode: Boolean
+    manualMode: Boolean,
+    watchData: Array
   },
 
   mounted(){
     if(this.manualMode != true){
       this.initTable()
+    }
+  },
+  watch: {
+    watchData(){
+      this.destroyTable()
+      this.$nextTick(() => {
+        this.initTable()
+      })
     }
   },
   methods: {

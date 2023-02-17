@@ -3,7 +3,7 @@
     <div class="card-body">
       <button class="btn btn-primary" @click="addData()">Añadir Datos</button>
 
-      <vue-datatable ref="datatable" class="table table-striped table-row-bordered gy-5 gs-7 border rounded">
+      <vue-datatable :watchData="lista" class="table table-striped table-row-bordered gy-5 gs-7 border rounded">
         <thead>
           <tr class="fw-bold fs-6 text-gray-800 px-7">
             <th>Id</th>
@@ -44,14 +44,6 @@ export default {
         status: "Working"
       },
       ]
-    }
-  },
-  watch: {
-    lista() {
-      this.$refs.datatable.destroyTable()
-      this.$nextTick(() => {
-        this.$refs.datatable.initTable()
-      });
     }
   },
   methods:{
