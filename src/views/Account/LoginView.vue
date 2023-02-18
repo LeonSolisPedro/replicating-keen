@@ -20,14 +20,15 @@
 						</div>
 						<div class="fv-row mb-8">
 							<input type="text" placeholder="Email" v-model="loginForm.email" class="form-control bg-transparent" />
+							<div class="invalid-feedback"> {{ v$.loginForm.email.$errors[0]?.$message }} </div>
 						</div>
 						<div class="fv-row mb-3">
-							<input type="password" placeholder="Password" v-model="loginForm.password"
-								class="form-control bg-transparent" />
+							<input type="password" placeholder="Password" v-model="loginForm.password" class="form-control bg-transparent" />
+							<div class="invalid-feedback"> {{ v$.loginForm.password.$errors[0]?.$message }} </div>
 						</div>
 						<div class="d-grid mb-10">
 							<button @click.prevent="login()" type="submit" class="btn btn-primary">
-								<span class="indicator-label">Sign In</span>
+								Sign In
 							</button>
 						</div>
 						<div class="text-gray-500 text-center fw-semibold fs-6">Not an user?
@@ -54,12 +55,25 @@
 </style>
 
 <script>
+import { useVuelidate } from '@vuelidate/core'
+import { required, email } from '@vuelidate/validators'
+
 export default {
+	setup: () => ({ v$: useVuelidate() }),
   data(){
     return {
       loginForm: {
         email: null,
         password: null
+      }
+    }
+  },
+
+	validations () {
+    return {
+			loginForm: {
+        email: {required, email},
+        password: {required}
       }
     }
   },
@@ -72,7 +86,10 @@ export default {
   },
 
   methods: {
-    login(){
+    async login(){
+			const valid = await this.v$.$validate()
+      if (!valid) return
+
       if(this.loginForm.email === "admin@admin.com" && this.loginForm.password === "admin"){
         localStorage.setItem("token", "true")
         localStorage.setItem("roles", JSON.stringify(["Administrator"]))
@@ -93,6 +110,6 @@ export default {
       else
         this.$router.push({ path: '/' })
     }
-  }
+  },
 }
 </script>
