@@ -45,3 +45,7 @@ $warning-inverse:  									#FFFFFF;
   color: #b02a37 !important;
   display: block !important;
 }
+[data-theme="dark"] .invalid-feedback {
+  color: #ea868f !important;
+}
+
