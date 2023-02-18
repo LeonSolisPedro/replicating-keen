@@ -421,6 +421,24 @@
 											</span>
 											<span class="menu-title">Overview</span>
 										</router-link>
+										<router-link to="/plugins/normalmode" class="menu-link">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">Normal Mode</span>
+										</router-link>
+										<router-link to="/plugins/manualmode" class="menu-link">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">Manual Mode</span>
+										</router-link>
+										<router-link to="/plugins/vuelidate" class="menu-link">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">VeeValidate</span>
+										</router-link>
 									</div>
 								</div>
 							</div>
@@ -445,18 +463,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/emptypages/normalmode" class="menu-link">
-											<span class="menu-bullet">
-												<span class="bullet bullet-dot"></span>
-											</span>
-											<span class="menu-title">Normal Mode</span>
-										</router-link>
-										<router-link to="/emptypages/manualmode" class="menu-link">
-											<span class="menu-bullet">
-												<span class="bullet bullet-dot"></span>
-											</span>
-											<span class="menu-title">Manual Mode</span>
-										</router-link>
+										
 									</div>
 								</div>
 							</div>

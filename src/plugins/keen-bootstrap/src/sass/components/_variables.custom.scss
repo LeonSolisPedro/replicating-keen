@@ -39,3 +39,8 @@ $warning-active:    								#F1BC00;
 $warning-light:    									#FFF8DD;
 $warning-light-dark:								#392F28;
 $warning-inverse:  									#FFFFFF;
+
+// Vuelidate
+.invalid-feedback {
+  display: block !important;
+}

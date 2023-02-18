@@ -194,6 +194,18 @@ const routes = {
               path: "/plugins/index",
               component: () => import("@/views/Plugins/Index.vue"),
             },
+            {
+              path: "/plugins/normalmode",
+              component: () => import("@/views/Plugins/Normalmode.vue"),
+            },
+            {
+              path: "/plugins/manualmode",
+              component: () => import("@/views/Plugins/Manualmode.vue"),
+            },
+            {
+              path: "/plugins/vuelidate",
+              component: () => import("@/views/Plugins/Vuelidate.vue"),
+            },
           ]
         },
 
@@ -207,14 +219,7 @@ const routes = {
               path: "/emptypages/index",
               component: () => import("@/views/Emptypages/Index.vue"),
             },
-            {
-              path: "/emptypages/normalmode",
-              component: () => import("@/views/Emptypages/Normalmode.vue"),
-            },
-            {
-              path: "/emptypages/manualmode",
-              component: () => import("@/views/Emptypages/Manualmode.vue"),
-            },
+            
           ]
         },
 
