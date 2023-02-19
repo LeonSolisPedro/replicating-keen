@@ -437,7 +437,13 @@
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
-											<span class="menu-title">VeeValidate</span>
+											<span class="menu-title">Vuelidate</span>
+										</router-link>
+										<router-link to="/plugins/sweetalert2" class="menu-link">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">SweetAlert2</span>
 										</router-link>
 									</div>
 								</div>
