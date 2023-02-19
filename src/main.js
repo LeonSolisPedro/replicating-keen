@@ -6,6 +6,7 @@ import App from "./App.vue"
  */
 import "./plugins/keen-bootstrap"
 import "./plugins/fontawesome"
+import "./plugins/sweetalert2"
 import router from "./plugins/vue-router"
 
 

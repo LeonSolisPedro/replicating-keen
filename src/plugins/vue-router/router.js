@@ -206,6 +206,10 @@ const routes = {
               path: "/plugins/vuelidate",
               component: () => import("@/views/Plugins/Vuelidate.vue"),
             },
+            {
+              path: "/plugins/sweetalert2",
+              component: () => import("@/views/Plugins/SweetAlert2.vue"),
+            },
           ]
         },
 
