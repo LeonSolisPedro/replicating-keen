@@ -74,6 +74,9 @@ export default {
       const domElement = this.$el;
       $(domElement).DataTable().destroy();
     }
+  },
+  beforeDestroy(){
+    this.destroyTable()
   }
 }
 </script>

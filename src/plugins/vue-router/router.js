@@ -223,7 +223,24 @@ const routes = {
               path: "/emptypages/index",
               component: () => import("@/views/Emptypages/Index.vue"),
             },
-            
+            {
+              path: "/emptypages/simplelist",
+              component: BaseController,
+              children: [
+                {
+                  path: "/emptypages/simplelist/index",
+                  component: () => import("@/views/Emptypages/Simplelist/Index.vue"),
+                },
+                {
+                  path: "/emptypages/simplelist/create",
+                  component: () => import("@/views/Emptypages/Simplelist/Create.vue"),
+                },
+                {
+                  path: "/emptypages/simplelist/update/:id",
+                  component: () => import("@/views/Emptypages/Simplelist/Update.vue"),
+                }
+              ]
+            },
           ]
         },
 
