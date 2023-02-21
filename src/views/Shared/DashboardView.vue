@@ -467,6 +467,12 @@
 											</span>
 											<span class="menu-title">Overview</span>
 										</router-link>
+										<router-link to="/emptypages/simplelist" class="menu-link">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">Simplelist</span>
+										</router-link>
 									</div>
 									<div class="menu-item">
 										
