@@ -17,16 +17,16 @@
 export default {
   methods:{
     showAlertSuccess(){
-      Swal.fire("Success", "All users have been uploaded", "success")
+      swal.fire("Success", "All users have been uploaded", "success")
     },
     showAlertError(){
-      Swal.fire("Error", "An error has been occured, please try again", "error")
+      swal.fire("Error", "An error has been occured, please try again", "error")
     },
     showAlertWarning(){
-      Swal.fire("Warning", "There are no users with the given name", "warning")
+      swal.fire("Warning", "There are no users with the given name", "warning")
     },
     showAlertQuestion(){
-      Swal.fire({
+      swal.fire({
         title: "Are you sure you want to upgrade all users to level: Low?",
         text: "This action will prevent some users from logging in.",
         icon: "warning",

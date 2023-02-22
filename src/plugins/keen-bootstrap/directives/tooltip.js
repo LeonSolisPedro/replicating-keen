@@ -1,4 +1,4 @@
-import Tooltip from "bootstrap/js/src/tooltip"
+import { Tooltip } from "bootstrap"
 
 const tooltip = {
   inserted(el) {

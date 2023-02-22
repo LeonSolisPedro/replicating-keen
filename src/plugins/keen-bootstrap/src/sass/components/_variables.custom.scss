@@ -48,3 +48,18 @@ $warning-inverse:  									#FFFFFF;
 [data-theme="dark"] .invalid-feedback {
   color: #ea868f !important;
 }
+
+// Cruds
+.datatable .card-header  {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+.datatable .card-title  {
+  font-weight: 600 !important;
+}
+.datatable .card-toolbar  {
+    gap: 1rem;
+}
+.datatable .card-body {
+  padding-top: 0;
+}

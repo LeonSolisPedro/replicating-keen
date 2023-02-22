@@ -473,6 +473,12 @@
 											</span>
 											<span class="menu-title">Simplelist</span>
 										</router-link>
+										<router-link to="/emptypages/simplelistmodal" class="menu-link">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">Simplelist Modal</span>
+										</router-link>
 									</div>
 									<div class="menu-item">
 										

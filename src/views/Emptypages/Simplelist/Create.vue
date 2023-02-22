@@ -1,34 +1,31 @@
 <template>
-  <div class="card card-flush">
+  <div class="card card-flush datatable">
 
-    <div class="card-header py-5"> <!-- Here-->
-      <h2 class="card-title fw-bold">Create Todo</h2>
-      <div class="card-toolbar"> <!-- Here-->
-        <router-link to="index" class="btn btn-flex btn-light me-4">Return</router-link>
+    <div class="card-header">
+      <h2 class="card-title">Create Todo</h2>
+      <div class="card-toolbar">
+        <router-link to="index" class="btn btn-flex btn-light">Return</router-link>
         <button @click.prevent="create()" class="btn btn-flex btn-primary">Create</button>
       </div>
     </div>
 
-    <div class="card-body pt-0"> <!-- Here-->
+    <div class="card-body">
       <form class="row mb-4 g-9">
         <input type="hidden" v-model="todo.id" />
         <div class="col-sm-6">
           <label class="required form-label">Title</label>
           <input type="text" v-model="todo.title" class="form-control form-control-solid" placeholder="Buy milk" />
+          <div class="invalid-feedback"> {{ v$.todo.title.$errors[0]?.$message }} </div>
         </div>
         <div class="col-sm-6">
-          <label class="required form-label">Title</label>
-          <input type="text" v-model="todo.title" class="form-control form-control-solid" placeholder="Buy milk" />
+          <label class="form-label">Status</label>
+          <div class="ms-9 mt-3 form-check form-check-custom form-check-solid">
+            <input type="checkbox" v-model="todo.completed" class="form-check-input" id="flexCheckDefault" />
+            <label class="form-check-label" for="flexCheckDefault">
+              Completed
+            </label>
+          </div>
         </div>
-        <div class="col-sm-6">
-          <label class="required form-label">Title</label>
-          <input type="text" v-model="todo.title" class="form-control form-control-solid" placeholder="Buy milk" />
-        </div>
-        <div class="col-sm-6">
-          <label class="required form-label">Title</label>
-          <input type="text" v-model="todo.title" class="form-control form-control-solid" placeholder="Buy milk" />
-        </div>
-        
       </form>
     </div>
 
@@ -46,9 +43,6 @@ export default {
       todo: {
         id: 0,
         title: "",
-        title2: "",
-        title3: "",
-        title4: "",
         completed: false
       },
     }
@@ -64,7 +58,10 @@ export default {
     async create() {
       const valid = await this.v$.$validate()
       if (!valid) return
-      alert("Creating...")
+      const block = new KTBlockUI(this.$el)
+      await new Promise(r => setTimeout(r, 2500)); //Todo: Add axios here
+      await swal.fire("Error", "An error has been occured, please try again", "error")
+      block.releaseDestroy()
     }
   }
 }
