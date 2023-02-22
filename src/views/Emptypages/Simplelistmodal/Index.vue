@@ -4,7 +4,7 @@
     <div class="card-header">
       <h2 class="card-title">Todos</h2>
       <div class="card-toolbar">
-        <router-link to="create" class="btn btn-flex btn-primary">Add Todo</router-link>
+        <button class="btn btn-flex btn-primary" data-bs-toggle="modal" data-bs-target="#create">Add Todo</button>
       </div>
     </div>
 
@@ -23,10 +23,18 @@
             <th>{{ todo.id }}</th>
             <th>{{ todo.title }}</th>
             <th>{{ todo.completed }}</th>
-            <th><router-link :to="'update/'+todo.id">Editar</router-link></th>
+            <th><a href="#" data-bs-toggle="modal" data-bs-target="#update">Editar</a></th>
           </tr>
         </tbody>
       </vue-datatable>
+    </div>
+
+    <div class="modal fade" tabindex="-1" id="create">
+      <Create></Create>
+    </div>
+
+    <div class="modal fade" tabindex="-1" id="update">
+      <Update></Update>
     </div>
 
   </div>
@@ -38,6 +46,10 @@ export default {
     return {
       lista: []
     }
+  },
+  components: {
+    Create: () => import("./_Create.vue"),
+    Update: () => import("./_Update.vue")
   },
   async beforeRouteEnter(to, from, next) {
     const result = await axios.get("https://jsonplaceholder.typicode.com/todos")

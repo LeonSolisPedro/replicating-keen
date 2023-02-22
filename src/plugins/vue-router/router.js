@@ -241,6 +241,16 @@ const routes = {
                 }
               ]
             },
+            {
+              path: "/emptypages/simplelistmodal",
+              component: BaseController,
+              children: [
+                {
+                  path: "/emptypages/simplelistmodal/index",
+                  component: () => import("@/views/Emptypages/Simplelistmodal/Index.vue"),
+                }
+              ]
+            },
           ]
         },
 

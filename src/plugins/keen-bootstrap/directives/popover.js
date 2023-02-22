@@ -1,4 +1,4 @@
-import Popover from "bootstrap/js/src/popover"
+import { Popover } from "bootstrap"
 
 const popover = {
   inserted(el) {

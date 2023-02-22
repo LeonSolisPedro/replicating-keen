@@ -16,7 +16,7 @@ var KTBlockUI = function(element, options) {
         zIndex: false,
         overlayClass: '',
         overflow: 'hidden',
-        message: '<span class="spinner-border text-primary"></span>'
+        message: 'Loading...'
     };
 
     ////////////////////////////
@@ -28,6 +28,7 @@ var KTBlockUI = function(element, options) {
             the = KTUtil.data(element).get('blockui');
         } else {
             _init();
+            _block();
         }
     }
 
@@ -77,8 +78,8 @@ var KTBlockUI = function(element, options) {
 
         the.overlayElement = document.createElement('DIV');    
         the.overlayElement.setAttribute('class', 'blockui-overlay ' + the.options.overlayClass);
-        
-        the.overlayElement.innerHTML = the.options.message;
+
+        the.overlayElement.innerHTML = `<div class="blockui-message"><span class="spinner-border text-primary"></span> ${the.options.message}</div>`;
 
         KTUtil.css(the.overlayElement, 'z-index', zIndex);
 
@@ -142,6 +143,11 @@ var KTBlockUI = function(element, options) {
 
     the.destroy = function() {
         return _destroy();
+    }
+
+    the.releaseDestroy = function() {
+        _release();
+        _destroy();
     }
 
     // Event API

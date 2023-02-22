@@ -1,8 +1,8 @@
-import Scrollspy from "bootstrap/js/src/scrollspy"
+import { ScrollSpy } from "bootstrap"
 
 const scrollspy = {
   inserted(el) {
-    el.scrollspy = new Scrollspy(el)
+    el.scrollspy = new ScrollSpy(el)
   },
 
   unbind(el){
