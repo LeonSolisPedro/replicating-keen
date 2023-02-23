@@ -8,7 +8,7 @@ import "@fontsource/inter/latin-600.css"
 import "@fontsource/inter/latin-700.css"
 import "@fontsource/inter/latin-800.css"
 import "@fontsource/inter/latin-900.css"
-import "bootstrap"
+import * as bootstrap from "bootstrap"
 import tooltip from "./directives/tooltip"
 import popover from "./directives/popover"
 import scrollspy from "./directives/scrollspy"
@@ -56,6 +56,9 @@ export default {
     window.KTDrawer = KTDrawer
     window.KTScroll = KTScroll
 
+
+    //Bootstrap configuration
+    bootstrap.Modal.Default.backdrop = "static"
 
     //Adding Directives
     Vue.directive("tooltip", tooltip);

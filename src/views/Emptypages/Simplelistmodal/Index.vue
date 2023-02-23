@@ -23,18 +23,18 @@
             <th>{{ todo.id }}</th>
             <th>{{ todo.title }}</th>
             <th>{{ todo.completed }}</th>
-            <th><a href="#" data-bs-toggle="modal" data-bs-target="#update">Editar</a></th>
+            <th><a href="#" @click="$refs.update.openModal(todo.id)">Editar</a></th>
           </tr>
         </tbody>
       </vue-datatable>
     </div>
 
     <div class="modal fade" tabindex="-1" id="create">
-      <Create></Create>
+      <div class="modal-dialog modal-lg"><Create/></div>
     </div>
 
-    <div class="modal fade" tabindex="-1" id="update">
-      <Update></Update>
+    <div class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-lg"><Update ref="update"/></div>
     </div>
 
   </div>
