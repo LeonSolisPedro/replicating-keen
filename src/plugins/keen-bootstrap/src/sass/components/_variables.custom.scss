@@ -49,7 +49,7 @@ $warning-inverse:  									#FFFFFF;
   color: #ea868f !important;
 }
 
-// Cruds
+// Card datatables
 .datatable .card-header  {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -62,4 +62,46 @@ $warning-inverse:  									#FFFFFF;
 }
 .datatable .card-body {
   padding-top: 0;
+}
+
+
+// Datatables
+.datatable .dataTables_wrapper {
+  margin-top: -15px;
+}
+.dt-custom {
+  font-size: 1.075rem;
+  vertical-align: middle;
+}
+.dt-custom th:first-child,
+.dt-custom td:first-child {
+  padding-left: 1.75rem;
+}
+.dt-custom th,
+.dt-custom td {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+.dt-custom thead tr {
+  text-align: left;
+  color: var(--kt-gray-400);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+}
+.dt-custom tbody .odd {
+  background-color: var(--kt-gray-100)
+}
+.dt-custom tbody,
+.dt-custom tbody .odd th,
+.dt-custom tbody .even th {
+  font-size: 1.075rem;
+  font-weight: 500;
+  color: var(--kt-gray-800)
+}
+.dtcustom-btn-sm .btn {
+  padding: calc(0.55rem + 1px) calc(1.25rem + 1px) !important; 
+  border-radius: 0.425rem;
+  font-size: 0.925rem !important;
+  background-color: var(--kt-gray-200) !important;
 }
