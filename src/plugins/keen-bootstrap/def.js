@@ -43,7 +43,6 @@ export default {
   // The install method will be called with the Vue constructor as
   // the first argument, along with possible options
   install(Vue) {
-    // Add a component or directive to your plugin, so it will be installed globally to your project.
 
     //Global Keen objects
     window.KTUtil = KTUtil
@@ -74,7 +73,32 @@ export default {
     //Adding Components
     Vue.component("vue-datatable", () => import("./components/VueDatatable.vue"))
 
-
+    //Adding global methods
+    Vue.prototype.$globalDelete = async function (url, id, name, accessor) {
+      const question = await swal.fire({
+        title: `Do you want to delete the item: ${name}?`,
+        text: "This action is irreversible",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Yes, delete!",
+        cancelButtonText: 'No, cancel!',
+        showLoaderOnConfirm: true,
+        preConfirm(){
+          const finalURL = /[^&?]*?=[^&?]*/.test(url) ? url + id : url.replace(/\/$/, "") + "/" + id;
+          return axios.delete(finalURL).catch(() => {
+            swal.showValidationMessage("An error has been ocurred, please try again")
+          })
+        }
+      });
+      if(!question.isConfirmed) return
+      const accesorlista = accessor ? accessor.split(".")[0] : "lista"
+      const accesorid = accessor?.split(".")[1] ? accessor?.split(".")[1] : "id"
+      if(typeof this.$data[accesorlista] === "undefined") return console.error(`Unable to find this.$data.${accesorlista} on current component, please specify the data to continue...`)
+      const index = this.$data[accesorlista].map(item => item[accesorid]).indexOf(id)
+      if(index === -1) return console.warn(`Couldn't find ${accesorid} ${id} on this.$data.${accesorlista}[0].${accesorid}, make sure it exists to continue...`)
+      this.$data.lista.splice(index, 1)
+      //Todo: Add confirmation of deletion
+    }
     Vue.prototype.$setupTemplate = function () {
       document.body.classList.add("app-default")
       document.body.setAttribute("data-kt-app-layout", "dark-sidebar")

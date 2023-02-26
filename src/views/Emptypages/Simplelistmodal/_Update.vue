@@ -70,7 +70,7 @@ export default {
       this.v$.$reset()
     },
     async openModal(id){
-      const result = await axios.get(`https://jsonplaceholder.typicode.com/todos/${id}`)
+      const result = await axios.get(`todos/${id}`)
       this.todo = result.data
       Modal.getOrCreateInstance(this.$el.parentElement.parentElement).show()
     }

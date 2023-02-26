@@ -23,7 +23,17 @@
             <th>{{ todo.id }}</th>
             <th>{{ todo.title }}</th>
             <th>{{ todo.completed }}</th>
-            <th><router-link :to="'update/'+todo.id">Editar</router-link></th>
+            <th>
+              <div class="dropdown">
+                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                  Actions
+                </button>
+                <ul class="dropdown-menu">
+                  <li><router-link :to="'update/' + todo.id" class="dropdown-item">Edit</router-link></li>
+                  <li><button @click="$globalDelete('/posts/', todo.id, 'Todo')" class="dropdown-item">Delete</button></li>
+                </ul>
+              </div>
+            </th>
           </tr>
         </tbody>
       </vue-datatable>
@@ -40,7 +50,7 @@ export default {
     }
   },
   async beforeRouteEnter(to, from, next) {
-    const result = await axios.get("https://jsonplaceholder.typicode.com/todos")
+    const result = await axios.get("todos")
     next(vm => { vm.lista = result.data })
   }
 }
