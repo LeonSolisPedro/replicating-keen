@@ -23,7 +23,17 @@
             <th>{{ todo.id }}</th>
             <th>{{ todo.title }}</th>
             <th>{{ todo.completed }}</th>
-            <th><a href="#" @click="$refs.update.openModal(todo.id)">Editar</a></th>
+            <th>
+              <div class="dropdown">
+                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                  Actions
+                </button>
+                <ul class="dropdown-menu">
+                  <li><button class="dropdown-item" @click="$refs.update.openModal(todo.id)">Editar</button></li>
+                  <li><button @click="$globalDelete('/posts/', todo.id, 'Todo')" class="dropdown-item">Delete</button></li>
+                </ul>
+              </div>
+            </th>
           </tr>
         </tbody>
       </vue-datatable>
@@ -52,7 +62,7 @@ export default {
     Update: () => import("./_Update.vue")
   },
   async beforeRouteEnter(to, from, next) {
-    const result = await axios.get("https://jsonplaceholder.typicode.com/todos")
+    const result = await axios.get("todos")
     next(vm => { vm.lista = result.data })
   }
 }
