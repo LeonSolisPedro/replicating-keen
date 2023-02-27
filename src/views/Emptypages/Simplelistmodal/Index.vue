@@ -40,11 +40,11 @@
     </div>
 
     <div class="modal fade" tabindex="-1" id="create">
-      <div class="modal-dialog modal-lg"><Create/></div>
+      <div class="modal-dialog modal-lg"><Create @create="$globalAdd($event)"/></div>
     </div>
 
     <div class="modal fade" tabindex="-1">
-      <div class="modal-dialog modal-lg"><Update ref="update"/></div>
+      <div class="modal-dialog modal-lg"><Update @update="$globalEdit($event)" ref="update"/></div>
     </div>
 
   </div>

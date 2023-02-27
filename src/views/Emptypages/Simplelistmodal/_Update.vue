@@ -60,9 +60,10 @@ export default {
       const valid = await this.v$.$validate()
       if (!valid) return
       const block = new KTBlockUI(this.$el)
-      await new Promise(r => setTimeout(r, 2500)); //Todo: Add axios here
-      await swal.fire("Error", "An error has been occured, please try again", "error")
+      const result = await axios.put(`todos/${this.todo.id}`, this.todo)
+      await swal.fire("Success", "Todo updated successfully", "success")
       block.releaseDestroy()
+      this.$emit("update", result.data)
       Modal.getInstance(this.$el.parentElement.parentElement).hide()
     },
     resetModal() {
