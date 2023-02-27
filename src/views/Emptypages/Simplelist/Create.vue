@@ -59,9 +59,10 @@ export default {
       const valid = await this.v$.$validate()
       if (!valid) return
       const block = new KTBlockUI(this.$el)
-      await new Promise(r => setTimeout(r, 2500)); //Todo: Add axios here
-      await swal.fire("Error", "An error has been occured, please try again", "error")
+      const result = await axios.post("todos", this.todo)
+      await swal.fire("Success", "Todo added successfully", "success")
       block.releaseDestroy()
+      this.$router.push("index")
     }
   }
 }

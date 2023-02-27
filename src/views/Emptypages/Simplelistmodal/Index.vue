@@ -30,7 +30,7 @@
                 </button>
                 <ul class="dropdown-menu">
                   <li><button class="dropdown-item" @click="$refs.update.openModal(todo.id)">Editar</button></li>
-                  <li><button @click="$globalDelete('/posts/', todo.id, 'Todo')" class="dropdown-item">Delete</button></li>
+                  <li><button @click="$globalDelete('/todos/', todo.id, 'Todo')" class="dropdown-item">Delete</button></li>
                 </ul>
               </div>
             </th>
@@ -40,11 +40,11 @@
     </div>
 
     <div class="modal fade" tabindex="-1" id="create">
-      <div class="modal-dialog modal-lg"><Create/></div>
+      <div class="modal-dialog modal-lg"><Create @create="$globalAdd($event)"/></div>
     </div>
 
     <div class="modal fade" tabindex="-1">
-      <div class="modal-dialog modal-lg"><Update ref="update"/></div>
+      <div class="modal-dialog modal-lg"><Update @update="$globalEdit($event)" ref="update"/></div>
     </div>
 
   </div>

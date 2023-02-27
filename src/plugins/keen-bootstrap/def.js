@@ -74,6 +74,24 @@ export default {
     Vue.component("vue-datatable", () => import("./components/VueDatatable.vue"))
 
     //Adding global methods
+    Vue.prototype.$globalAdd = function (event, accessor){
+      const accesorlista = accessor ? accessor.split(".")[0] : "lista"
+      const accesorid = accessor?.split(".")[1] ? accessor?.split(".")[1] : "id"
+      if(typeof this.$data[accesorlista] === "undefined") return console.error(`Unable to find this.$data.${accesorlista} on current component, please specify the data to continue...`)
+      if(typeof event[accesorid] === "undefined") return console.error(`Property "${accesorid}" does not exist on this.$data.${accesorlista}, please specify the correct id name`)
+      const index = this.$data[accesorlista].findIndex(item => item[accesorid] === event[accesorid])
+      if(index !== -1) return console.error(`Unable to add data, An item with ${accesorid} ${event[accesorid]} already exists in this.$data.${accesorlista}`)
+      this.$data[accesorlista].push(event)
+    }
+    Vue.prototype.$globalEdit = function (event, accessor){
+      const accesorlista = accessor ? accessor.split(".")[0] : "lista"
+      const accesorid = accessor?.split(".")[1] ? accessor?.split(".")[1] : "id"
+      if(typeof this.$data[accesorlista] === "undefined") return console.error(`Unable to find this.$data.${accesorlista} on current component, please specify the data to continue...`)
+      if(typeof event[accesorid] === "undefined") return console.error(`Property "${accesorid}" does not exist on this.$data.${accesorlista}, please specify the correct id name`)
+      const index = this.$data[accesorlista].findIndex(item => item[accesorid] === event[accesorid])
+      if(index === -1) return console.error(`Unable to edit data, The item with ${accesorid} ${event[accesorid]} does not exist in this.$data.${accesorlista}`)
+      this.$data[accesorlista].splice(index, 1, event)
+    }
     Vue.prototype.$globalDelete = async function (url, id, name, accessor) {
       const question = await swal.fire({
         title: `Do you want to delete the item: ${name}?`,
@@ -94,10 +112,12 @@ export default {
       const accesorlista = accessor ? accessor.split(".")[0] : "lista"
       const accesorid = accessor?.split(".")[1] ? accessor?.split(".")[1] : "id"
       if(typeof this.$data[accesorlista] === "undefined") return console.error(`Unable to find this.$data.${accesorlista} on current component, please specify the data to continue...`)
-      const index = this.$data[accesorlista].map(item => item[accesorid]).indexOf(id)
-      if(index === -1) return console.warn(`Couldn't find ${accesorid} ${id} on this.$data.${accesorlista}[0].${accesorid}, make sure it exists to continue...`)
-      this.$data.lista.splice(index, 1)
-      //Todo: Add confirmation of deletion
+      if(this.$data[accesorlista].length === 0) return console.error(`You can't delete data on an empty array! this.$data.${accesorlista} is empty!`)
+      if(typeof this.$data[accesorlista][0][accesorid] === "undefined") return console.error(`Property "${accesorid}" does not exist on this.$data.${accesorlista}, please specify the correct id name`)
+      const index = this.$data[accesorlista].findIndex(item => item[accesorid] === id)
+      if(index === -1) return console.error(`Unable to remove data, The item with ${accesorid} ${id} does not exist in this.$data.${accesorlista}`)
+      await swal.fire("Success", `${name} deleted successfully`, "success")
+      this.$data[accesorlista].splice(index, 1)
     }
     Vue.prototype.$setupTemplate = function () {
       document.body.classList.add("app-default")
