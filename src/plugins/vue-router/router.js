@@ -195,12 +195,8 @@ const routes = {
               component: () => import("@/views/Plugins/Index.vue"),
             },
             {
-              path: "/plugins/normalmode",
-              component: () => import("@/views/Plugins/Normalmode.vue"),
-            },
-            {
-              path: "/plugins/manualmode",
-              component: () => import("@/views/Plugins/Manualmode.vue"),
+              path: "/plugins/datatables",
+              component: () => import("@/views/Plugins/DataTables.vue"),
             },
             {
               path: "/plugins/vuelidate",
@@ -224,37 +220,37 @@ const routes = {
               component: () => import("@/views/Emptypages/Index.vue"),
             },
             {
-              path: "/emptypages/simplelist",
+              path: "/emptypages/simplecrud",
               component: BaseController,
               children: [
                 {
-                  path: "/emptypages/simplelist/index",
-                  component: () => import("@/views/Emptypages/Simplelist/Index.vue"),
+                  path: "/emptypages/simplecrud/index",
+                  component: () => import("@/views/Emptypages/SimpleCRUD/Index.vue"),
                 },
                 {
-                  path: "/emptypages/simplelist/create",
-                  component: () => import("@/views/Emptypages/Simplelist/Create.vue"),
+                  path: "/emptypages/simplecrud/create",
+                  component: () => import("@/views/Emptypages/SimpleCRUD/Create.vue"),
                 },
                 {
-                  path: "/emptypages/simplelist/update/:id",
-                  component: () => import("@/views/Emptypages/Simplelist/Update.vue"),
+                  path: "/emptypages/simplecrud/update/:id",
+                  component: () => import("@/views/Emptypages/SimpleCRUD/Update.vue"),
                 }
               ]
             },
             {
-              path: "/emptypages/simplelistmodal",
+              path: "/emptypages/simplecrudmodal",
               component: BaseController,
               children: [
                 {
-                  path: "/emptypages/simplelistmodal/index",
-                  component: () => import("@/views/Emptypages/Simplelistmodal/Index.vue"),
+                  path: "/emptypages/simplecrudmodal/index",
+                  component: () => import("@/views/Emptypages/SimpleCRUDmodal/Index.vue"),
                 }
               ]
             },
           ]
         },
 
-        //Role-Based Sample
+        //Role-Based Plugin
         {
           path: "/items",
           component: BaseController,

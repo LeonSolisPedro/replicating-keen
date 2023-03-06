@@ -421,17 +421,11 @@
 											</span>
 											<span class="menu-title">Overview</span>
 										</router-link>
-										<router-link to="/plugins/normalmode" class="menu-link">
+										<router-link to="/plugins/datatables" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
-											<span class="menu-title">Normal Mode</span>
-										</router-link>
-										<router-link to="/plugins/manualmode" class="menu-link">
-											<span class="menu-bullet">
-												<span class="bullet bullet-dot"></span>
-											</span>
-											<span class="menu-title">Manual Mode</span>
+											<span class="menu-title">DataTables</span>
 										</router-link>
 										<router-link to="/plugins/vuelidate" class="menu-link">
 											<span class="menu-bullet">
@@ -467,17 +461,17 @@
 											</span>
 											<span class="menu-title">Overview</span>
 										</router-link>
-										<router-link to="/emptypages/simplelist" class="menu-link">
+										<router-link to="/emptypages/simplecrud" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
-											<span class="menu-title">Simplelist</span>
+											<span class="menu-title">Simple CRUD</span>
 										</router-link>
-										<router-link to="/emptypages/simplelistmodal" class="menu-link">
+										<router-link to="/emptypages/simplecrudmodal" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
-											<span class="menu-title">Simplelist Modal</span>
+											<span class="menu-title">Simple CRUD modal</span>
 										</router-link>
 									</div>
 									<div class="menu-item">
@@ -487,13 +481,13 @@
 							</div>
 							<!--#endregion -->
 
-              <!--#region Role-Based Sample -->
+              <!--#region Role-Based Plugin -->
 							<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
 								<span href="#" class="menu-link">
 									<span class="menu-icon">
 										<font-awesome-icon icon="fa-solid fa-hand" />
 									</span>
-									<span class="menu-title">Role-Based Sample</span>
+									<span class="menu-title">Role-Based Plugin</span>
 									<span class="menu-arrow"></span>
 								</span>
 								<div class="menu-sub menu-sub-accordion">

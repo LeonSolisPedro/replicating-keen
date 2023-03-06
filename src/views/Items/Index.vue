@@ -1,65 +1,261 @@
 <template>
-  <div class="row gy-5 g-xl-10">
-
-    <div class="col-xl-8 mb-xl-10">
-      <div class="card card-flush h-xl-100">
-        <div
-          class="card-header bgi-no-repeat bgi-size-cover bgi-position-y-top bgi-position-x-center align-items-start bg-light-danger"
-          style="height: 134px">
-          <h3 class="card-title align-items-start flex-column pt-15">
-            <span class="fw-bold fs-2x mb-3">Role-Based Sample</span>
-          </h3>
-          <div class="card-toolbar">
-            <font-awesome-icon class="text-danger" id="cuteicon" icon="fa-solid fa-hand" />
+  <div>
+    <div class="row gy-5 g-xl-10">
+      <div class="col-xl-8 mb-xl-10">
+        <div class="card card-flush h-xl-100">
+          <div
+            class="card-header bgi-no-repeat bgi-size-cover bgi-position-y-top bgi-position-x-center align-items-start bg-light-danger"
+            style="height: 134px">
+            <h3 class="card-title align-items-start flex-column pt-15">
+              <span class="fw-bold fs-2x mb-3">Role-Based Plugin</span>
+            </h3>
+            <div class="card-toolbar">
+              <font-awesome-icon class="text-danger" id="cuteicon" icon="fa-solid fa-hand" />
+            </div>
+          </div>
+          <div class="card-body fs-6  p-10 text-gray-700">
+            <div class="pb-10">
+              <h1 class="anchor fw-bold mb-5" id="overview" data-kt-scroll-offset="50">
+                <a href="#overview"></a>Overview
+              </h1>
+              <div class="py-5">
+                The role-based authentication plugin, is a custom plugin that allows you to secure router endpoints, using
+                a similarly pattern, found in <a
+                  href="https://learn.microsoft.com/en-us/aspnet/core/security/authorization/roles"
+                  target="_blank">ASP.NET Core</a>
+              </div>
+            </div>
+            <div class="pb-10">
+              <h1 class="anchor fw-bold mb-5" id="overview" data-kt-scroll-offset="50">
+                <a href="#usage"></a>Usage
+              </h1>
+              <div class="py-5">
+                Follow 1 of the links below, to start securing your endpoints:
+                <ul>
+                  <li><a href="#securingroute">Secure an endpoint route</a></li>
+                  <li><a href="#specifyingroles">Specify a set of roles</a></li>
+                  <li><a href="#securingwholedirectory">Secure a whole directory</a></li>
+                  <li><a href="#exploreliveexample">Explore a live example</a></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-        
-        <div class="card-body fs-6  p-10 text-gray-700">
-          <div class="pb-10">
-            <h1 id="overview" class="anchor fw-bold mb-5"><a href="#overview"></a> Overview</h1>
-            <div class="py-5">
-              Overview Text
+      </div>
+      <div class="col-xl-4 mb-xl-10">
+        <div class="card h-md-100">
+          <div class="card-body d-flex flex-column flex-center">
+            <div class="mb-2">
+              <div class="py-10 text-center">
+                <img src="@/assets/media/illustrations/easy/1.svg" class="theme-light-show w-200px">
+                <img src="@/assets/media/illustrations/easy/1-dark.svg" class="theme-dark-show w-200px">
+              </div>
+              <h1 class="fw-semibold text-gray-800 text-center lh-lg">
+                Custom role-based authentication plugin that allows, certain accounts to see specific pages
+              </h1>
+            </div>
+            <div class="text-center mb-1">
+              <a class="btn btn-sm btn-light" href="#securingroute">
+                Secure your endpoints now!</a>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-
-    <div class="col-xl-4 mb-xl-10">
-      <div class="card h-md-100">
-        <div class="card-body d-flex flex-column flex-center">
-          <div class="mb-2">
-            <div class="py-10 text-center">
-              <img src="@/assets/media/illustrations/easy/1.svg" class="theme-light-show w-200px">
-              <img src="@/assets/media/illustrations/easy/1-dark.svg" class="theme-dark-show w-200px">
-            </div>
-            <h1 class="fw-semibold text-gray-800 text-center lh-lg">
-              Custom role-based authentication plugin that allows, certain accounts to see specific pages
-            </h1>
+    <div class="mt-4 mt-xl-0 card card-flush">
+      <div class="card-body fs-6 py-15 px-10 py-lg-15 px-lg-15 text-gray-700">
+        <div class="pb-10">
+          <h1 class="anchor fw-bold mb-5" id="securingroute" data-kt-scroll-offset="50">
+            <a href="#securingroute"></a>Secure an endpoint route
+          </h1>
+          <div class="py-5">
+            Open <code>router.js</code> and locate the route you want to secure, specify the meta property
           </div>
-          <div class="text-center mb-1">
-            <a class="btn btn-sm btn-light" href="/keen/demo1/../demo1/apps/ecommerce/catalog/add-product.html">
-              Replace this</a>
+          <div class="py-5">
+            <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
+              xxx meta: null
+              </pre>
+          </div>
+          <div class="py-5">
+            Inside the meta property, specify either authorize: true, or, AllowAnonymous
+            <ul>
+              <li>If you specify authorize: true, the user must be logged in, in order to enter to the required endpoint
+              </li>
+              <li>If you specify AllowAnonymous, any user can enter the requested endpoint.</li>
+            </ul>
+          </div>
+          <div class="py-5">
+            <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
+              Simple example code having both endpoints
+              </pre>
+          </div>
+        </div>
+        <div class="pb-10">
+          <h1 class="anchor fw-bold mb-5" id="specifyingroles" data-kt-scroll-offset="50">
+            <a href="#specifyingroles"></a>Specify a set of roles
+          </h1>
+          <div class="py-5">
+            You can specify roles inside the meta property, this way, only specific users can see the requested page.
+          </div>
+          <div class="py-5">
+            To do this, specify the meta authorize: true
+          </div>
+          <div class="py-5">
+            <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
+                xxx mesta: authorize:true
+                </pre>
+          </div>
+          <div class="py-5">
+            Then pass the property roles, as an array of string. <br>
+            Each role must be divided by commas, similarly to ASP.NET Core
+          </div>
+          <div class="py-5">
+            <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
+              Insert sample here
+              </pre>
+          </div>
+          <div class="py-5">
+            When a user visits the link `insertsamplelinkhere`, the role-based authentication plugin will automatically
+            decipher the JWT token of the browser and let the user visit the page, if it matches the specified role
+            defined above.
+          </div>
+          <div class="py-5">
+            If it doesn't match, it will show an error page and the user can't proceed with the requested action.
+          </div>
+          <div class="py-5">
+            We recommend contacting the backend developer to have an updated list of all ASP.NET Core roles,
+            per controller, that way, you can specify the correct meta properties with the `Roles` property as described
+            above.
+          </div>
+        </div>
+        <div class="pb-10">
+          <h1 class="anchor fw-bold mb-5" id="securingwholedirectory" data-kt-scroll-offset="50">
+            <a href="#securingwholedirectory"></a>Secure a whole directory
+          </h1>
+          <div class="py-5">
+            The meta property is automatically inherited to all children routes, for example, in the following route
+            definition, the children, index, create, update and reportview, inherits the meta property authorize: true
+            and the specified roles from the parent route
+          </div>
+          <div class="py-5">
+            <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
+              Insert sample here
+              </pre>
+          </div>
+          <div class="py-5">
+            If you want a specific children to have a different set of roles or authorization, you can specify the meta
+            property on the desired children
+          </div>
+          <div class="py-5">
+            <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
+              Insert sample here
+              </pre>
+          </div>
+          <div class="py-5">
+            In the above example, the children report view, will be available to all users, even users who haven't logged
+            in, ignoring entirely the roles defined in the parent
+          </div>
+          <div class="py-5">
+            If the report view children have any other children, these meta definitions will be also inherited. but the
+            children of index, create and update, won't
+          </div>
+          <div class="py-5">
+            <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
+              Sample code here
+              </pre>
+          </div>
+        </div>
+        <div class="pb-10">
+          <h1 class="anchor fw-bold mb-5" id="exploreliveexample" data-kt-scroll-offset="50">
+            <a href="#exploreliveexample"></a>Explore a live example
+          </h1>
+          <div class="py-5">
+            This project has two roles:
+            <ul>
+              <li>`admin@admin.com` with the password `admin`</li>
+              <li>`employee@wintercr.com` with the password `employee</li>
+            </ul>
+          </div>
+          <div class="py-5">
+            In the following links, each specific role has access to specific view, you can test them by trying to access
+            the following pages on your browser and see the end result. <br>
+            You can also open the `router.js` file and inspect all of these routes by yourself:
+          </div>
+          <div class="py-5">
+            <div class="table-responsive">
+              <table class="table table-rounded table-row-dashed table-striped dt-custom">
+                <thead>
+                  <tr>
+                    <th>Endpoint</th>
+                    <th>Who has access?</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>List of books</td>
+                    <td class="fw-semibold text-gray-600">
+                      <ul>
+                        <li>admin@admin.com</li>
+                        <li>employee@wintercr.com</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Create a book</td>
+                    <td class="fw-semibold text-gray-600">
+                      <ul>
+                        <li>admin@admin.com</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Update book</td>
+                    <td class="fw-semibold text-gray-600">
+                      <ul>
+                        <li>admin@admin.com</li>
+                        <li>employee@wintercr.com</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Generate Employee Report</td>
+                    <td class="fw-semibold text-gray-600">
+                      <ul>
+                        <li>employee@wintercr.com</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>View Generated Report</td>
+                    <td class="fw-semibold text-gray-600">
+                      <ul>
+                        <li>everyone</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+            </table>
           </div>
         </div>
       </div>
     </div>
-
   </div>
+</div>
 </template>
 
 <style>
 #cuteicon {
-    font-size: 59px;
-    margin-top: 30px;
-    margin-right: 25px;
+  font-size: 59px;
+  margin-top: 30px;
+  margin-right: 25px;
 }
-@media screen and ( max-width: 576px ){
-    #cuteicon {
+
+@media screen and (max-width: 576px) {
+  #cuteicon {
     font-size: 31px;
     margin-top: 38px;
     margin-right: 11px;
-}
+  }
 }
 </style>

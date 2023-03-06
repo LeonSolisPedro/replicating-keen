@@ -7,8 +7,8 @@
           <a href="#overview"></a>Overview
         </h1>
         <div class="py-5">
-          Sweetalert2 is a JavaScript plugin that allows you to display alerts with dynamically added features, such as:
-          confirmation dialogs, auto-close, ajax requests, async await, and more...
+          DataTables is a jQuery plugin that allows you to build tables dynamically, with rich features, such as:
+          searching, paging, exporting, and processing.
         </div>
       </div>
 
@@ -18,12 +18,12 @@
           <a href="#usage"></a>Usage
         </h1>
         <div class="py-5">
-          Sweetalert2 is globally available in the whole project via the "window.swal" variable. It is recommended to use
-          this variable, as it includes all the necessary CSS files needed to display it correctly
+          To use DataTables in this project, it is recommended to use the following Vue component, as it loads all the
+          necessary dependencies (such as jQuery) and all the CSS files needed to display it correctly
         </div>
         <div class="py-5">
           <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
-            Insert small code here
+            &lt;vue-datatable /&gt;
             </pre>
         </div>
       </div>
@@ -35,78 +35,104 @@
           <a href="#basicexample"></a>Basic Example
         </h1>
         <div class="py-5">
-          To show a message, use swal.fire followed by the `title` of the message, the `body` of the message, and the
-          `type` of the message
-        </div>
-        <div class="py-5">
-          <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
-            Insert small code here (with comments of each parameter)
-            </pre>
-        </div>
-        <div class="py-5">
-          The type can be either success, warning or error
+          If you plan to use DataTables for static data, use the vue-datatable component right away
         </div>
         <div class="py-5">
           <div class="highlight">  <button class="highlight-copy btn" data-bs-toggle="tooltip" data-bs-original-title="Copy code" data-kt-initialized="1">copy</button><ul class="nav nav-pills" role="tablist"><li class="nav-item" role="presentation">    <a class="nav-link active" data-bs-toggle="tab" href="#kt_highlight_63e537c8b9de3" role="tab" aria-selected="true">HTML</a></li><li class="nav-item" role="presentation">    <a class="nav-link " data-bs-toggle="tab" href="#kt_highlight_63e537c8b9dea" role="tab" aria-selected="false" tabindex="-1">CSS</a></li></ul><div class="tab-content"><div class="tab-pane fade show active" id="kt_highlight_63e537c8b9de3" role="tabpanel">    <div class="highlight-code"><pre class="language-html" tabindex="0"><code class="language-html">bigcats1</code></pre>    </div></div><div class="tab-pane fade " id="kt_highlight_63e537c8b9dea" role="tabpanel">    <div class="highlight-code"><pre class="language-javascript" tabindex="0"><code class="language-css">bigcats2</code></pre>    </div></div></div></div><!--end::Highlight-->
         </div>
       </div>
 
+
       <div class="pb-10">
-        <h1 class="anchor fw-bold mb-5" id="questionexample" data-kt-scroll-offset="50">
-          <a href="#questionexample"></a>Question Example
+        <h1 class="anchor fw-bold mb-5" id="examplevfor" data-kt-scroll-offset="50">
+          <a href="#examplevfor"></a>Example with v-for
         </h1>
         <div class="py-5">
-          If you want to show an alert with Yes and No buttons, set the property `showCancelButton` to true, and pass the
-          title, text, icon, confirmbuttontext, and cancelButtonText properties
+          If you plan to use v-for inside the vue-datatable component, first, specify the watchData prop on the
+          vue-datatable component and specify the list that you want to iterate for.
         </div>
         <div class="py-5">
-          <div class="highlight">  <button class="highlight-copy btn" data-bs-toggle="tooltip" data-bs-original-title="Copy code" data-kt-initialized="1">copy</button><ul class="nav nav-pills" role="tablist"><li class="nav-item" role="presentation">    <a class="nav-link active" data-bs-toggle="tab" href="#kt_highlight_63e537c8b9ae3" role="tab" aria-selected="true">HTML</a></li><li class="nav-item" role="presentation">    <a class="nav-link " data-bs-toggle="tab" href="#kt_highlight_63e537c8b9aea" role="tab" aria-selected="false" tabindex="-1">CSS</a></li></ul><div class="tab-content"><div class="tab-pane fade show active" id="kt_highlight_63e537c8b9ae3" role="tabpanel">    <div class="highlight-code"><pre class="language-html" tabindex="0"><code class="language-html">bigcats1</code></pre>    </div></div><div class="tab-pane fade " id="kt_highlight_63e537c8b9aea" role="tabpanel">    <div class="highlight-code"><pre class="language-javascript" tabindex="0"><code class="language-css">bigcats2</code></pre>    </div></div></div></div><!--end::Highlight-->
+          <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
+            Insert small code here
+            </pre>
+        </div>
+        <div class="py-5">
+          After that, iterate the list with v-for
+        </div>
+        <div class="py-5">
+          <div class="highlight"> <button class="highlight-copy btn" data-bs-toggle="tooltip" data-bs-original-title="Copy code" data-kt-initialized="1">copy</button> <ul class="nav nav-pills" role="tablist"> <li class="nav-item" role="presentation"> <a class="nav-link active" data-bs-toggle="tab" href="#kt_highlight_63e537c8b9ae3" role="tab" aria-selected="true">HTML</a></li> <li class="nav-item" role="presentation"> <a class="nav-link " data-bs-toggle="tab" href="#kt_highlight_63e537c8b9aea" role="tab" aria-selected="false" tabindex="-1">CSS</a></li></ul> <div class="tab-content"><div class="tab-pane fade show active" id="kt_highlight_63e537c8b9ae3" role="tabpanel"><div class="highlight-code"><pre class="language-html" tabindex="0"><code class="language-html">bigcats1</code></pre></div></div><div class="tab-pane fade " id="kt_highlight_63e537c8b9aea" role="tabpanel"><div class="highlight-code"><pre class="language-javascript" tabindex="0"><code class="language-css">bigcats2</code></pre></div></div></div></div><!--end::Highlight-->
+        </div>
+        <div class="py-5">
+          When new data is added to the list, DataTables will reinitialize itself, this is why the watchData prop is
+          required in conjunction with v-for
         </div>
       </div>
 
 
+
       <div class="pb-10">
-        <h1 class="anchor fw-bold mb-5" id="ajaxexample" data-kt-scroll-offset="50">
-          <a href="#ajaxexample"></a>Ajax Example
+        <h1 class="anchor fw-bold mb-5" id="manualinitialization" data-kt-scroll-offset="50">
+          <a href="#manualinitialization"></a>Manual initialization
         </h1>
         <div class="py-5">
-          If you want to show an alert, and perform an ajax operation in the background, you can do this with the
-          `preConfirm` method
+          If you want to initialize DataTables with custom options and features, you can do this by first, specifying
+          the manual prop to true
         </div>
         <div class="py-5">
           <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
-            Insert small code here (You also need to put true to showLoaderOnConfirm)(preConfirm is empty)
+            Insert small code here
             </pre>
         </div>
         <div class="py-5">
-          The preConfirm method expects you to return a promise, you can use axios and perform the ajax operation from there
+          Then, specify the desired `id` and pass a Vue method inside the `hook:mounted` event
         </div>
         <div class="py-5">
           <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
-            Insert small code here (preConfirm now has stuff)
+            Insert small code here
             </pre>
         </div>
         <div class="py-5">
-          When the alert is shown, you must click the "OK" button to start the ajax operation. <br>
-          This is where you must use `async await` to save the result of the ajax operation into a variable
+          In the script tag, import jQuery, and initialize DataTables within the method you previously specified
         </div>
         <div class="py-5">
           <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
-            Insert showwhat large code with too many console.logs
+            Insert small code here
             </pre>
         </div>
         <div class="py-5">
-          This is the full working code of the Ajax example. notice the use of `swal.showValidationMessage` inside the
-          `preConfirm` method, this is recommended in case the ajax operation failed.
+          If you like to use v-for inside the vue-datatable component, make sure to watch for changes on the list that
+          you are iterating for.
         </div>
         <div class="py-5">
-          <div class="highlight">  <button class="highlight-copy btn" data-bs-toggle="tooltip" data-bs-original-title="Copy code" data-kt-initialized="1">copy</button><ul class="nav nav-pills" role="tablist"><li class="nav-item" role="presentation">    <a class="nav-link active" data-bs-toggle="tab" href="#kt_highlight_63e537c8b9ce3" role="tab" aria-selected="true">HTML</a></li><li class="nav-item" role="presentation">    <a class="nav-link " data-bs-toggle="tab" href="#kt_highlight_63e537c8b9cea" role="tab" aria-selected="false" tabindex="-1">CSS</a></li></ul><div class="tab-content"><div class="tab-pane fade show active" id="kt_highlight_63e537c8b9ce3" role="tabpanel">    <div class="highlight-code"><pre class="language-html" tabindex="0"><code class="language-html">bigcats1</code></pre>    </div></div><div class="tab-pane fade " id="kt_highlight_63e537c8b9cea" role="tabpanel">    <div class="highlight-code"><pre class="language-javascript" tabindex="0"><code class="language-css">bigcats2</code></pre>    </div></div></div></div><!--end::Highlight-->
+          <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
+            Insert small code here (watch list is empty)
+            </pre>
+        </div>
+        <div class="py-5">
+          Then, inside the watch method, destroy DataTables and reinitialize it again
+        </div>
+        <div class="py-5">
+          <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
+            Insert small code here
+            </pre>
+        </div>
+        <div class="py-5">
+          This way, when new data is added to the list, DataTables will reinitialize itself and respond to the
+          reactivity of Vue
+        </div>
+        <div class="py-5">
+          This is the full working code of manual initialization
+        </div>
+        <div class="py-5">
+          <div class="highlight"> <button class="highlight-copy btn" data-bs-toggle="tooltip" data-bs-original-title="Copy code" data-kt-initialized="1">copy</button> <ul class="nav nav-pills" role="tablist"> <li class="nav-item" role="presentation"> <a class="nav-link active" data-bs-toggle="tab" href="#kt_highlight_63e537c8b9be3" role="tab" aria-selected="true">HTML</a></li> <li class="nav-item" role="presentation"> <a class="nav-link " data-bs-toggle="tab" href="#kt_highlight_63e537c8b9bea" role="tab" aria-selected="false" tabindex="-1">CSS</a></li></ul> <div class="tab-content"><div class="tab-pane fade show active" id="kt_highlight_63e537c8b9be3" role="tabpanel"><div class="highlight-code"><pre class="language-html" tabindex="0"><code class="language-html">bigcats1</code></pre></div></div><div class="tab-pane fade " id="kt_highlight_63e537c8b9bea" role="tabpanel"><div class="highlight-code"><pre class="language-javascript" tabindex="0"><code class="language-css">bigcats2</code></pre></div></div></div></div><!--end::Highlight-->
         </div>
       </div>
 
     </div>
   </div>
 </template>
+
+
 
 
 <style lang="scss">
@@ -300,30 +326,35 @@ code.language-css .token.selector>.token.pseudo-element {
 .line-highlight.line-highlight:before,
 .line-highlight.line-highlight[data-end]:after {
   content: "";
-}
-</style>
+}</style>
+
 
 <script>
 export default {
-  methods:{
-    showAlertSuccess(){
-      swal.fire("Success", "All users have been uploaded", "success")
-    },
-    showAlertError(){
-      swal.fire("Error", "An error has been occured, please try again", "error")
-    },
-    showAlertWarning(){
-      swal.fire("Warning", "There are no users with the given name", "warning")
-    },
-    showAlertQuestion(){
-      swal.fire({
-        title: "Are you sure you want to upgrade all users to level: Low?",
-        text: "This action will prevent some users from logging in.",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonText: "Continue",
-        cancelButtonText: 'No, cancel'
-    });
+  data() {
+    return {
+      lista1: [{
+        id: 1,
+        name: "Travis Adbeel",
+        status: "Unemployment"
+      },
+      {
+        id: 2,
+        name: "Diego Janus",
+        status: "Unemployment"
+      },
+      {
+        id: 3,
+        name: "David Salas",
+        status: "Working"
+      },
+      ]
+    }
+  },
+  methods: {
+    addData() {
+      const data = { id: this.lista1.length + 1, name: `CoolName${this.lista1.length + 1}`, status: `CoolStatus${this.lista1.length + 1}` }
+      this.lista1.push(data)
     }
   }
 }
