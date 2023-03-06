@@ -96,7 +96,7 @@
 								</span>
 								<div class="menu-sub menu-sub-accordion">
 									<div class="menu-item">
-										<router-link to="/components/index" class="menu-link">
+										<router-link to="/keencomponents/index" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -104,7 +104,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/utilities" class="menu-link">
+										<router-link to="/keencomponents/utilities" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -112,7 +112,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/flexlayouts" class="menu-link">
+										<router-link to="/keencomponents/flexlayouts" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -120,7 +120,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/text" class="menu-link">
+										<router-link to="/keencomponents/text" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -128,7 +128,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/background" class="menu-link">
+										<router-link to="/keencomponents/background" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -136,7 +136,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/borders" class="menu-link">
+										<router-link to="/keencomponents/borders" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -144,7 +144,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/opacity" class="menu-link">
+										<router-link to="/keencomponents/opacity" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -152,7 +152,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/controls" class="menu-link">
+										<router-link to="/keencomponents/controls" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -160,7 +160,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/checksandradios" class="menu-link">
+										<router-link to="/keencomponents/checksandradios" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -168,7 +168,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/inputgroup" class="menu-link">
+										<router-link to="/keencomponents/inputgroup" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -176,7 +176,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/floatinglabels" class="menu-link">
+										<router-link to="/keencomponents/floatinglabels" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -184,7 +184,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/advancedcontrols" class="menu-link">
+										<router-link to="/keencomponents/advancedcontrols" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -192,7 +192,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/buttons" class="menu-link">
+										<router-link to="/keencomponents/buttons" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -200,7 +200,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/accordion" class="menu-link">
+										<router-link to="/keencomponents/accordion" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -208,7 +208,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/alerts" class="menu-link">
+										<router-link to="/keencomponents/alerts" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -216,7 +216,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/badges" class="menu-link">
+										<router-link to="/keencomponents/badges" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -224,7 +224,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/breadcrumps" class="menu-link">
+										<router-link to="/keencomponents/breadcrumps" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -232,7 +232,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/bullets" class="menu-link">
+										<router-link to="/keencomponents/bullets" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -240,7 +240,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/cards" class="menu-link">
+										<router-link to="/keencomponents/cards" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -248,7 +248,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/carousel" class="menu-link">
+										<router-link to="/keencomponents/carousel" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -256,7 +256,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/indicator" class="menu-link">
+										<router-link to="/keencomponents/indicator" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -264,7 +264,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/pageloading" class="menu-link">
+										<router-link to="/keencomponents/pageloading" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -272,7 +272,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/modal" class="menu-link">
+										<router-link to="/keencomponents/modal" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -280,7 +280,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/overlay" class="menu-link">
+										<router-link to="/keencomponents/overlay" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -288,7 +288,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/pagination" class="menu-link">
+										<router-link to="/keencomponents/pagination" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -296,7 +296,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/popovers" class="menu-link">
+										<router-link to="/keencomponents/popovers" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -304,7 +304,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/hover" class="menu-link">
+										<router-link to="/keencomponents/hover" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -312,7 +312,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/pulse" class="menu-link">
+										<router-link to="/keencomponents/pulse" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -320,7 +320,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/rating" class="menu-link">
+										<router-link to="/keencomponents/rating" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -328,7 +328,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/ribbon" class="menu-link">
+										<router-link to="/keencomponents/ribbon" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -336,7 +336,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/rotate" class="menu-link">
+										<router-link to="/keencomponents/rotate" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -344,7 +344,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/separator" class="menu-link">
+										<router-link to="/keencomponents/separator" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -352,7 +352,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/symbol" class="menu-link">
+										<router-link to="/keencomponents/symbol" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -360,7 +360,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/tables" class="menu-link">
+										<router-link to="/keencomponents/tables" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -368,7 +368,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/tabs" class="menu-link">
+										<router-link to="/keencomponents/tabs" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -376,7 +376,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/toasts" class="menu-link">
+										<router-link to="/keencomponents/toasts" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -384,7 +384,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/tooltips" class="menu-link">
+										<router-link to="/keencomponents/tooltips" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -392,7 +392,7 @@
 										</router-link>
 									</div>
 									<div class="menu-item">
-										<router-link to="/components/underline" class="menu-link">
+										<router-link to="/keencomponents/underline" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -415,25 +415,25 @@
 								</span>
 								<div class="menu-sub menu-sub-accordion">
 									<div class="menu-item">
-										<router-link to="/plugins/index" class="menu-link">
+										<router-link to="/customplugins/index" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
 											<span class="menu-title">Overview</span>
 										</router-link>
-										<router-link to="/plugins/datatables" class="menu-link">
+										<router-link to="/customplugins/datatables" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
 											<span class="menu-title">DataTables</span>
 										</router-link>
-										<router-link to="/plugins/vuelidate" class="menu-link">
+										<router-link to="/customplugins/vuelidate" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
 											<span class="menu-title">Vuelidate</span>
 										</router-link>
-										<router-link to="/plugins/sweetalert2" class="menu-link">
+										<router-link to="/customplugins/sweetalert2" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -492,7 +492,7 @@
 								</span>
 								<div class="menu-sub menu-sub-accordion">
 									<div class="menu-item">
-										<router-link to="/items/index" class="menu-link">
+										<router-link to="/rolebasedplugin/index" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>

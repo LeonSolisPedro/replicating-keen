@@ -27,184 +27,184 @@ const routes = {
 
         //Keen components
         {
-          path: "/components",
+          path: "/keencomponents",
           component: BaseController,
           children: [
             {
-              path: "/components/index",
-              component: () => import("@/views/Components/Index.vue")
+              path: "/keencomponents/index",
+              component: () => import("@/views/KeenComponents/Index.vue")
             },
             {
-              path: "/components/utilities",
-              component: () => import("@/views/Components/Utilities.vue"),
+              path: "/keencomponents/utilities",
+              component: () => import("@/views/KeenComponents/Utilities.vue"),
             },
             {
-              path: "/components/flexlayouts",
-              component: () => import("@/views/Components/FlexLayouts.vue"),
+              path: "/keencomponents/flexlayouts",
+              component: () => import("@/views/KeenComponents/FlexLayouts.vue"),
             },
             {
-              path: "/components/text",
-              component: () => import("@/views/Components/Text.vue"),
+              path: "/keencomponents/text",
+              component: () => import("@/views/KeenComponents/Text.vue"),
             },
             {
-              path: "/components/background",
-              component: () => import("@/views/Components/Background.vue"),
+              path: "/keencomponents/background",
+              component: () => import("@/views/KeenComponents/Background.vue"),
             },
             {
-              path: "/components/borders",
-              component: () => import("@/views/Components/Borders.vue"),
+              path: "/keencomponents/borders",
+              component: () => import("@/views/KeenComponents/Borders.vue"),
             },
             {
-              path: "/components/opacity",
-              component: () => import("@/views/Components/Opacity.vue"),
+              path: "/keencomponents/opacity",
+              component: () => import("@/views/KeenComponents/Opacity.vue"),
             },
             {
-              path: "/components/controls",
-              component: () => import("@/views/Components/Controls.vue"),
+              path: "/keencomponents/controls",
+              component: () => import("@/views/KeenComponents/Controls.vue"),
             },
             {
-              path: "/components/checksandradios",
-              component: () => import("@/views/Components/ChecksAndRadios.vue"),
+              path: "/keencomponents/checksandradios",
+              component: () => import("@/views/KeenComponents/ChecksAndRadios.vue"),
             },
             {
-              path: "/components/inputgroup",
-              component: () => import("@/views/Components/InputGroup.vue"),
+              path: "/keencomponents/inputgroup",
+              component: () => import("@/views/KeenComponents/InputGroup.vue"),
             },
             {
-              path: "/components/floatinglabels",
-              component: () => import("@/views/Components/FloatingLabels.vue"),
+              path: "/keencomponents/floatinglabels",
+              component: () => import("@/views/KeenComponents/FloatingLabels.vue"),
             },
             {
-              path: "/components/advancedcontrols",
-              component: () => import("@/views/Components/AdvancedControls.vue"),
+              path: "/keencomponents/advancedcontrols",
+              component: () => import("@/views/KeenComponents/AdvancedControls.vue"),
             },
             {
-              path: "/components/buttons",
-              component: () => import("@/views/Components/Buttons.vue"),
+              path: "/keencomponents/buttons",
+              component: () => import("@/views/KeenComponents/Buttons.vue"),
             },
             {
-              path: "/components/accordion",
-              component: () => import("@/views/Components/Accordion.vue"),
+              path: "/keencomponents/accordion",
+              component: () => import("@/views/KeenComponents/Accordion.vue"),
             },
             {
-              path: "/components/alerts",
-              component: () => import("@/views/Components/Alerts.vue"),
+              path: "/keencomponents/alerts",
+              component: () => import("@/views/KeenComponents/Alerts.vue"),
             },
             {
-              path: "/components/badges",
-              component: () => import("@/views/Components/Badges.vue"),
+              path: "/keencomponents/badges",
+              component: () => import("@/views/KeenComponents/Badges.vue"),
             },
             {
-              path: "/components/breadcrumps",
-              component: () => import("@/views/Components/Breadcrumps.vue"),
+              path: "/keencomponents/breadcrumps",
+              component: () => import("@/views/KeenComponents/Breadcrumps.vue"),
             },
             {
-              path: "/components/bullets",
-              component: () => import("@/views/Components/Bullets.vue"),
+              path: "/keencomponents/bullets",
+              component: () => import("@/views/KeenComponents/Bullets.vue"),
             },
             {
-              path: "/components/cards",
-              component: () => import("@/views/Components/Cards.vue"),
+              path: "/keencomponents/cards",
+              component: () => import("@/views/KeenComponents/Cards.vue"),
             },
             {
-              path: "/components/carousel",
-              component: () => import("@/views/Components/Carousel.vue"),
+              path: "/keencomponents/carousel",
+              component: () => import("@/views/KeenComponents/Carousel.vue"),
             },
             {
-              path: "/components/indicator",
-              component: () => import("@/views/Components/Indicator.vue"),
+              path: "/keencomponents/indicator",
+              component: () => import("@/views/KeenComponents/Indicator.vue"),
             },
             {
-              path: "/components/pageloading",
-              component: () => import("@/views/Components/PageLoading.vue"),
+              path: "/keencomponents/pageloading",
+              component: () => import("@/views/KeenComponents/PageLoading.vue"),
             },
             {
-              path: "/components/modal",
-              component: () => import("@/views/Components/Modal.vue"),
+              path: "/keencomponents/modal",
+              component: () => import("@/views/KeenComponents/Modal.vue"),
             },
             {
-              path: "/components/overlay",
-              component: () => import("@/views/Components/Overlay.vue"),
+              path: "/keencomponents/overlay",
+              component: () => import("@/views/KeenComponents/Overlay.vue"),
             },
             {
-              path: "/components/pagination",
-              component: () => import("@/views/Components/Pagination.vue"),
+              path: "/keencomponents/pagination",
+              component: () => import("@/views/KeenComponents/Pagination.vue"),
             },
             {
-              path: "/components/popovers",
-              component: () => import("@/views/Components/Popovers.vue"),
+              path: "/keencomponents/popovers",
+              component: () => import("@/views/KeenComponents/Popovers.vue"),
             },
             {
-              path: "/components/hover",
-              component: () => import("@/views/Components/Hover.vue"),
+              path: "/keencomponents/hover",
+              component: () => import("@/views/KeenComponents/Hover.vue"),
             },
             {
-              path: "/components/pulse",
-              component: () => import("@/views/Components/Pulse.vue"),
+              path: "/keencomponents/pulse",
+              component: () => import("@/views/KeenComponents/Pulse.vue"),
             },
             {
-              path: "/components/rating",
-              component: () => import("@/views/Components/Rating.vue"),
+              path: "/keencomponents/rating",
+              component: () => import("@/views/KeenComponents/Rating.vue"),
             },
             {
-              path: "/components/ribbon",
-              component: () => import("@/views/Components/Ribbon.vue"),
+              path: "/keencomponents/ribbon",
+              component: () => import("@/views/KeenComponents/Ribbon.vue"),
             },
             {
-              path: "/components/rotate",
-              component: () => import("@/views/Components/Rotate.vue"),
+              path: "/keencomponents/rotate",
+              component: () => import("@/views/KeenComponents/Rotate.vue"),
             },
             {
-              path: "/components/separator",
-              component: () => import("@/views/Components/Separator.vue"),
+              path: "/keencomponents/separator",
+              component: () => import("@/views/KeenComponents/Separator.vue"),
             },
             {
-              path: "/components/symbol",
-              component: () => import("@/views/Components/Symbol.vue"),
+              path: "/keencomponents/symbol",
+              component: () => import("@/views/KeenComponents/Symbol.vue"),
             },
             {
-              path: "/components/tables",
-              component: () => import("@/views/Components/Tables.vue"),
+              path: "/keencomponents/tables",
+              component: () => import("@/views/KeenComponents/Tables.vue"),
             },
             {
-              path: "/components/tabs",
-              component: () => import("@/views/Components/Tabs.vue"),
+              path: "/keencomponents/tabs",
+              component: () => import("@/views/KeenComponents/Tabs.vue"),
             },
             {
-              path: "/components/toasts",
-              component: () => import("@/views/Components/Toasts.vue"),
+              path: "/keencomponents/toasts",
+              component: () => import("@/views/KeenComponents/Toasts.vue"),
             },
             {
-              path: "/components/tooltips",
-              component: () => import("@/views/Components/Tooltips.vue"),
+              path: "/keencomponents/tooltips",
+              component: () => import("@/views/KeenComponents/Tooltips.vue"),
             },
             {
-              path: "/components/underline",
-              component: () => import("@/views/Components/Underline.vue"),
+              path: "/keencomponents/underline",
+              component: () => import("@/views/KeenComponents/Underline.vue"),
             }
           ]
         },
 
         //Custom plugins
         {
-          path: "/plugins",
+          path: "/customplugins",
           component: BaseController,
           children: [
             {
-              path: "/plugins/index",
-              component: () => import("@/views/Plugins/Index.vue"),
+              path: "/customplugins/index",
+              component: () => import("@/views/CustomPlugins/Index.vue"),
             },
             {
-              path: "/plugins/datatables",
-              component: () => import("@/views/Plugins/DataTables.vue"),
+              path: "/customplugins/datatables",
+              component: () => import("@/views/CustomPlugins/DataTables.vue"),
             },
             {
-              path: "/plugins/vuelidate",
-              component: () => import("@/views/Plugins/Vuelidate.vue"),
+              path: "/customplugins/vuelidate",
+              component: () => import("@/views/CustomPlugins/Vuelidate.vue"),
             },
             {
-              path: "/plugins/sweetalert2",
-              component: () => import("@/views/Plugins/SweetAlert2.vue"),
+              path: "/customplugins/sweetalert2",
+              component: () => import("@/views/CustomPlugins/SweetAlert2.vue"),
             },
           ]
         },
@@ -217,7 +217,7 @@ const routes = {
           children: [
             {
               path: "/emptypages/index",
-              component: () => import("@/views/Emptypages/Index.vue"),
+              component: () => import("@/views/EmptyPages/Index.vue"),
             },
             {
               path: "/emptypages/simplecrud",
@@ -225,15 +225,15 @@ const routes = {
               children: [
                 {
                   path: "/emptypages/simplecrud/index",
-                  component: () => import("@/views/Emptypages/SimpleCRUD/Index.vue"),
+                  component: () => import("@/views/EmptyPages/SimpleCRUD/Index.vue"),
                 },
                 {
                   path: "/emptypages/simplecrud/create",
-                  component: () => import("@/views/Emptypages/SimpleCRUD/Create.vue"),
+                  component: () => import("@/views/EmptyPages/SimpleCRUD/Create.vue"),
                 },
                 {
                   path: "/emptypages/simplecrud/update/:id",
-                  component: () => import("@/views/Emptypages/SimpleCRUD/Update.vue"),
+                  component: () => import("@/views/EmptyPages/SimpleCRUD/Update.vue"),
                 }
               ]
             },
@@ -243,7 +243,7 @@ const routes = {
               children: [
                 {
                   path: "/emptypages/simplecrudmodal/index",
-                  component: () => import("@/views/Emptypages/SimpleCRUDmodal/Index.vue"),
+                  component: () => import("@/views/EmptyPages/SimpleCRUDmodal/Index.vue"),
                 }
               ]
             },
@@ -252,13 +252,13 @@ const routes = {
 
         //Role-Based Plugin
         {
-          path: "/items",
+          path: "/rolebasedplugin",
           component: BaseController,
           meta: {Authorize: true, Roles: ["Administrator,Employee"]},
           children: [
             {
-              path: "/items/index",
-              component: () => import("@/views/Items/Index.vue"),
+              path: "/rolebasedplugin/index",
+              component: () => import("@/views/RoleBasedPlugin/Index.vue"),
             }
           ]
         }
