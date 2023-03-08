@@ -19,15 +19,21 @@
                 <a href="#overview"></a>Overview
               </h1>
               <div class="py-5">
-                The following pages, are suitable for copying / pasting code
+                The following pages, are suitable for copying / pasting code:
+                <ul>
+                  <li><router-link to="simplecrud">Simple CRUD</router-link></li>
+                  <li><router-link to="simplecrudmodal">Simple CRUD with Modals</router-link></li>
+                </ul>
               </div>
               <div class="py-5">
-                You can follow 1 of the links below, to start coping / pasting:
+                Open one of the following files from your code editor to start coping / pasting:
                 <ul>
-                  <li><router-link to="simplecrud">Copy / Paste Simple CRUD</router-link></li>
-                  <li><router-link to="simplecrudmodal">Copy / Paste Simple CRUD with Modals</router-link></li>
-                  <li><a href="#usagevscode">Usage with Visual Studio Code</a></li>
+                  <li class="pb-2"><code>src/EmptyPages/SimpleCRUD/Index.Vue</code></li>
+                  <li><code>src/EmptyPages/SimpleCRUDmodal/Index.Vue</code></li>
                 </ul>
+              </div>
+              <div class="py-5">
+                You can also generate the above code dynamically, by <a href="#usagevscode">following this link</a>
               </div>
             </div>
           </div>

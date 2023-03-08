@@ -7,7 +7,8 @@
           <a href="#overview"></a>Overview
         </h1>
         <div class="py-5">
-          Vuelidate is a Vue plugin that allows you to validate forms, using data-driven validations
+          <a href="https://vuelidate-next.netlify.app" target="_blank">Vuelidate</a> is a Vue plugin that allows you to
+          validate forms, using data-driven validations
         </div>
       </div>
 
@@ -17,8 +18,8 @@
           <a href="#usage"></a>Usage
         </h1>
         <div class="py-5">
-          To use Vuelidate, import the `@vuelidate/core` package inside the script tag, and then, call `useVuelidate`
-          within the `setup` method
+          To use Vuelidate, import the <code>@vuelidate/core</code> package inside the <code>&lt;script&gt;</code> tag,
+          and then, call <code>useVuelidate</code> within the <code>setup</code> method
         </div>
         <div class="py-5">
           <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
@@ -26,7 +27,8 @@
             </pre>
         </div>
         <div class="py-5">
-          After that, specify the validations using the `validations` method right next to the `data` method
+          After that, specify the validations using the <code>validations</code> method right next to the <code>data</code>
+          method
         </div>
         <div class="py-5">
           <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
@@ -34,7 +36,8 @@
             </pre>
         </div>
         <div class="py-5">
-          To specify the validations, declare the same structure of the `data` method, on the `validations` method
+          To specify the validations, declare the same structure of the <code>data</code> method, on the <code>validations</code>
+          method
         </div>
         <div class="py-5">
           <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
@@ -42,11 +45,12 @@
             </pre>
         </div>
         <div class="py-5">
-          Then import the required validations, on the `@vuelidate/validators` package, some common validations include
+          Then import the required validations, on the <code>@vuelidate/validators</code> package, some common validations
+          include:
           <ul>
-            <li>Required: to require a specific field</li>
-            <li>Email: The field must be a valid email address</li>
-            <li>Number: The field must be a number</li>
+            <li><span class="fw-bold text-gray-600">Required:</span> to require a specific field</li>
+            <li><span class="fw-bold text-gray-600">Email:</span> The field must be a valid email address</li>
+            <li><span class="fw-bold text-gray-600">Number:</span> The field must be a number</li>
           </ul>
         </div>
         <div class="py-5">
@@ -55,7 +59,7 @@
             </pre>
         </div>
         <div class="py-5">
-          And import them inside the brackets of `{}`
+          And import them inside the brackets of <code>{}</code>
         </div>
         <div class="py-5">
           <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
@@ -63,7 +67,8 @@
             </pre>
         </div>
         <div class="py-5">
-          Make a two-way binding on you template tag, and specify the method `send()` after submitting your form
+          Make a two-way binding on you <code>&lt;template&gt;</code> tag, and specify the <code>send()</code> method after
+          submitting your form
         </div>
         <div class="py-5">
           <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
@@ -71,8 +76,8 @@
             </pre>
         </div>
         <div class="py-5">
-          Inside the method `Send()` use the following code to validate your form and avoid submitting it if it has any
-          errors.
+          Inside the <code>send()</code> method, use the following code to validate your form and avoid submitting it if it
+          has any errors.
         </div>
         <div class="py-5">
           <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
@@ -80,7 +85,7 @@
             </pre>
         </div>
         <div class="py-5">
-          Here's the full working code for this basic usage, you can also refer to the official documentation for more
+          Here's the full working code for this basic usage, you can also refer to the <a href="https://vuelidate-next.netlify.app/guide.html" target="_blank">official documentation</a> for more
           information
         </div>
         <div class="py-5">

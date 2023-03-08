@@ -7,7 +7,7 @@
           <a href="#overview"></a>Overview
         </h1>
         <div class="py-5">
-          Sweetalert2 is a JavaScript plugin that allows you to display alerts with dynamically added features, such as:
+          <a href="https://sweetalert2.github.io" target="_blank">Sweetalert2</a> is a JavaScript plugin that allows you to display alerts with dynamically added features, such as:
           confirmation dialogs, auto-close, ajax requests, async await, and more...
         </div>
       </div>
@@ -18,8 +18,8 @@
           <a href="#usage"></a>Usage
         </h1>
         <div class="py-5">
-          Sweetalert2 is globally available in the whole project via the "window.swal" variable. It is recommended to use
-          this variable, as it includes all the necessary CSS files needed to display it correctly
+          Sweetalert2 is globally available in the whole project via the <code>window.swal</code> variable. It is recommended
+          to use this variable, as it includes all the necessary CSS files needed to display it correctly
         </div>
         <div class="py-5">
           <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
@@ -35,8 +35,9 @@
           <a href="#basicexample"></a>Basic Example
         </h1>
         <div class="py-5">
-          To show a message, use swal.fire followed by the `title` of the message, the `body` of the message, and the
-          `type` of the message
+          To show a message, use <code>swal.fire</code> followed by the <span class="fw-bold text-gray-600">title</span>
+          of the message, the <span class="fw-bold text-gray-600">body</span> of the message, and the
+          <span class="fw-bold text-gray-600">type</span> of the message
         </div>
         <div class="py-5">
           <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
@@ -56,8 +57,8 @@
           <a href="#questionexample"></a>Question Example
         </h1>
         <div class="py-5">
-          If you want to show an alert with Yes and No buttons, set the property `showCancelButton` to true, and pass the
-          title, text, icon, confirmbuttontext, and cancelButtonText properties
+          If you want to show an alert with Yes and No buttons, set the property <code>showCancelButton</code> to <span class="fw-bold text-gray-600">true</span>, and pass the
+          <span class="fw-bold text-gray-600">title</span>, <span class="fw-bold text-gray-600">text</span>, <span class="fw-bold text-gray-600">icon</span>, <span class="fw-bold text-gray-600">confirmbuttontext</span>, and <span class="fw-bold text-gray-600">cancelButtonText</span> properties
         </div>
         <div class="py-5">
           <div class="highlight">  <button class="highlight-copy btn" data-bs-toggle="tooltip" data-bs-original-title="Copy code" data-kt-initialized="1">copy</button><ul class="nav nav-pills" role="tablist"><li class="nav-item" role="presentation">    <a class="nav-link active" data-bs-toggle="tab" href="#kt_highlight_63e537c8b9ae3" role="tab" aria-selected="true">HTML</a></li><li class="nav-item" role="presentation">    <a class="nav-link " data-bs-toggle="tab" href="#kt_highlight_63e537c8b9aea" role="tab" aria-selected="false" tabindex="-1">CSS</a></li></ul><div class="tab-content"><div class="tab-pane fade show active" id="kt_highlight_63e537c8b9ae3" role="tabpanel">    <div class="highlight-code"><pre class="language-html" tabindex="0"><code class="language-html">bigcats1</code></pre>    </div></div><div class="tab-pane fade " id="kt_highlight_63e537c8b9aea" role="tabpanel">    <div class="highlight-code"><pre class="language-javascript" tabindex="0"><code class="language-css">bigcats2</code></pre>    </div></div></div></div><!--end::Highlight-->
@@ -71,7 +72,7 @@
         </h1>
         <div class="py-5">
           If you want to show an alert, and perform an ajax operation in the background, you can do this with the
-          `preConfirm` method
+          <code>preConfirm</code> method
         </div>
         <div class="py-5">
           <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
@@ -79,7 +80,7 @@
             </pre>
         </div>
         <div class="py-5">
-          The preConfirm method expects you to return a promise, you can use axios and perform the ajax operation from there
+          The <code>preConfirm</code> method expects you to return a <span class="fw-bold text-gray-600">promise</span>, you can use <a href="https://axios-http.com" target="_blank">axios</a> and perform the ajax operation from there
         </div>
         <div class="py-5">
           <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
@@ -87,8 +88,8 @@
             </pre>
         </div>
         <div class="py-5">
-          When the alert is shown, you must click the "OK" button to start the ajax operation. <br>
-          This is where you must use `async await` to save the result of the ajax operation into a variable
+          When the alert is shown, you must click the <span class="fw-bold text-gray-600">"Ok"</span> button to start the ajax operation. <br>
+          This is where you must use <code>async await</code> to save the result of the ajax operation into a variable
         </div>
         <div class="py-5">
           <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
@@ -96,8 +97,8 @@
             </pre>
         </div>
         <div class="py-5">
-          This is the full working code of the Ajax example. notice the use of `swal.showValidationMessage` inside the
-          `preConfirm` method, this is recommended in case the ajax operation failed.
+          This is the full working code of the Ajax example. notice the use of <code>swal.showValidationMessage</code> inside the
+          <code>preConfirm</code> method, this is recommended in case the ajax operation failed.
         </div>
         <div class="py-5">
           <div class="highlight">  <button class="highlight-copy btn" data-bs-toggle="tooltip" data-bs-original-title="Copy code" data-kt-initialized="1">copy</button><ul class="nav nav-pills" role="tablist"><li class="nav-item" role="presentation">    <a class="nav-link active" data-bs-toggle="tab" href="#kt_highlight_63e537c8b9ce3" role="tab" aria-selected="true">HTML</a></li><li class="nav-item" role="presentation">    <a class="nav-link " data-bs-toggle="tab" href="#kt_highlight_63e537c8b9cea" role="tab" aria-selected="false" tabindex="-1">CSS</a></li></ul><div class="tab-content"><div class="tab-pane fade show active" id="kt_highlight_63e537c8b9ce3" role="tabpanel">    <div class="highlight-code"><pre class="language-html" tabindex="0"><code class="language-html">bigcats1</code></pre>    </div></div><div class="tab-pane fade " id="kt_highlight_63e537c8b9cea" role="tabpanel">    <div class="highlight-code"><pre class="language-javascript" tabindex="0"><code class="language-css">bigcats2</code></pre>    </div></div></div></div><!--end::Highlight-->

@@ -7,8 +7,8 @@
           <a href="#overview"></a>Overview
         </h1>
         <div class="py-5">
-          DataTables is a jQuery plugin that allows you to build tables dynamically, with rich features, such as:
-          searching, paging, exporting, and processing.
+          <a href="https://datatables.net" target="_blank">DataTables</a> is a jQuery plugin that allows you to build
+          tables dynamically, with rich features, such as: searching, paging, exporting, and processing.
         </div>
       </div>
 
@@ -48,7 +48,7 @@
           <a href="#examplevfor"></a>Example with v-for
         </h1>
         <div class="py-5">
-          If you plan to use v-for inside the vue-datatable component, first, specify the watchData prop on the
+          If you plan to use v-for inside the vue-datatable component, first, specify the <code>watchData</code> prop on the
           vue-datatable component and specify the list that you want to iterate for.
         </div>
         <div class="py-5">
@@ -57,14 +57,14 @@
             </pre>
         </div>
         <div class="py-5">
-          After that, iterate the list with v-for
+          After that, iterate the list with <code>v-for</code>
         </div>
         <div class="py-5">
           <div class="highlight"> <button class="highlight-copy btn" data-bs-toggle="tooltip" data-bs-original-title="Copy code" data-kt-initialized="1">copy</button> <ul class="nav nav-pills" role="tablist"> <li class="nav-item" role="presentation"> <a class="nav-link active" data-bs-toggle="tab" href="#kt_highlight_63e537c8b9ae3" role="tab" aria-selected="true">HTML</a></li> <li class="nav-item" role="presentation"> <a class="nav-link " data-bs-toggle="tab" href="#kt_highlight_63e537c8b9aea" role="tab" aria-selected="false" tabindex="-1">CSS</a></li></ul> <div class="tab-content"><div class="tab-pane fade show active" id="kt_highlight_63e537c8b9ae3" role="tabpanel"><div class="highlight-code"><pre class="language-html" tabindex="0"><code class="language-html">bigcats1</code></pre></div></div><div class="tab-pane fade " id="kt_highlight_63e537c8b9aea" role="tabpanel"><div class="highlight-code"><pre class="language-javascript" tabindex="0"><code class="language-css">bigcats2</code></pre></div></div></div></div><!--end::Highlight-->
         </div>
         <div class="py-5">
-          When new data is added to the list, DataTables will reinitialize itself, this is why the watchData prop is
-          required in conjunction with v-for
+          When new data is added to the list, DataTables will reinitialize itself, this is why the <code>watchData</code> prop is
+          required in conjunction with <code>v-for</code>
         </div>
       </div>
 
@@ -76,7 +76,7 @@
         </h1>
         <div class="py-5">
           If you want to initialize DataTables with custom options and features, you can do this by first, specifying
-          the manual prop to true
+          the <code>manual</code> prop to true
         </div>
         <div class="py-5">
           <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
@@ -84,7 +84,7 @@
             </pre>
         </div>
         <div class="py-5">
-          Then, specify the desired `id` and pass a Vue method inside the `hook:mounted` event
+          Then, specify the desired <code>id</code> and pass a Vue method inside the <code>hook:mounted</code> event
         </div>
         <div class="py-5">
           <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
@@ -92,7 +92,7 @@
             </pre>
         </div>
         <div class="py-5">
-          In the script tag, import jQuery, and initialize DataTables within the method you previously specified
+          In the <code>&lt;script&gt;</code> tag, import jQuery, and initialize DataTables within the method you previously specified
         </div>
         <div class="py-5">
           <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
@@ -100,8 +100,8 @@
             </pre>
         </div>
         <div class="py-5">
-          If you like to use v-for inside the vue-datatable component, make sure to watch for changes on the list that
-          you are iterating for.
+          If you like to use <code>v-for</code> inside the vue-datatable component, make sure to watch for changes on the
+          list that you are iterating for.
         </div>
         <div class="py-5">
           <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
@@ -109,7 +109,7 @@
             </pre>
         </div>
         <div class="py-5">
-          Then, inside the watch method, destroy DataTables and reinitialize it again
+          Then, inside the <code>watch</code> method, destroy DataTables and reinitialize it again
         </div>
         <div class="py-5">
           <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">

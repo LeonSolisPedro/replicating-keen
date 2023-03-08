@@ -70,7 +70,7 @@
             <a href="#securingroute"></a>Secure an endpoint route
           </h1>
           <div class="py-5">
-            Open <code>router.js</code> and locate the route you want to secure, specify the meta property
+            Open <code>router.js</code> and locate the route you want to secure, specify the <span class="fw-bold text-gray-600">meta</span> property
           </div>
           <div class="py-5">
             <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
@@ -78,11 +78,11 @@
               </pre>
           </div>
           <div class="py-5">
-            Inside the meta property, specify either authorize: true, or, AllowAnonymous
+            Inside the <span class="fw-bold text-gray-600">meta</span> property, specify either <code>Authorize: true</code>, or, <code>AllowAnonymous</code>
             <ul>
-              <li>If you specify authorize: true, the user must be logged in, in order to enter to the required endpoint
+              <li>If you specify <span class="fw-bold text-gray-600">Authorize: true</span>, the user must be logged in, in order to enter to the required endpoint
               </li>
-              <li>If you specify AllowAnonymous, any user can enter the requested endpoint.</li>
+              <li>If you specify <span class="fw-bold text-gray-600">AllowAnonymous</span>, any user can enter the requested endpoint.</li>
             </ul>
           </div>
           <div class="py-5">
@@ -96,10 +96,10 @@
             <a href="#specifyingroles"></a>Specify a set of roles
           </h1>
           <div class="py-5">
-            You can specify roles inside the meta property, this way, only specific users can see the requested page.
+            You can specify roles inside the <span class="fw-bold text-gray-600">meta</span> property, this way, only specific users can see the requested page.
           </div>
           <div class="py-5">
-            To do this, specify the meta authorize: true
+            To do this, specify the meta <code>Authorize: true</code>
           </div>
           <div class="py-5">
             <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
@@ -107,8 +107,8 @@
                 </pre>
           </div>
           <div class="py-5">
-            Then pass the property roles, as an array of string. <br>
-            Each role must be divided by commas, similarly to ASP.NET Core
+            Then pass the property <code>Roles</code>, as an array of string. <br>
+            Each role must be divided by commas, similarly to <a href="https://learn.microsoft.com/en-us/aspnet/core/security/authorization/roles?view=aspnetcore-7.0#adding-role-checks" target="_blank">ASP.NET Core</a>
           </div>
           <div class="py-5">
             <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
@@ -125,7 +125,7 @@
           </div>
           <div class="py-5">
             We recommend contacting the backend developer to have an updated list of all ASP.NET Core roles,
-            per controller, that way, you can specify the correct meta properties with the `Roles` property as described
+            per controller, that way, you can specify the correct meta properties with the <code>Roles</code> property as described
             above.
           </div>
         </div>
@@ -134,8 +134,8 @@
             <a href="#securingwholedirectory"></a>Secure a whole directory
           </h1>
           <div class="py-5">
-            The meta property is automatically inherited to all children routes, for example, in the following route
-            definition, the children, index, create, update and reportview, inherits the meta property authorize: true
+            The <span class="fw-bold text-gray-600">meta</span> property is automatically inherited to all children routes, for example, in the following route
+            definition, the children, <span class="fw-bold text-gray-600">Index</span>, <span class="fw-bold text-gray-600">Create</span>, <span class="fw-bold text-gray-600">Update</span> and <span class="fw-bold text-gray-600">ReportView</span>, inherits the meta property <code>Authorize: true</code>
             and the specified roles from the parent route
           </div>
           <div class="py-5">
@@ -144,7 +144,7 @@
               </pre>
           </div>
           <div class="py-5">
-            If you want a specific children to have a different set of roles or authorization, you can specify the meta
+            If you want a specific children to have a different set of roles or authorization, you can specify the <span class="fw-bold text-gray-600">meta</span>
             property on the desired children
           </div>
           <div class="py-5">
@@ -153,12 +153,12 @@
               </pre>
           </div>
           <div class="py-5">
-            In the above example, the children report view, will be available to all users, even users who haven't logged
+            In the above example, the children <span class="fw-bold text-gray-600">ReportView</span>, will be available to all users, even users who haven't logged
             in, ignoring entirely the roles defined in the parent
           </div>
           <div class="py-5">
-            If the report view children have any other children, these meta definitions will be also inherited. but the
-            children of index, create and update, won't
+            If the <span class="fw-bold text-gray-600">ReportView</span> page have any other children, these meta definitions will be also inherited. but the
+            children of <span class="fw-bold text-gray-600">Index</span>, <span class="fw-bold text-gray-600">Create</span> and <span class="fw-bold text-gray-600">Update</span>, won't
           </div>
           <div class="py-5">
             <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
@@ -173,14 +173,14 @@
           <div class="py-5">
             This project has two roles:
             <ul>
-              <li>`admin@admin.com` with the password `admin`</li>
-              <li>`employee@wintercr.com` with the password `employee</li>
+              <li><span class="fw-bold text-gray-600">admin@admin.com</span> with the password <span class="fw-bold text-gray-600">admin</span></li>
+              <li><span class="fw-bold text-gray-600">employee@wintercr.com</span> with the password <span class="fw-bold text-gray-600">employee</span></li>
             </ul>
           </div>
           <div class="py-5">
-            In the following links, each specific role has access to specific view, you can test them by trying to access
+            In the following links, each specific role has access to specific views, you can test them by trying to access
             the following pages on your browser and see the end result. <br>
-            You can also open the `router.js` file and inspect all of these routes by yourself:
+            You can also open the <code>router.js</code> file and inspect all of these routes by yourself:
           </div>
           <div class="py-5">
             <div class="table-responsive">
