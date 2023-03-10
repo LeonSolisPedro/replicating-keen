@@ -74,7 +74,11 @@
           </div>
           <div class="py-5">
             <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
-              xxx meta: null
+              {
+                path: "/books",
+                ...
+                meta: { }            &#60---- Specify this
+              }
               </pre>
           </div>
           <div class="py-5">
@@ -87,7 +91,17 @@
           </div>
           <div class="py-5">
             <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
-              Simple example code having both endpoints
+              {
+                path: "/books",
+                ...
+                meta: {Authorize: true}            // The user must be logged in
+              },
+
+              {
+                path: "/posts",
+                ...
+                meta: {AllowAnonymous: true}       // Anybody can enter
+              }
               </pre>
           </div>
         </div>
@@ -103,8 +117,12 @@
           </div>
           <div class="py-5">
             <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
-                xxx mesta: authorize:true
-                </pre>
+              {
+                path: "/books",
+                ...
+                meta: {Authorize: true}        &#60---- Specify this
+              }
+              </pre>
           </div>
           <div class="py-5">
             Then pass the property <code>Roles</code>, as an array of string. <br>
@@ -112,20 +130,24 @@
           </div>
           <div class="py-5">
             <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
-              Insert sample here
+              {
+                path: "/books",
+                ...
+                meta: {Authorize: true, Roles: ["Administrator"]}         &#60---- Specify this
+              }
               </pre>
           </div>
           <div class="py-5">
-            When a user visits the link `insertsamplelinkhere`, the role-based authentication plugin will automatically
+            When a user visits the link <code>"/books"</code>, the role-based authentication plugin will automatically
             decipher the JWT token of the browser and let the user visit the page, if it matches the specified role
-            defined above.
+            <code>["Administrator"]</code>
           </div>
           <div class="py-5">
-            If it doesn't match, it will show an error page and the user can't proceed with the requested action.
+            If it doesn't match, <span class="fw-bold text-gray-600">it will show an error page</span>, and the user can't proceed with the requested action.
           </div>
           <div class="py-5">
-            We recommend contacting the backend developer to have an updated list of all ASP.NET Core roles,
-            per controller, that way, you can specify the correct meta properties with the <code>Roles</code> property as described
+            We recommend contacting the <span class="fw-bold text-gray-600">backend developer</span> to have an updated list of all <a href="https://learn.microsoft.com/en-us/aspnet/core/security/authorization/roles?view=aspnetcore-7.0#adding-role-checks" target="_blank">ASP.NET Core roles</a>,
+            per controller, that way, you can specify the correct <span class="fw-bold text-gray-600">meta</span> properties with the <span class="fw-bold text-gray-600">Roles</span> property as described
             above.
           </div>
         </div>
@@ -136,11 +158,28 @@
           <div class="py-5">
             The <span class="fw-bold text-gray-600">meta</span> property is automatically inherited to all children routes, for example, in the following route
             definition, the children, <span class="fw-bold text-gray-600">Index</span>, <span class="fw-bold text-gray-600">Create</span>, <span class="fw-bold text-gray-600">Update</span> and <span class="fw-bold text-gray-600">ViewReport</span>, inherits the meta property <code>Authorize: true</code>
-            and the specified roles from the parent route
+            and the roles <code>["Administrator"]</code> from the parent <code>"/books"</code>
           </div>
           <div class="py-5">
             <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
-              Insert sample here
+              {
+                path: "/books",
+                meta: {Authorize: true, Roles: ["Administrator"]},
+                children: [
+                  {
+                    path: "/books/index",
+                  },
+                  {
+                    path: "/books/create",
+                  },                                     // All children
+                  {                                      // Inherits role
+                    path: "/books/update/:id",           // "Administrator"
+                  },
+                  {
+                    path: "/books/viewreport",
+                  }
+                ]
+              }
               </pre>
           </div>
           <div class="py-5">
@@ -149,7 +188,25 @@
           </div>
           <div class="py-5">
             <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
-              Insert sample here
+              {
+                path: "/books",
+                meta: {Authorize: true, Roles: ["Administrator"]},
+                children: [
+                  {
+                    path: "/books/index",
+                  },
+                  {
+                    path: "/books/create",
+                  },
+                  {
+                    path: "/books/update/:id",
+                  },
+                  {
+                    path: "/books/viewreport",           // Available to
+                    meta: {AllowAnonymous: true}         // Everyone
+                  }
+                ]
+              }
               </pre>
           </div>
           <div class="py-5">
@@ -157,12 +214,34 @@
             in, ignoring entirely the roles defined in the parent
           </div>
           <div class="py-5">
-            If the <span class="fw-bold text-gray-600">ViewReport</span> page have any other children, these meta definitions will be also inherited. but the
-            children of <span class="fw-bold text-gray-600">Index</span>, <span class="fw-bold text-gray-600">Create</span> and <span class="fw-bold text-gray-600">Update</span>, won't
+            If the <span class="fw-bold text-gray-600">ViewReport</span> page have any other children, the meta definition <code>AllowAnonymous</code> will be also be inherited.
           </div>
           <div class="py-5">
             <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
-              Sample code here
+              {
+                path: "/books",
+                meta: {Authorize: true, Roles: ["Administrator"]},
+                children: [
+                  {
+                    path: "/books/index",
+                  },                                                     // Only Administrator
+                  {                                                      // Can access
+                    path: "/books/create",
+                  },
+                  {
+                    path: "/books/viewreport",
+                    meta: {AllowAnonymous: true}
+                    children: [
+                      {
+                        path: "/books/viewreport/details1"
+                      },                                                 // Available to
+                      {                                                  // Everyone
+                        path: "/books/viewreport/details2"
+                      },
+                    ]
+                  }
+                ]
+              }
               </pre>
           </div>
         </div>
@@ -178,7 +257,7 @@
             </ul>
           </div>
           <div class="py-5">
-            In the following links, each specific role has access to specific views, you can test them by trying to access
+            In the following links, each specific role has access to specific views, <span class="fw-bold text-gray-600">you can test them</span> by trying to access
             the following pages on your browser and see the end result. <br>
             You can also open the <code>router.js</code> file and inspect all of these routes by yourself:
           </div>
