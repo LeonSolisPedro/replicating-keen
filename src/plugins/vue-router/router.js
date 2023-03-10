@@ -206,6 +206,54 @@ const routes = {
               path: "/customplugins/sweetalert2",
               component: () => import("@/views/CustomPlugins/SweetAlert2.vue"),
             },
+            {
+              path: "/customplugins/ktblockui",
+              component: () => import("@/views/CustomPlugins/KTBlockUI.vue"),
+            },
+            {
+              path: "/customplugins/ktmenu",
+              component: BaseController,
+              children: [
+                {
+                  path: "/customplugins/ktmenu/index",
+                  component: () => import("@/views/CustomPlugins/KTMenu/Index.vue"),
+                },
+                {
+                  path: "/customplugins/ktmenu/customization",
+                  component: () => import("@/views/CustomPlugins/KTMenu/Customization.vue"),
+                },
+                {
+                  path: "/customplugins/ktmenu/advanced",
+                  component: () => import("@/views/CustomPlugins/KTMenu/Advanced.vue"),
+                },
+                {
+                  path: "/customplugins/ktmenu/api",
+                  component: () => import("@/views/CustomPlugins/KTMenu/API.vue"),
+                },
+              ]
+            },
+            {
+              path: "/customplugins/legacy",
+              component: BaseController,
+              children: [
+                {
+                  path: "/customplugins/legacy/ktdrawer",
+                  component: () => import("@/views/CustomPlugins/Legacy/KTDrawer.vue"),
+                },
+                {
+                  path: "/customplugins/legacy/ktscroll",
+                  component: () => import("@/views/CustomPlugins/Legacy/KTScroll.vue"),
+                },
+                {
+                  path: "/customplugins/legacy/kttoggle",
+                  component: () => import("@/views/CustomPlugins/Legacy/KTToggle.vue"),
+                },
+                {
+                  path: "/customplugins/legacy/ktcookie",
+                  component: () => import("@/views/CustomPlugins/Legacy/KTCookie.vue"),
+                },
+              ]
+            }
           ]
         },
 

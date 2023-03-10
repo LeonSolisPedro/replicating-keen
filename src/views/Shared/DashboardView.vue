@@ -439,7 +439,7 @@
 											</span>
 											<span class="menu-title">SweetAlert2</span>
 										</router-link>
-										<router-link to="/customplugins/sweetalert2" class="menu-link">
+										<router-link to="/customplugins/ktblockui" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
