@@ -498,6 +498,12 @@
 											</span>
 											<span class="menu-title">Overview</span>
 										</router-link>
+										<router-link to="/rolebasedplugin/books/index" class="menu-link">
+											<span class="menu-bullet">
+												<span class="bullet bullet-dot"></span>
+											</span>
+											<span class="menu-title">List of books</span>
+										</router-link>
 									</div>
 								</div>
 							</div>

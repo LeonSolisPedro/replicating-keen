@@ -135,7 +135,7 @@
           </h1>
           <div class="py-5">
             The <span class="fw-bold text-gray-600">meta</span> property is automatically inherited to all children routes, for example, in the following route
-            definition, the children, <span class="fw-bold text-gray-600">Index</span>, <span class="fw-bold text-gray-600">Create</span>, <span class="fw-bold text-gray-600">Update</span> and <span class="fw-bold text-gray-600">ReportView</span>, inherits the meta property <code>Authorize: true</code>
+            definition, the children, <span class="fw-bold text-gray-600">Index</span>, <span class="fw-bold text-gray-600">Create</span>, <span class="fw-bold text-gray-600">Update</span> and <span class="fw-bold text-gray-600">ViewReport</span>, inherits the meta property <code>Authorize: true</code>
             and the specified roles from the parent route
           </div>
           <div class="py-5">
@@ -153,11 +153,11 @@
               </pre>
           </div>
           <div class="py-5">
-            In the above example, the children <span class="fw-bold text-gray-600">ReportView</span>, will be available to all users, even users who haven't logged
+            In the above example, the children <span class="fw-bold text-gray-600">ViewReport</span>, will be available to all users, even users who haven't logged
             in, ignoring entirely the roles defined in the parent
           </div>
           <div class="py-5">
-            If the <span class="fw-bold text-gray-600">ReportView</span> page have any other children, these meta definitions will be also inherited. but the
+            If the <span class="fw-bold text-gray-600">ViewReport</span> page have any other children, these meta definitions will be also inherited. but the
             children of <span class="fw-bold text-gray-600">Index</span>, <span class="fw-bold text-gray-600">Create</span> and <span class="fw-bold text-gray-600">Update</span>, won't
           </div>
           <div class="py-5">
@@ -193,7 +193,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>List of books</td>
+                    <td><router-link to="./books/index" class="text-gray-800 text-hover-primary">List of books</router-link></td>
                     <td class="fw-semibold text-gray-600">
                       <ul>
                         <li>admin@admin.com</li>
@@ -202,7 +202,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>Create a book</td>
+                    <td><router-link to="./books/create" class="text-gray-800 text-hover-primary">Create a book</router-link></td>
                     <td class="fw-semibold text-gray-600">
                       <ul>
                         <li>admin@admin.com</li>
@@ -210,7 +210,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>Update book</td>
+                    <td><router-link to="./books/update/1" class="text-gray-800 text-hover-primary">Update a book</router-link></td>
                     <td class="fw-semibold text-gray-600">
                       <ul>
                         <li>admin@admin.com</li>
@@ -219,7 +219,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>Generate Employee Report</td>
+                    <td><router-link to="./books/employeedashboard" class="text-gray-800 text-hover-primary">Employee Dashboard</router-link></td>
                     <td class="fw-semibold text-gray-600">
                       <ul>
                         <li>employee@wintercr.com</li>
@@ -227,7 +227,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>View Generated Report</td>
+                    <td><router-link to="./books/viewreport" class="text-gray-800 text-hover-primary">View Report</router-link></td>
                     <td class="fw-semibold text-gray-600">
                       <ul>
                         <li>everyone</li>

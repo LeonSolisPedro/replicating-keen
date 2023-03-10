@@ -254,11 +254,40 @@ const routes = {
         {
           path: "/rolebasedplugin",
           component: BaseController,
-          meta: {Authorize: true, Roles: ["Administrator,Employee"]},
           children: [
             {
               path: "/rolebasedplugin/index",
               component: () => import("@/views/RoleBasedPlugin/Index.vue"),
+            },
+            {
+              path: "/rolebasedplugin/books",
+              component: BaseController,
+              meta: {Authorize: true, Roles: ["Administrator,Employee"]},
+              children: [
+                {
+                  path: "/rolebasedplugin/books/index",
+                  component: () => import("@/views/RoleBasedPlugin/Books/Index.vue"),
+                },
+                {
+                  path: "/rolebasedplugin/books/create",
+                  component: () => import("@/views/RoleBasedPlugin/Books/Create.vue"),
+                  meta: {Authorize: true, Roles: ["Administrator"]}
+                },
+                {
+                  path: "/rolebasedplugin/books/update/:id",
+                  component: () => import("@/views/RoleBasedPlugin/Books/Update.vue"),
+                },
+                {
+                  path: "/rolebasedplugin/books/employeedashboard",
+                  component: () => import("@/views/RoleBasedPlugin/Books/EmployeeDashboard.vue"),
+                  meta: {Authorize: true, Roles: ["Employee"]}
+                },
+                {
+                  path: "/rolebasedplugin/books/viewreport",
+                  component: () => import("@/views/RoleBasedPlugin/Books/ViewReport.vue"),
+                  meta: {AllowAnonymous: true}
+                }
+              ]
             }
           ]
         }
