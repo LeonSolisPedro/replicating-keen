@@ -9,7 +9,7 @@
 				<img src="@/assets/media/auth/401-dark.png" class="theme-dark-show" style="width:80%; max-width: 320px" />
 			</div>
 			<div class="mb-0">
-				<a href="../../demo1/dist/index.html" class="btn btn-sm btn-primary">Return Home</a>
+				<button @click="$router.go(-1)" class="btn btn-sm btn-primary">Go Back</button>
 			</div>
 		</div>
 	</div>
