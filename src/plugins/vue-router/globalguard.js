@@ -8,7 +8,7 @@ const globalguard = (to, from, next) => {
   // Check if the current router has the meta: Authorize
   if(to.meta?.Authorize){
     if(testAuth() == false){
-      next({ path: '/login', replace: true, query: { returnUrl: to.fullPath } })
+      next({ path: '/login', replace: true, query: { returnUrl: to?.redirectedFrom ?? to.fullPath } })
       return
     }
   }
@@ -16,7 +16,7 @@ const globalguard = (to, from, next) => {
   if(to.meta?.Roles){
     const rolesMeta = to.meta.Roles
     if(testRoles(rolesMeta) == false) {
-      next({ path: '/unauthorized', replace: true })
+      next({ path: '/unauthorized' })
       return
     }
   }
@@ -41,7 +41,7 @@ const globalguard = (to, from, next) => {
   //If the "last meta" is of type authorize, then we will check if has a valid JWT token
   if(authorizeIndex >= anonymousIndex){
     if(testAuth() == false){
-      next({ path: '/login', replace: true, query: { returnUrl: to.fullPath } })
+      next({ path: '/login', replace: true, query: { returnUrl: to?.redirectedFrom ?? to.fullPath } })
       return
     }
   }
@@ -50,7 +50,7 @@ const globalguard = (to, from, next) => {
   if(rolesIndex !== -1){
     const rolesMeta = to.matched[rolesIndex].meta.Roles;
     if(testRoles(rolesMeta) == false) {
-      next({ path: '/unauthorized', replace: true })
+      next({ path: '/unauthorized' })
       return
     }
   }

@@ -3,6 +3,7 @@ import BaseController from "@/views/Shared/BaseController.vue"
 
 const routes = {
   mode: "history",
+  linkActiveClass: "active",
   base: import.meta.env.BASE_URL,
   routes: [
     {
@@ -19,6 +20,14 @@ const routes = {
           path: "/employee",
           component: () => import("@/views/Shared/Dashboards/Employee.vue"),
           meta: {Authorize: true, Roles: ["Employee"] }
+        },
+        {
+          path: "/notfound",
+          component: () => import("@/views/Shared/Error/NotFound.vue"),
+        },
+        {
+          path: "/internalerror",
+          component: () => import("@/views/Shared/Error/InternalError.vue"),
         },
         {
           path: "/unauthorized",
@@ -349,6 +358,9 @@ const routes = {
       path: "/signup",
       component: () => import("@/views/Account/SignUpView.vue")
     },
+    {
+      path: '/:catchAll(.*)', redirect:'notfound'
+    }
   ]
 }
 
