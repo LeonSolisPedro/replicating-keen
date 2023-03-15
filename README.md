@@ -1,5 +1,17 @@
-# replicatingkeen
+# Replicating Keen
 
-Hi! This project is a replication of keen, running on Vue 2!
+This template, is a recreation of [keen](https://preview.keenthemes.com/keen/demo1/index.html) running on Vue 2 + Vite
 
-This project is in alpha stage and all features listed [on the release page](https://github.com/LeonSolisPedro/replicating-keen/releases), are incomplete and and not ready for production.
+![Alt Text](https://s10.gifyu.com/images/Untitled-2479022d00ee81cf2.gif)
+
+
+
+### Login credentials
+
+| email  | password |
+| ------------- | ------------- |
+| admin@admin.com  | admin  |
+| employee@wintercr.com  | employee  |
+
+
+See the [release page](https://github.com/LeonSolisPedro/replicating-keen/releases) for updates and bug fixes
