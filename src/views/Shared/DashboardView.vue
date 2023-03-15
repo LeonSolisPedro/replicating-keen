@@ -598,13 +598,6 @@
 					<section id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
 						<div id="kt_app_toolbar_container" class="app-container container-xxl d-flex flex-stack">
 							<div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
-								<ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
-									<li v-for="(match, id) in breadRoutes" :key="id" class="breadcrumb-item text-muted">
-										<router-link :to="match.path" class="text-muted text-hover-primary"> {{ match?.name ?? "PLACEHOLDER"
-											}} </router-link>
-										<span v-if="id != breadRoutes.length - 1" class="bullet bg-gray-400 w-5px h-2px ms-2"></span>
-									</li>
-								</ul>
 							</div>
 							<div class="d-flex align-items-center">
 								<select class="form-select form-select-sm bg-body border-body w-175px">
@@ -645,15 +638,6 @@ export default {
   destroyed () {
     this.$destroyTemplate()
   },
-	computed: {
-		breadRoutes(){
-			const routes = this.$route.matched.filter(item => { return item.path !== "" })
-			const found = routes[routes.length-1]?.path?.match(/\b\w+$/) ?? []
-			if(found[0] === "index")
-			  routes.pop()
-			return routes
-		}
-	},
   methods: {
     logout() {
       localStorage.removeItem("token");

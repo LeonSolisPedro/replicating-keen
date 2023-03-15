@@ -2,7 +2,7 @@
   <div class="row gy-5 g-xl-10">
 
     <div class="col-xl-8 mb-xl-10">
-      <div class="card card-flush h-xl-100">
+      <div class="card card-flush">
         <div
           class="card-header bgi-no-repeat bgi-size-cover bgi-position-y-top bgi-position-x-center align-items-start bg-light-success"
           style="height: 134px">
@@ -18,7 +18,17 @@
           <div class="pb-10">
             <h1 id="overview" class="anchor fw-bold mb-5"><a href="#overview"></a> Overview</h1>
             <div class="py-5">
-              Overview Text
+              The following components, are plugins that will help you build <router-link to="datatables" target="_blank">cruds</router-link>, <router-link to="ktmenu/index" target="_blank">menus</router-link>, <router-link to="datatables" target="_blank">tables</router-link> and <router-link to="vuelidate" target="_blank">validations</router-link>.
+            </div>
+            <div class="py-5">
+              These plugins require some <span class="fw-bold text-gray-600">specific configuration</span> in order for them to work properly
+            </div>
+            <div class="py-5">
+              We recommend reading all the documentation, so you can configure each plugin, the correct way.
+            </div>
+            <div class="py-5">
+              <br>
+              <br>
             </div>
           </div>
         </div>
@@ -39,8 +49,7 @@
             </h1>
           </div>
           <div class="text-center mb-1">
-            <a class="btn btn-sm btn-light" href="/keen/demo1/../demo1/apps/ecommerce/catalog/add-product.html">
-              Replace this</a>
+            <router-link to="datatables" class="btn btn-sm btn-light">Explore now!</router-link>
           </div>
         </div>
       </div>
