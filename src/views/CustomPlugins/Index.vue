@@ -30,7 +30,7 @@
               There's also <router-link to="legacy/ktdrawer" target="_blank">legacy plugins</router-link>. plugins that do not make sense to use with Vue, but <span class="fw-bold text-gray-600">keen provides</span> in addition to its documentation<br>
             </div>
             <div class="py-5">
-              Feel free to implement any plugin you want ...
+              Feel free to implement any plugin you want
             </div>
           </div>
         </div>
