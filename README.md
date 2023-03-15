@@ -2,7 +2,8 @@
 
 This template, is a recreation of [keen](https://preview.keenthemes.com/keen/demo1/index.html) running on Vue 2 + Vite
 
-![Alt Text](https://s10.gifyu.com/images/Untitled-2479022d00ee81cf2.gif)
+
+<img src="https://s10.gifyu.com/images/Untitled-2479022d00ee81cf2.gif" width="620" />
 
 
 
