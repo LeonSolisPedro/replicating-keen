@@ -18,7 +18,13 @@
           <div class="pb-10">
             <h1 id="overview" class="anchor fw-bold mb-5"><a href="#overview"></a> Overview</h1>
             <div class="py-5">
-              Overview Text
+              In the following pages, you will explore keen components that will help you build <router-link to="inputgroup" target="_blank">inputs</router-link>, <router-link to="modal" target="_blank">modals</router-link>, <router-link to="alerts" target="_blank">alerts</router-link>, and <router-link to="toasts" target="_blank">toasts</router-link>
+            </div>
+            <div class="py-5">
+              These components have been <span class="fw-bold text-gray-600">heavily modified</span>, so they will look and feel different.
+            </div>
+            <div class="py-5">
+              You can use these components to build basic things, or use these components to build more sophisticated ones.
             </div>
           </div>
         </div>
@@ -39,8 +45,7 @@
             </h1>
           </div>
           <div class="text-center mb-1">
-            <a class="btn btn-sm btn-light" href="/keen/demo1/../demo1/apps/ecommerce/catalog/add-product.html">
-              Replace this</a>
+            <router-link to="utilities" class="btn btn-sm btn-light">Explore now!</router-link>
           </div>
         </div>
       </div>
