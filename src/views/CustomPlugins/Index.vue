@@ -2,7 +2,7 @@
   <div class="row gy-5 g-xl-10">
 
     <div class="col-xl-8 mb-xl-10">
-      <div class="card card-flush">
+      <div class="card card-flush h-xl-100">
         <div
           class="card-header bgi-no-repeat bgi-size-cover bgi-position-y-top bgi-position-x-center align-items-start bg-light-success"
           style="height: 134px">
@@ -18,7 +18,7 @@
           <div class="pb-10">
             <h1 id="overview" class="anchor fw-bold mb-5"><a href="#overview"></a> Overview</h1>
             <div class="py-5">
-              The following components, are plugins that will help you build <router-link to="datatables" target="_blank">cruds</router-link>, <router-link to="ktmenu/index" target="_blank">menus</router-link>, <router-link to="datatables" target="_blank">tables</router-link> and <router-link to="vuelidate" target="_blank">validations</router-link>.
+              The following components, are plugins that will help you build <router-link to="datatables" target="_blank">cruds</router-link>, <router-link to="ktmenu/index" target="_blank">menus</router-link>, <router-link to="sweetalert2" target="_blank">alerts</router-link> and <router-link to="vuelidate" target="_blank">validations</router-link>.
             </div>
             <div class="py-5">
               These plugins require some <span class="fw-bold text-gray-600">specific configuration</span> in order for them to work properly
@@ -27,8 +27,10 @@
               We recommend reading all the documentation, so you can configure each plugin, the correct way.
             </div>
             <div class="py-5">
-              <br>
-              <br>
+              There's also <router-link to="legacy/ktdrawer" target="_blank">legacy plugins</router-link>. plugins that do not make sense to use with Vue, but <span class="fw-bold text-gray-600">keen provides</span> in addition to its documentation<br>
+            </div>
+            <div class="py-5">
+              Feel free to implement any plugin you want ...
             </div>
           </div>
         </div>
