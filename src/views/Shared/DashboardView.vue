@@ -633,10 +633,10 @@
 <script>
 export default {
   mounted () {
-    this.$setupTemplate()
+    this.$setupLayout()
   },
   destroyed () {
-    this.$destroyTemplate()
+    this.$destroyLayout()
   },
   methods: {
     logout() {

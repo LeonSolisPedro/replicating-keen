@@ -119,7 +119,7 @@ export default {
       await swal.fire("Success", `${name} deleted successfully`, "success")
       this.$data[accesorlista].splice(index, 1)
     }
-    Vue.prototype.$setupTemplate = function () {
+    Vue.prototype.$setupLayout = function () {
       document.body.classList.add("app-default")
       document.body.setAttribute("data-kt-app-layout", "dark-sidebar")
       document.body.setAttribute("data-kt-app-header-fixed", "true")
@@ -135,7 +135,7 @@ export default {
       const classes = ["d-flex", "flex-column", "flex-root", "app-root"]
       approot.classList.add(...classes)
     }
-    Vue.prototype.$destroyTemplate = function () {
+    Vue.prototype.$destroyLayout = function () {
       document.body.classList.remove("app-default")
       document.body.removeAttribute("data-kt-app-layout")
       document.body.removeAttribute("data-kt-app-header-fixed")
@@ -151,14 +151,14 @@ export default {
       const classes = ["d-flex", "flex-column", "flex-root", "app-root"]
       approot.classList.remove(...classes)
     }
-    Vue.prototype.$setupBlankPage = function () {
+    Vue.prototype.$setupAuthLayout = function () {
       document.body.classList.add("app-blank")
       document.body.id = "kt_body"
       const approot = document.getElementById("app")
       const classes = ["d-flex", "flex-column", "flex-root"]
       approot.classList.add(...classes)
     }
-    Vue.prototype.$destroyBlankPage = function () {
+    Vue.prototype.$destroyAuthLayout = function () {
       document.body.classList.remove("app-blank")
       document.body.id = ""
       const approot = document.getElementById("app")
