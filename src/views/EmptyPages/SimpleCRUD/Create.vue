@@ -15,7 +15,7 @@
         <div class="col-sm-6">
           <label class="required form-label">Title</label>
           <input type="text" v-model="todo.title" class="form-control form-control-solid" placeholder="Buy milk" />
-          <div class="invalid-feedback"> {{ v$.todo.title.$errors[0]?.$message }} </div>
+          <span class="invalid-feedback"> {{ v$.todo.title.$errors[0]?.$message }} </span>
         </div>
         <div class="col-sm-6">
           <label class="form-label">Status</label>

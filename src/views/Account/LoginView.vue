@@ -20,11 +20,11 @@
 						</div>
 						<div class="fv-row mb-8">
 							<input type="text" placeholder="Email" v-model="loginForm.email" class="form-control bg-transparent" />
-							<div class="invalid-feedback"> {{ v$.loginForm.email.$errors[0]?.$message }} </div>
+							<span class="invalid-feedback"> {{ v$.loginForm.email.$errors[0]?.$message }} </span>
 						</div>
 						<div class="fv-row mb-3">
 							<input type="password" placeholder="Password" v-model="loginForm.password" class="form-control bg-transparent" />
-							<div class="invalid-feedback"> {{ v$.loginForm.password.$errors[0]?.$message }} </div>
+							<span class="invalid-feedback"> {{ v$.loginForm.password.$errors[0]?.$message }} </span>
 						</div>
 						<div class="d-grid mb-10">
 							<button @click.prevent="login()" type="submit" class="btn btn-primary">
