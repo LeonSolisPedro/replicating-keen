@@ -2,10 +2,10 @@
   <div class="card card-flush datatable">
 
     <div class="card-header">
-      <h2 class="card-title">Update Todo</h2>
+      <h2 class="card-title">Edit Todo</h2>
       <div class="card-toolbar">
         <router-link to="../index" class="btn btn-flex btn-light">Return</router-link>
-        <button @click.prevent="update()" class="btn btn-flex btn-primary">Update</button>
+        <button @click.prevent="update()" class="btn btn-flex btn-primary">Edit</button>
       </div>
     </div>
 
@@ -64,7 +64,7 @@ export default {
       if (!valid) return
       const block = new KTBlockUI(this.$el)
       const result = await axios.put(`todos/${this.todo.id}`, this.todo)
-      await swal.fire("Success", "Todo updated successfully", "success")
+      await swal.fire("Success", "Todo edited successfully", "success")
       block.releaseDestroy()
       this.$router.push("../index")
     }

@@ -1,7 +1,7 @@
 <template>
   <div class="modal-content">
     <div class="modal-header">
-      <h3 class="modal-title">Create Todo</h3>
+      <h3 class="modal-title">Add Todo</h3>
       <button class="btn-close btn btn-icon btn-sm btn-active-light-primary me-0" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
 
@@ -27,7 +27,7 @@
 
     <div class="modal-footer">
       <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
-      <button @click="create()" type="button" class="btn btn-primary">Create</button>
+      <button @click="create()" type="button" class="btn btn-primary">Add</button>
     </div>
   </div>
 </template>

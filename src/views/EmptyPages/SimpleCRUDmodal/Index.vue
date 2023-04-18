@@ -29,7 +29,7 @@
                   Actions
                 </button>
                 <ul class="dropdown-menu">
-                  <li><button class="dropdown-item" @click="$refs.update.openModal(todo.id)">Editar</button></li>
+                  <li><button class="dropdown-item" @click="$refs.update.openModal(todo.id)">Edit</button></li>
                   <li><button @click="$globalDelete('/todos/', todo.id, 'Todo')" class="dropdown-item">Delete</button></li>
                 </ul>
               </div>
