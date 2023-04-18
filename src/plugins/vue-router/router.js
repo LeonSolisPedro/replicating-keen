@@ -289,8 +289,8 @@ const routes = {
                   component: () => import("@/views/EmptyPages/SimpleCRUD/Create.vue"),
                 },
                 {
-                  path: "/emptypages/simplecrud/update/:id",
-                  component: () => import("@/views/EmptyPages/SimpleCRUD/Update.vue"),
+                  path: "/emptypages/simplecrud/edit/:id",
+                  component: () => import("@/views/EmptyPages/SimpleCRUD/Edit.vue"),
                 }
               ]
             },
@@ -331,8 +331,8 @@ const routes = {
                   meta: {Authorize: true, Roles: ["Administrator"]}
                 },
                 {
-                  path: "/rolebasedplugin/books/update/:id",
-                  component: () => import("@/views/RoleBasedPlugin/Books/Update.vue"),
+                  path: "/rolebasedplugin/books/edit/:id",
+                  component: () => import("@/views/RoleBasedPlugin/Books/Edit.vue"),
                 },
                 {
                   path: "/rolebasedplugin/books/employeedashboard",

@@ -14,7 +14,7 @@
       <h3>List of books</h3>
       <img src="@/assets/rolebasedplugin/rolebasedsample1.png" width="340" class="img-fluid theme-light-show">
       <img src="@/assets/rolebasedplugin/rolebasedsample1dark.png" width="340" class="img-fluid theme-dark-show">
-      <router-link to="update/1" class="text-center mt-1">Edit Book 1</router-link>
+      <router-link to="edit/1" class="text-center mt-1">Edit Book 1</router-link>
     </div>
 
   </div>

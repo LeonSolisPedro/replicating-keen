@@ -29,7 +29,7 @@
                   Actions
                 </button>
                 <ul class="dropdown-menu">
-                  <li><router-link :to="'update/' + todo.id" class="dropdown-item">Edit</router-link></li>
+                  <li><router-link :to="'edit/' + todo.id" class="dropdown-item">Edit</router-link></li>
                   <li><button @click="$globalDelete('/todos/', todo.id, 'Todo')" class="dropdown-item">Delete</button></li>
                 </ul>
               </div>

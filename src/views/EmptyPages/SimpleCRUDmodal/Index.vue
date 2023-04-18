@@ -29,7 +29,7 @@
                   Actions
                 </button>
                 <ul class="dropdown-menu">
-                  <li><button class="dropdown-item" @click="$refs.update.openModal(todo.id)">Edit</button></li>
+                  <li><button class="dropdown-item" @click="$refs.edit.openModal(todo.id)">Edit</button></li>
                   <li><button @click="$globalDelete('/todos/', todo.id, 'Todo')" class="dropdown-item">Delete</button></li>
                 </ul>
               </div>
@@ -44,7 +44,7 @@
     </div>
 
     <div class="modal fade" tabindex="-1">
-      <div class="modal-dialog"><Update @refresh="refresh()" ref="update"/></div>
+      <div class="modal-dialog"><Edit @refresh="refresh()" ref="edit"/></div>
     </div>
 
   </div>
@@ -59,7 +59,7 @@ export default {
   },
   components: {
     Create: () => import("./_Create.vue"),
-    Update: () => import("./_Update.vue")
+    Edit: () => import("./_Edit.vue")
   },
   methods: {
     async refresh() {

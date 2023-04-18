@@ -9,7 +9,7 @@
     </div>
 
     <div class="card-body text-center d-flex flex-column gap-5 flex-center" style="height: 54.5vh">
-      <h3>Update Book {{ $route.params.id }}</h3>
+      <h3>Edit Book {{ $route.params.id }}</h3>
       <img src="@/assets/rolebasedplugin/rolebasedsample3.png" width="340" class="img-fluid theme-light-show">
       <img src="@/assets/rolebasedplugin/rolebasedsample3dark.png" width="340" class="img-fluid theme-dark-show">
     </div>
