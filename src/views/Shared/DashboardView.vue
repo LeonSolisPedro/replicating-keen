@@ -10,8 +10,8 @@
 						</span>
 					</div>
 				</div>
-				<div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0 d-lg-none">
-					<router-link to="/">
+				<div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
+					<router-link to="/" class="d-lg-none">
 						<img alt="Logo" src="@/assets/media/logos/default-small.svg" class="theme-light-show h-30px" />
 						<img alt="Logo" src="@/assets/media/logos/default-small-dark.svg" class="theme-dark-show h-30px" />
 					</router-link>
@@ -52,7 +52,7 @@
 				</div>
 			</div>
 		</header>
-		<div id="kt_app_wrap" class="app-wrapper  flex-column flex-row-fluid ">
+		<div id="kt_app_wrapper" class="app-wrapper  flex-column flex-row-fluid ">
 			<aside id="kt_app_sidebar" class="app-sidebar flex-column" v-ktdrawer data-kt-drawer="true"
 				data-kt-drawer-name="app-sidebar" data-kt-drawer-activate="{default: true, lg: false}"
 				data-kt-drawer-overlay="true" data-kt-drawer-width="225px" data-kt-drawer-direction="start"
@@ -72,7 +72,7 @@
 				<nav class="app-sidebar-menu overflow-hidden flex-column-fluid">
 					<div id="kt_app_sidebar_menu_wrapper" class="app-sidebar-wrapper hover-scroll-overlay-y my-5" v-ktscroll
 						data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="auto"
-						data-kt-scroll-dependencies="#kt_app_sidebar_logo" data-kt-scroll-wrappers="#kt_app_sidebar_menu"
+						data-kt-scroll-dependencies="#kt_app_sidebar_logo, #kt_app_sidebar_footer" data-kt-scroll-wrappers="#kt_app_sidebar_menu"
 						data-kt-scroll-offset="5px">
 						<div class="menu menu-column menu-rounded menu-sub-indention fw-semibold px-3" id="#kt_app_sidebar_menu"
 							v-ktmenu data-kt-menu="true" data-kt-menu-expand="false">
