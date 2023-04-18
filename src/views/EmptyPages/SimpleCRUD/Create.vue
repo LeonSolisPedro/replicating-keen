@@ -2,10 +2,10 @@
   <div class="card card-flush datatable">
 
     <div class="card-header">
-      <h2 class="card-title">Create Todo</h2>
+      <h2 class="card-title">Add Todo</h2>
       <div class="card-toolbar">
         <router-link to="index" class="btn btn-flex btn-light">Return</router-link>
-        <button @click.prevent="create()" class="btn btn-flex btn-primary">Create</button>
+        <button @click.prevent="create()" class="btn btn-flex btn-primary">Add</button>
       </div>
     </div>
 
@@ -15,7 +15,7 @@
         <div class="col-sm-6">
           <label class="required form-label">Title</label>
           <input type="text" v-model="todo.title" class="form-control form-control-solid" placeholder="Buy milk" />
-          <div class="invalid-feedback"> {{ v$.todo.title.$errors[0]?.$message }} </div>
+          <span class="invalid-feedback"> {{ v$.todo.title.$errors[0]?.$message }} </span>
         </div>
         <div class="col-sm-6">
           <label class="form-label">Status</label>

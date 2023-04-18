@@ -157,7 +157,7 @@
           </h1>
           <div class="py-5">
             The <span class="fw-bold text-gray-600">meta</span> property is automatically inherited to all children routes, for example, in the following route
-            definition, the children, <span class="fw-bold text-gray-600">Index</span>, <span class="fw-bold text-gray-600">Create</span>, <span class="fw-bold text-gray-600">Update</span> and <span class="fw-bold text-gray-600">ViewReport</span>, inherits the meta property <code>Authorize: true</code>
+            definition, the children, <span class="fw-bold text-gray-600">Index</span>, <span class="fw-bold text-gray-600">Create</span>, <span class="fw-bold text-gray-600">Edit</span> and <span class="fw-bold text-gray-600">ViewReport</span>, inherits the meta property <code>Authorize: true</code>
             and the roles <code>["Administrator"]</code> from the parent <code>"/books"</code>
           </div>
           <div class="py-5">
@@ -173,7 +173,7 @@
                     path: "/books/create",
                   },                                     // All children
                   {                                      // Inherits role
-                    path: "/books/update/:id",           // "Administrator"
+                    path: "/books/edit/:id",             // "Administrator"
                   },
                   {
                     path: "/books/viewreport",
@@ -199,7 +199,7 @@
                     path: "/books/create",
                   },
                   {
-                    path: "/books/update/:id",
+                    path: "/books/edit/:id",
                   },
                   {
                     path: "/books/viewreport",           // Available to
@@ -289,7 +289,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td><router-link to="./books/update/1" class="text-gray-800 text-hover-primary">Update a book</router-link></td>
+                    <td><router-link to="./books/edit/1" class="text-gray-800 text-hover-primary">Edit a book</router-link></td>
                     <td class="fw-semibold text-gray-600">
                       <ul>
                         <li>admin@admin.com</li>

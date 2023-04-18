@@ -78,8 +78,8 @@
               ozelot:createmodal       (For modals)
               ozelot:index             (For the index page)
               ozelot:indexmodal        (For modals)
-              ozelot:update            (For the update page)
-              ozelot:updatemodal       (For modals)
+              ozelot:edit              (For the edit page)
+              ozelot:editmodal         (For modals)
               </pre>
           </div>
           <div class="py-5">

@@ -1,7 +1,7 @@
 <template>
   <div class="modal-content">
     <div class="modal-header">
-      <h3 class="modal-title">Create Todo</h3>
+      <h3 class="modal-title">Add Todo</h3>
       <button class="btn-close btn btn-icon btn-sm btn-active-light-primary me-0" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
 
@@ -11,7 +11,7 @@
         <div class="col-sm-12">
           <label class="required form-label">Title</label>
           <input type="text" v-model="todo.title" class="form-control form-control-solid" placeholder="Buy milk" />
-          <div class="invalid-feedback"> {{ v$.todo.title.$errors[0]?.$message }} </div>
+          <span class="invalid-feedback"> {{ v$.todo.title.$errors[0]?.$message }} </span>
         </div>
         <div class="col-sm-12">
           <label class="form-label">Status</label>
@@ -27,7 +27,7 @@
 
     <div class="modal-footer">
       <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
-      <button @click="create()" type="button" class="btn btn-primary">Create</button>
+      <button @click="create()" type="button" class="btn btn-primary">Add</button>
     </div>
   </div>
 </template>
@@ -60,10 +60,10 @@ export default {
       const valid = await this.v$.$validate()
       if (!valid) return
       const block = new KTBlockUI(this.$el)
-      const result = await axios.post("todos", this.todo)
+      await axios.post("todos", this.todo)
       await swal.fire("Success", "Todo added successfully", "success")
       block.releaseDestroy()
-      this.$emit("create", result.data)
+      this.$emit("refresh")
       Modal.getInstance(this.$el.parentElement.parentElement).hide()
     },
     resetModal() {

@@ -43,10 +43,10 @@
 <script>
 export default {
   mounted () {
-    this.$setupBlankPage()
+    this.$setupAuthLayout()
   },
   destroyed () {
-    this.$destroyBlankPage()
+    this.$destroyAuthLayout()
   }
 }
 </script>

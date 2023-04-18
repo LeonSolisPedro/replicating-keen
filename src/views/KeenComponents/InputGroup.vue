@@ -51,9 +51,9 @@
             <div class="input-group has-validation mb-5">
                 <span class="input-group-text">@</span>
                 <input type="text" class="form-control is-invalid" required="">
-                <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                <span id="validationServerUsernameFeedback" class="invalid-feedback">
                     Please choose a username.
-                </div>
+                </span>
             </div>
             <!--end::Input group-->
 

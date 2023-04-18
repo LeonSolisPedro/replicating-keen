@@ -74,24 +74,6 @@ export default {
     Vue.component("vue-datatable", () => import("./components/VueDatatable.vue"))
 
     //Adding global methods
-    Vue.prototype.$globalAdd = function (event, accessor){
-      const accesorlista = accessor ? accessor.split(".")[0] : "lista"
-      const accesorid = accessor?.split(".")[1] ? accessor?.split(".")[1] : "id"
-      if(typeof this.$data[accesorlista] === "undefined") return console.error(`Unable to find this.$data.${accesorlista} on current component, please specify the data to continue...`)
-      if(typeof event[accesorid] === "undefined") return console.error(`Property "${accesorid}" does not exist on this.$data.${accesorlista}, please specify the correct id name`)
-      const index = this.$data[accesorlista].findIndex(item => item[accesorid] === event[accesorid])
-      if(index !== -1) return console.error(`Unable to add data, An item with ${accesorid} ${event[accesorid]} already exists in this.$data.${accesorlista}`)
-      this.$data[accesorlista].push(event)
-    }
-    Vue.prototype.$globalEdit = function (event, accessor){
-      const accesorlista = accessor ? accessor.split(".")[0] : "lista"
-      const accesorid = accessor?.split(".")[1] ? accessor?.split(".")[1] : "id"
-      if(typeof this.$data[accesorlista] === "undefined") return console.error(`Unable to find this.$data.${accesorlista} on current component, please specify the data to continue...`)
-      if(typeof event[accesorid] === "undefined") return console.error(`Property "${accesorid}" does not exist on this.$data.${accesorlista}, please specify the correct id name`)
-      const index = this.$data[accesorlista].findIndex(item => item[accesorid] === event[accesorid])
-      if(index === -1) return console.error(`Unable to edit data, The item with ${accesorid} ${event[accesorid]} does not exist in this.$data.${accesorlista}`)
-      this.$data[accesorlista].splice(index, 1, event)
-    }
     Vue.prototype.$globalDelete = async function (url, id, name, accessor) {
       const question = await swal.fire({
         title: `Do you want to delete the item: ${name}?`,
@@ -119,7 +101,7 @@ export default {
       await swal.fire("Success", `${name} deleted successfully`, "success")
       this.$data[accesorlista].splice(index, 1)
     }
-    Vue.prototype.$setupTemplate = function () {
+    Vue.prototype.$setupLayout = function () {
       document.body.classList.add("app-default")
       document.body.setAttribute("data-kt-app-layout", "dark-sidebar")
       document.body.setAttribute("data-kt-app-header-fixed", "true")
@@ -135,7 +117,7 @@ export default {
       const classes = ["d-flex", "flex-column", "flex-root", "app-root"]
       approot.classList.add(...classes)
     }
-    Vue.prototype.$destroyTemplate = function () {
+    Vue.prototype.$destroyLayout = function () {
       document.body.classList.remove("app-default")
       document.body.removeAttribute("data-kt-app-layout")
       document.body.removeAttribute("data-kt-app-header-fixed")
@@ -151,14 +133,14 @@ export default {
       const classes = ["d-flex", "flex-column", "flex-root", "app-root"]
       approot.classList.remove(...classes)
     }
-    Vue.prototype.$setupBlankPage = function () {
+    Vue.prototype.$setupAuthLayout = function () {
       document.body.classList.add("app-blank")
       document.body.id = "kt_body"
       const approot = document.getElementById("app")
       const classes = ["d-flex", "flex-column", "flex-root"]
       approot.classList.add(...classes)
     }
-    Vue.prototype.$destroyBlankPage = function () {
+    Vue.prototype.$destroyAuthLayout = function () {
       document.body.classList.remove("app-blank")
       document.body.id = ""
       const approot = document.getElementById("app")

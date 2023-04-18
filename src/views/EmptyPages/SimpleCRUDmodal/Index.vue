@@ -29,7 +29,7 @@
                   Actions
                 </button>
                 <ul class="dropdown-menu">
-                  <li><button class="dropdown-item" @click="$refs.update.openModal(todo.id)">Editar</button></li>
+                  <li><button class="dropdown-item" @click="$refs.edit.openModal(todo.id)">Edit</button></li>
                   <li><button @click="$globalDelete('/todos/', todo.id, 'Todo')" class="dropdown-item">Delete</button></li>
                 </ul>
               </div>
@@ -40,11 +40,11 @@
     </div>
 
     <div class="modal fade" tabindex="-1" id="create">
-      <div class="modal-dialog modal-lg"><Create @create="$globalAdd($event)"/></div>
+      <div class="modal-dialog"><Create @refresh="refresh()"/></div>
     </div>
 
     <div class="modal fade" tabindex="-1">
-      <div class="modal-dialog modal-lg"><Update @update="$globalEdit($event)" ref="update"/></div>
+      <div class="modal-dialog"><Edit @refresh="refresh()" ref="edit"/></div>
     </div>
 
   </div>
@@ -59,7 +59,13 @@ export default {
   },
   components: {
     Create: () => import("./_Create.vue"),
-    Update: () => import("./_Update.vue")
+    Edit: () => import("./_Edit.vue")
+  },
+  methods: {
+    async refresh() {
+      const result = await axios.get("todos")
+      this.lista = result.data
+    }
   },
   async beforeRouteEnter(to, from, next) {
     const result = await axios.get("todos")
