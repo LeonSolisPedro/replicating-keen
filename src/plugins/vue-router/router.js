@@ -1,8 +1,9 @@
+import { createWebHistory } from "vue-router"
 import DashboardView from "@/views/Shared/DashboardView.vue"
 import BaseController from "@/views/Shared/BaseController.vue"
 
 const routes = {
-  mode: "history",
+  history: createWebHistory(import.meta.env.BASE_URL),
   linkActiveClass: "active",
   base: import.meta.env.BASE_URL,
   routes: [

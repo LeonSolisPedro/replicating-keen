@@ -5,7 +5,7 @@ let KTUtilIdTwo = 0;
 
 
 const ktdrawer = {
-  inserted(el) {
+  mounted(el) {
     el.ktdrawer = new KTDrawer(el)
     if (KTDrawerHandlersInitialized === false) {
       window.addEventListener("resize", eventlistenerfour)
@@ -28,7 +28,7 @@ const ktdrawer = {
       KTDrawerHandlersInitialized = true
     }
   },
-  unbind(el) {
+  unmounted(el) {
     el.ktdrawer.destroy()
     const newArrayDataOfOjbect = Object.values(KTUtilElementDataStore)
     const allDrawers = newArrayDataOfOjbect.flatMap(x => x.drawer)

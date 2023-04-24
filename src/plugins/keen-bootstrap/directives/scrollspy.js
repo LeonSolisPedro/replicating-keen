@@ -1,11 +1,11 @@
 import { ScrollSpy } from "bootstrap"
 
 const scrollspy = {
-  inserted(el) {
+  mounted(el) {
     el.scrollspy = new ScrollSpy(el)
   },
 
-  unbind(el){
+  unmounted(el){
     el.scrollspy.dispose()
     el.scrollspy = null
     delete el.scrollspy

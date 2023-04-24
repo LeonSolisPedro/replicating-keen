@@ -2,7 +2,7 @@
 let KTScrollHandlersInitialized = false;
 
 const ktscroll = {
-  inserted(el) {
+  mounted(el) {
     el.ktscroll = new KTScroll(el)
     if (KTScrollHandlersInitialized === false) {
       window.addEventListener("resize", eventlistenerthree);
@@ -11,7 +11,7 @@ const ktscroll = {
   },
 
 
-  unbind(el) {
+  unmounted(el) {
     el.ktscroll.destroy()
     const newArrayDataOfOjbect = Object.values(KTUtilElementDataStore)
     const allScrolls = newArrayDataOfOjbect.flatMap(x => x.scroll)

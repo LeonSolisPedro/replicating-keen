@@ -58,12 +58,15 @@ export default {
     }
   },
   watch: {
-    watchData(){
-      this.destroyTable()
-      this.$nextTick(() => {
-        this.initTable()
-      })
-    }
+    watchData: {
+      handler(){
+        this.destroyTable()
+        this.$nextTick(() => {
+          this.initTable()
+        })
+      },
+      deep: true
+    },
   },
   methods: {
     initTable(){

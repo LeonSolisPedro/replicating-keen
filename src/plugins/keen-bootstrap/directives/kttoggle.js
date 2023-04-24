@@ -1,8 +1,8 @@
 const kttoggle = {
-  inserted(el){
+  mounted(el){
     el.kttoggle = new KTToggle(el)
   },
-  unbind(el){
+  unmounted(el){
     el.kttoggle.destroy()
     el.kttoggle = null
     delete el.kttoggle
