@@ -315,7 +315,7 @@
         </div>
         <div class="py-5">
           <div class="rounded border p-10">
-            <vue-datatable :manualMode="true" @hook:mounted="initDatatables" id="datatable1" class="table table-row-dashed dt-custom">
+            <vue-datatable :manualMode="true" @vue:mounted="initDatatables" id="datatable1" class="table table-row-dashed dt-custom">
               <thead>
                 <tr>
                   <th>Id</th>
@@ -578,11 +578,14 @@ export default {
     }
   },
   watch: {
-    list2() {
-      $('#datatable1').DataTable().destroy();
-      this.$nextTick(() => {
-        this.initDatatables()
-      });
+    list2: {
+      handler(){
+        $('#datatable1').DataTable().destroy();
+        this.$nextTick(() => {
+          this.initDatatables()
+        });
+      },
+      deep:true
     }
   },
   methods: {

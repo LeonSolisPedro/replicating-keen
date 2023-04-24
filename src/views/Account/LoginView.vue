@@ -81,8 +81,8 @@ export default {
   mounted () {
     this.$setupAuthLayout()
   },
-  destroyed () {
-    this.$destroyAuthLayout()
+  unmounted () {
+    this.$unmountAuthLayout()
   },
 
   methods: {

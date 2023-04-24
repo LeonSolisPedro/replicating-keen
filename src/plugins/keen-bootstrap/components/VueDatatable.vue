@@ -60,7 +60,7 @@ export default {
   watch: {
     watchData: {
       handler(){
-        this.destroyTable()
+        this.unmountTable()
         this.$nextTick(() => {
           this.initTable()
         })
@@ -73,13 +73,13 @@ export default {
       const domElement = this.$el;
       $(domElement).DataTable()
     },
-    destroyTable(){
+    unmountTable(){
       const domElement = this.$el;
       $(domElement).DataTable().destroy();
     }
   },
-  beforeDestroy(){
-    this.destroyTable()
+  beforeUnmount(){
+    this.unmountTable()
   }
 }
 </script>
