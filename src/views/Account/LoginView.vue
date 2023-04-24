@@ -104,7 +104,7 @@ export default {
     },
     
     redirect(){
-      const returnUrl = this?.$router?.currentRoute?.query?.returnUrl
+			const returnUrl = this?.$route?.query?.returnUrl
       if(returnUrl)
         this.$router.push({ path: returnUrl })
       else

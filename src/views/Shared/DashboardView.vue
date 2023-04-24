@@ -578,7 +578,7 @@
 											</span>
 											<span class="menu-title">Overview</span>
 										</router-link>
-										<router-link to="/rolebasedplugin/books/index" class="menu-link">
+										<router-link to="/rolebasedplugin/books" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>

@@ -1010,7 +1010,7 @@
     <!--begin::Duotune examples--> 
     <!--begin::Block-->
     <div class="py-5">
-       Please, use <a href="https://fontawesome.com" class="fw-semibold">Fontawesome 6</a> because it better integrates with Vue 2
+       Please, use <a href="https://fontawesome.com" class="fw-semibold">Fontawesome 6</a> because it better integrates with Vue 3
     </div>
     <!--end::Block-->  
 
