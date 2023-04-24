@@ -1,5 +1,5 @@
 const ktbuttons = {
-  inserted(el) {
+  mounted(el) {
     //Copied from KTApp.js
     var selector = el.hasAttribute('data-kt-buttons-target') ? el.getAttribute('data-kt-buttons-target') : '.btn';
     var activeButtons = [].slice.call(el.querySelectorAll(selector));
@@ -12,7 +12,7 @@ const ktbuttons = {
     el.ktbuttonsId = id
   },
 
-  unbind(el){
+  unmounted(el){
     KTUtil.off(el, "click", el.ktbuttonsId)
   }
 }

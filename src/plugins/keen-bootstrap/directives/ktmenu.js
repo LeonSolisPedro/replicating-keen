@@ -6,7 +6,7 @@ let KTUtilIdFour = 0;
 let KTUtilIdFive = 0;
 
 const ktmenu = {
-  inserted(el) {
+  mounted(el) {
     //Copied from KTMenu.js
     el.ktmenu = new KTMenu(el)
     if (KTMenuHandlersInitialized === false) {
@@ -46,7 +46,7 @@ const ktmenu = {
     }
   },
 
-  unbind(el) {
+  unmounted(el) {
     el.ktmenu.destroy()
     const newArrayDataOfOjbect = Object.values(KTUtilElementDataStore)
     const allMenus = newArrayDataOfOjbect.flatMap(x => x.menu)

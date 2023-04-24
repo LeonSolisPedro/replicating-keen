@@ -1,17 +1,16 @@
-import Vue from "vue"
+import { createApp } from "vue"
 import App from "./App.vue"
-
-/**
- * Global plugins goes here
- */
-import "./plugins/keen-bootstrap"
-import "./plugins/fontawesome"
-import "./plugins/sweetalert2"
-import "./plugins/axios"
+import keenBootstrap from "./plugins/keen-bootstrap"
+import fontawesome from "./plugins/fontawesome"
+import sweetalert from "./plugins/sweetalert2"
+import axios from "./plugins/axios"
 import router from "./plugins/vue-router"
 
-
-new Vue({
-  router,
-  render: (h) => h(App)
-}).$mount("#app")
+//Global Plugins
+const app = createApp(App)
+app.use(keenBootstrap)
+app.use(fontawesome)
+app.use(sweetalert)
+app.use(axios)
+app.use(router)
+app.mount('#app')

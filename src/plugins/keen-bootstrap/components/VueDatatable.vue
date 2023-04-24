@@ -58,25 +58,28 @@ export default {
     }
   },
   watch: {
-    watchData(){
-      this.destroyTable()
-      this.$nextTick(() => {
-        this.initTable()
-      })
-    }
+    watchData: {
+      handler(){
+        this.unmountTable()
+        this.$nextTick(() => {
+          this.initTable()
+        })
+      },
+      deep: true
+    },
   },
   methods: {
     initTable(){
       const domElement = this.$el;
       $(domElement).DataTable()
     },
-    destroyTable(){
+    unmountTable(){
       const domElement = this.$el;
       $(domElement).DataTable().destroy();
     }
   },
-  beforeDestroy(){
-    this.destroyTable()
+  beforeUnmount(){
+    this.unmountTable()
   }
 }
 </script>

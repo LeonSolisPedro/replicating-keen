@@ -79,7 +79,7 @@
 
               <!--#region Keen component -->
 							<div class="menu-item">
-								<router-link to="/" exact class="menu-link">
+								<router-link to="/" active-class="exact" class="menu-link">
 								  <span class="menu-icon">
 										<font-awesome-icon icon="fa-solid fa-home" />
 									</span>
@@ -578,7 +578,7 @@
 											</span>
 											<span class="menu-title">Overview</span>
 										</router-link>
-										<router-link to="/rolebasedplugin/books/index" class="menu-link">
+										<router-link to="/rolebasedplugin/books" class="menu-link">
 											<span class="menu-bullet">
 												<span class="bullet bullet-dot"></span>
 											</span>
@@ -635,8 +635,8 @@ export default {
   mounted () {
     this.$setupLayout()
   },
-  destroyed () {
-    this.$destroyLayout()
+  unmounted () {
+    this.$unmountLayout()
   },
   methods: {
     logout() {

@@ -81,8 +81,8 @@ export default {
   mounted () {
     this.$setupAuthLayout()
   },
-  destroyed () {
-    this.$destroyAuthLayout()
+  unmounted () {
+    this.$unmountAuthLayout()
   },
 
   methods: {
@@ -104,7 +104,7 @@ export default {
     },
     
     redirect(){
-      const returnUrl = this?.$router?.currentRoute?.query?.returnUrl
+			const returnUrl = this?.$route?.query?.returnUrl
       if(returnUrl)
         this.$router.push({ path: returnUrl })
       else

@@ -1,9 +1,9 @@
 const ktrotate = {
-  bind(el) {
+  beforeMount(el) {
     el.addEventListener("click", handler)
   },
 
-  unbind(el) {
+  unmounted(el) {
     el.removeEventListener("click", handler)
   }
 }

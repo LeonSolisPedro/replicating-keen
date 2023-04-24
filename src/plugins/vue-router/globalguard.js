@@ -8,7 +8,7 @@ const globalguard = (to, from, next) => {
   // Check if the current router has the meta: Authorize
   if(to.meta?.Authorize){
     if(testAuth() == false){
-      next({ path: '/login', replace: true, query: { returnUrl: to?.redirectedFrom ?? to.fullPath } })
+      next({ path: '/login', replace: true, query: { returnUrl: to?.redirectedFrom?.fullPath ?? to.fullPath } })
       return
     }
   }

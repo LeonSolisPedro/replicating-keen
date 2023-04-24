@@ -8,10 +8,15 @@ const redirects = (to, from, next) => {
 
     //Todo: Import here jwt library
     const jwtroles = JSON.parse(localStorage.getItem("roles"))
-    if (jwtroles[0] === "Administrator")
+    if (jwtroles[0] === "Administrator"){
       next({ path: `${coolurl}/admin`, replace: true })
-    if (jwtroles[0] === "Employee")
+      return
+    }
+    if (jwtroles[0] === "Employee"){
       next({ path: `${coolurl}/employee`, replace: true })
+      return
+    }
+      
   }
 
   
@@ -21,8 +26,10 @@ const redirects = (to, from, next) => {
   if (redirectindex) {
     const coolurl = to.path.replace(/\/$/, "");
     next({ path: `${coolurl}/index`, replace: true })
+    return
   }
 
+  next()
 }
 
 

@@ -1,11 +1,11 @@
 import { Popover } from "bootstrap"
 
 const popover = {
-  inserted(el) {
+  mounted(el) {
     el.popover = new Popover(el)
   },
 
-  unbind(el){
+  unmounted(el){
     el.popover.dispose()
     el.popover = null
     delete el.popover

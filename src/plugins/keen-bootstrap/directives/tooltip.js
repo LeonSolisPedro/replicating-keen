@@ -1,11 +1,11 @@
 import { Tooltip } from "bootstrap"
 
 const tooltip = {
-  inserted(el) {
+  mounted(el) {
     el.tooltip = new Tooltip(el)
   },
 
-  unbind(el){
+  unmounted(el){
     el.tooltip.dispose()
     el.tooltip = null
     delete el.tooltip

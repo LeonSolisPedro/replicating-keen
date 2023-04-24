@@ -8,7 +8,7 @@
         </span>
       </h1>
       <div class="fw-semibold fs-2 text-gray-500">
-        Follow the links below to explore keen 3.0.2 on Vue 2!
+        Follow the links below to explore keen 3.0.2 on Vue 3!
       </div>
     </div>
   </div>
