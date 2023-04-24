@@ -46,7 +46,7 @@ export default {
     this.$setupAuthLayout()
   },
   unmounted () {
-    this.$unmountAuthLayout()
+    this.$destroyAuthLayout()
   }
 }
 </script>

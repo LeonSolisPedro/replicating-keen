@@ -636,7 +636,7 @@ export default {
     this.$setupLayout()
   },
   unmounted () {
-    this.$unmountLayout()
+    this.$destroyLayout()
   },
   methods: {
     logout() {

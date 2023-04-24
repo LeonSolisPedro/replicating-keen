@@ -3,7 +3,7 @@ import "sweetalert2/dist/sweetalert2.css"
 import "./style.scss"
 
 export default {
-  install(app){
+  install(){
     window.swal = window.Swal = sweetalert2.mixin({
       buttonsStyling: false,
       allowOutsideClick: false,

@@ -182,11 +182,11 @@
             </pre>
         </div>
         <div class="py-5">
-          Then, specify the desired <code>id</code> and pass a Vue method inside the <code>hook:mounted</code> event
+          Then, specify the desired <code>id</code> and pass a Vue method inside the <code>vue:mounted</code> event
         </div>
         <div class="py-5">
           <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
-            &lt;vue-datatable :manualMode="true" @hook:mounted="initDatatables" id="datatable1" /&gt;
+            &lt;vue-datatable :manualMode="true" @vue:mounted="initDatatables" id="datatable1" /&gt;
             </pre>
         </div>
         <div class="py-5">
@@ -212,26 +212,44 @@
         <div class="py-5">
           <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
             watch: {
-              list1() {
+              list1: {
 
               }
             },
             </pre>
         </div>
         <div class="py-5">
-          Then, inside the <code>watch</code> method, destroy DataTables and reinitialize it again
+          Then, inside the <code>watch</code> property, destroy DataTables and reinitialize it again, using the
+          <code>handler()</code> method
         </div>
         <div class="py-5">
           <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
             watch: {
-              list1() {
-                $('#datatable1').DataTable().destroy();
-                this.$nextTick(() => {
-                  this.initDatatables()
-                });
+              list1: {
+                handler(){
+                  $('#datatable1').DataTable().destroy();
+                  this.$nextTick(() => {
+                    this.initDatatables()
+                  });
+                }
               }
             },
             </pre>
+        </div>
+        <div class="py-5">
+          Don't forget to add the property <code>deep: true</code> inside the watcher, to make sure reactivity work
+        </div>
+        <div class="py-5">
+          <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
+            watch: {
+              list1: {
+                handler(){
+                  ...
+                },
+                deep: true       &#60-- Specify this
+              }
+            },
+          </pre>
         </div>
         <div class="py-5">
           This way, when new data is added to the list, DataTables will reinitialize itself and respond to the
@@ -241,7 +259,7 @@
           This is the full working code of manual initialization
         </div>
         <div class="py-5">
-          <div class="highlight"> <button class="highlight-copy btn" data-bs-toggle="tooltip" data-bs-original-title="Copy code" data-kt-initialized="1">copy</button> <ul class="nav nav-pills" role="tablist"> <li class="nav-item" role="presentation"> <a class="nav-link active" data-bs-toggle="tab" href="#kt_highlight_63e537c8b9be3" role="tab" aria-selected="true">HTML</a></li> <li class="nav-item" role="presentation"> <a class="nav-link " data-bs-toggle="tab" href="#kt_highlight_63e537c8b9bea" role="tab" aria-selected="false" tabindex="-1">Vue Script</a></li></ul> <div class="tab-content"><div class="tab-pane fade show active" id="kt_highlight_63e537c8b9be3" role="tabpanel"><div class="highlight-code"><pre class="language-html" tabindex="0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>vue-datatable</span> <span class="token attr-name">:manualMode</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">@hook:</span>mounted</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>initDatatables<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>datatable1<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>table table-row-dashed dt-custom<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+          <div class="highlight"> <button class="highlight-copy btn" data-bs-toggle="tooltip" data-bs-original-title="Copy code" data-kt-initialized="1">copy</button> <ul class="nav nav-pills" role="tablist"> <li class="nav-item" role="presentation"> <a class="nav-link active" data-bs-toggle="tab" href="#kt_highlight_63e537c8b9be3" role="tab" aria-selected="true">HTML</a></li> <li class="nav-item" role="presentation"> <a class="nav-link " data-bs-toggle="tab" href="#kt_highlight_63e537c8b9bea" role="tab" aria-selected="false" tabindex="-1">Vue Script</a></li></ul> <div class="tab-content"><div class="tab-pane fade show active" id="kt_highlight_63e537c8b9be3" role="tabpanel"><div class="highlight-code"><pre class="language-html" tabindex="0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>vue-datatable</span> <span class="token attr-name">:manualMode</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">@vue:</span>mounted</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>initDatatables<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>datatable1<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>table table-row-dashed dt-custom<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>thead</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">&gt;</span></span>Id<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">&gt;</span></span>
@@ -281,11 +299,14 @@
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token literal-property property">watch</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token function">list2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#datatable1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">DataTable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$nextTick</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">initDatatables</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token literal-property property">list2</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token function">handler</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#datatable1'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">DataTable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$nextTick</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">initDatatables</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">deep</span><span class="token operator">:</span> <span class="token boolean">true</span>
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token literal-property property">methods</span><span class="token operator">:</span> <span class="token punctuation">{</span>

@@ -114,7 +114,7 @@ export default {
       const classes = ["d-flex", "flex-column", "flex-root", "app-root"]
       approot.classList.add(...classes)
     }
-    app.config.globalProperties.$unmountLayout = function () {
+    app.config.globalProperties.$destroyLayout = function () {
       document.body.classList.remove("app-default")
       document.body.removeAttribute("data-kt-app-layout")
       document.body.removeAttribute("data-kt-app-header-fixed")
@@ -137,7 +137,7 @@ export default {
       const classes = ["d-flex", "flex-column", "flex-root"]
       approot.classList.add(...classes)
     }
-    app.config.globalProperties.$unmountAuthLayout = function () {
+    app.config.globalProperties.$destroyAuthLayout = function () {
       document.body.classList.remove("app-blank")
       document.body.id = ""
       const approot = document.getElementById("app")
