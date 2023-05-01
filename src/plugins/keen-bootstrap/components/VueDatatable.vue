@@ -15,8 +15,7 @@
 // @import "datatables.net-scroller-bs5/css/scroller.bootstrap5.min.css";
 // @import "datatables.net-select-bs5/css/select.bootstrap5.min.css";
 // @import "datatables.net-datetime/dist/dataTables.dateTime.min.css";
-@import "@/plugins/keen-bootstrap/src/sass/init";
-@import "@/plugins/keen-bootstrap/src/sass/vendors/plugins/datatables";
+table.dataTable { margin: 0 !important; }
 </style>
 
 
