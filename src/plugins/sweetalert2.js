@@ -1,6 +1,5 @@
-import sweetalert2 from "sweetalert2"
+import sweetalert2 from "sweetalert2/dist/sweetalert2.js"
 import "sweetalert2/dist/sweetalert2.css"
-import "./style.scss"
 
 export default {
   install(){
