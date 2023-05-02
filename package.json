@@ -1,6 +1,6 @@
 {
   "name": "replicatingkeen",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "scripts": {
     "serve": "vite",
     "build": "vite build",
