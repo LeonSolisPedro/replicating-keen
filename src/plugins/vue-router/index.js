@@ -1,9 +1,9 @@
 import { createRouter } from 'vue-router'
 import routes from "./router"
-import globalguard from "./globalguard"
-import redirects from "./redirects"
+import roleplugin from "./roleplugin"
+import redirectplugin from "./redirectplugin"
 
 const router = new createRouter(routes)
-router.beforeEach((to, from, next) => globalguard(to, from, next))
-router.beforeEach((to, from, next) => redirects(to, from, next))
+router.beforeEach((to, from, next) => roleplugin(to, from, next))
+router.beforeEach((to, from, next) => redirectplugin(to, from, next))
 export default router

@@ -1,4 +1,4 @@
-const globalguard = (to, from, next) => {
+const roleplugin = (to, from, next) => {
 
   // Check if the current router has the meta: AllowAnonymous
   if(to.meta?.AllowAnonymous){
@@ -81,4 +81,4 @@ function testRoles(rolesMeta){
   return true
 }
 
-export default globalguard
+export default roleplugin

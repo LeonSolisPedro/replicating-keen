@@ -1,5 +1,6 @@
 import { defineAsyncComponent } from "vue"
 import "./src/sass/style.scss"
+import "./src/sass/plugins.scss"
 import "@fontsource/inter/latin-100.css"
 import "@fontsource/inter/latin-200.css"
 import "@fontsource/inter/latin-300.css"
