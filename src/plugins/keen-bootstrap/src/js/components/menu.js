@@ -1126,4 +1126,12 @@ KTMenu.init = function() {
     }    
 };
 
+KTMenu.initVue = function() {
+    if (KTMenuHandlersInitialized === false) {
+        KTMenu.initHandlers();
+
+        KTMenuHandlersInitialized = true;
+    }   
+}
+
 export default KTMenu

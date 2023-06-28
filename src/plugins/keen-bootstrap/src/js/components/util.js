@@ -644,11 +644,6 @@ var KTUtil = function() {
                 remove: function(name) {
                     if (el && this.has(name)) {
                         delete window.KTUtilElementDataStore[el.customDataTag][name];
-                        const superobject = window.KTUtilElementDataStore[el.customDataTag]
-                        if(Object.keys(superobject).length === 0){
-                            delete window.KTUtilElementDataStore[el.customDataTag]
-                            window.KTUtilElementDataStoreID--;
-                        }
                     }
                 }
             };
