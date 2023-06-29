@@ -6,7 +6,6 @@ import "@fontsource/inter/latin-600.css"
 import "@fontsource/inter/latin-700.css"
 import "./src/sass/style.scss"
 import "./src/sass/plugins.scss"
-
 import * as bootstrap from "bootstrap"
 import tooltip from "./directives/tooltip"
 import popover from "./directives/popover"
@@ -17,10 +16,8 @@ import ktmenu from "./directives/ktmenu"
 import kttoggle from "./directives/kttoggle"
 import ktscroll from "./directives/ktscroll"
 import ktdrawer from "./directives/ktdrawer"
-
 import KTApp from "./src/js/components/appcustomvue"
 import KTBlockUI from "./src/js/components/blockui"
-import KTCookie from "./src/js/components/cookie"
 import KTDrawer from "./src/js/components/drawer"
 import KTEventHandler from "./src/js/components/event-handler"
 import KTMenu from "./src/js/components/menu"                              
@@ -35,7 +32,6 @@ export default {
     //Global Keen objects
     window.KTApp = KTApp
     window.KTBlockUI = KTBlockUI
-    window.KTCookie = KTCookie
     window.KTDrawer = KTDrawer
     window.KTEventHandler = KTEventHandler
     window.KTMenu = KTMenu
