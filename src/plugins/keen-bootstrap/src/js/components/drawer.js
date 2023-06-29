@@ -8,9 +8,6 @@ var KTDrawer = function(element, options) {
     // ** Private variables  ** //
     //////////////////////////////
     var the = this;
-    var KTUtilIdOne = 0;
-    var KTUtilIdTwo = 0;
-
 
     if ( typeof element === "undefined" || element === null ) {
         return;
@@ -65,7 +62,7 @@ var KTDrawer = function(element, options) {
         var closers = _getOption('close');
 
         if ( togglers !== null && togglers.length > 0 ) {
-            KTUtilIdOne = KTUtil.on(document.body, togglers, 'click', function(e) {
+            KTUtil.on(document.body, togglers, 'click', function(e) {
                 e.preventDefault();
 
                 the.toggleElement = this;
@@ -74,7 +71,7 @@ var KTDrawer = function(element, options) {
         }
 
         if ( closers !== null && closers.length > 0 ) {
-            KTUtilIdTwo = KTUtil.on(document.body, closers, 'click', function(e) {
+            KTUtil.on(document.body, closers, 'click', function(e) {
                 e.preventDefault();
 
                 the.closeElement = this;
@@ -277,8 +274,6 @@ var KTDrawer = function(element, options) {
 
     var _destroy = function() {
         KTUtil.data(the.element).remove('drawer');
-        KTUtil.off(document.body, "click", KTUtilIdOne)
-        KTUtil.off(document.body, "click", KTUtilIdTwo)
     }
 
     // Construct class
@@ -458,5 +453,15 @@ KTDrawer.init = function() {
         KTDrawerHandlersInitialized = true;
     }
 };
+
+KTDrawer.initVue = function(){
+    if (KTDrawerHandlersInitialized === false) {
+        KTDrawer.handleResize();
+        KTDrawer.handleShow();
+        KTDrawer.handleDismiss();
+
+        KTDrawerHandlersInitialized = true;
+    }
+}
 
 export default KTDrawer

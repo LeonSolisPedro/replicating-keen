@@ -350,4 +350,12 @@ KTScroll.init = function() {
     }    
 };
 
+KTScroll.initVue = function(){
+    if (KTScrollHandlersInitialized === false) {
+        KTScroll.handleResize();
+
+        KTScrollHandlersInitialized = true;
+    }    
+}
+
 export default KTScroll

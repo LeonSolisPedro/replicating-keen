@@ -1,15 +1,11 @@
 import { defineAsyncComponent } from "vue"
-import "./src/sass/style.scss"
-import "./src/sass/plugins.scss"
-import "@fontsource/inter/latin-100.css"
-import "@fontsource/inter/latin-200.css"
 import "@fontsource/inter/latin-300.css"
 import "@fontsource/inter/latin-400.css"
 import "@fontsource/inter/latin-500.css"
 import "@fontsource/inter/latin-600.css"
 import "@fontsource/inter/latin-700.css"
-import "@fontsource/inter/latin-800.css"
-import "@fontsource/inter/latin-900.css"
+import "./src/sass/style.scss"
+import "./src/sass/plugins.scss"
 import * as bootstrap from "bootstrap"
 import tooltip from "./directives/tooltip"
 import popover from "./directives/popover"
@@ -20,39 +16,28 @@ import ktmenu from "./directives/ktmenu"
 import kttoggle from "./directives/kttoggle"
 import ktscroll from "./directives/ktscroll"
 import ktdrawer from "./directives/ktdrawer"
-
-import KTUtil from "./src/js/components/util"
 import KTApp from "./src/js/components/appcustomvue"
-import KTEventHandler from "./src/js/components/event-handler"
 import KTBlockUI from "./src/js/components/blockui"
-import KTCookie from "./src/js/components/cookie"
-import KTMenu from "./src/js/components/menu"                              
-// import KTDialer from "./src/js/components/dialer"                        //Replaced by Vue
 import KTDrawer from "./src/js/components/drawer"
-// import KTFeedback from "./src/js/components/feedback"                  //???
-//import KTImageInput from "./src/js/components/image-input"              //Memory leak detected
-// import KTPasswordMeter from "./src/js/components/password-meter"       //Memory leak detected.
+import KTEventHandler from "./src/js/components/event-handler"
+import KTMenu from "./src/js/components/menu"                              
 import KTScroll from "./src/js/components/scroll"
-// import KTScrolltop from "./src/js/components/scrolltop"               //Replaced by vue
-// import KTSearch from "./src/js/components/search"                     //Memory leak detected.
-// import KTStepper from "./src/js/components/stepper"                   //Memory leak detected.
-// import KTSticky from "./src/js/components/sticky"                     //Replaced by bootstrap sticky
-// import KTSwapper from "./src/js/components/swapper"                   //Replaced by bootstrap
 import KTToggle from "./src/js/components/toggle"
+import KTUtil from "./src/js/components/util"
+
 
 export default {
   install(app){
 
     //Global Keen objects
-    window.KTUtil = KTUtil
     window.KTApp = KTApp
-    window.KTEventHandler = KTEventHandler
     window.KTBlockUI = KTBlockUI
-    window.KTCookie = KTCookie
-    window.KTMenu = KTMenu
-    window.KTToggle = KTToggle
     window.KTDrawer = KTDrawer
+    window.KTEventHandler = KTEventHandler
+    window.KTMenu = KTMenu
     window.KTScroll = KTScroll
+    window.KTToggle = KTToggle
+    window.KTUtil = KTUtil
 
     //Bootstrap configuration
     bootstrap.Modal.Default.backdrop = "static"
