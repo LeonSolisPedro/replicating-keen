@@ -9,7 +9,7 @@
     </div>
 
     <div class="card-body">
-      <vue-datatable :watchData="lista" class="table table-row-dashed dt-custom">
+      <VueDatatable :watchData="lista" class="table table-row-dashed dt-custom">
         <thead>
           <tr>
             <th>Id</th>
@@ -36,7 +36,7 @@
             </th>
           </tr>
         </tbody>
-      </vue-datatable>
+      </VueDatatable>
     </div>
 
     <div class="modal fade" tabindex="-1" id="create">

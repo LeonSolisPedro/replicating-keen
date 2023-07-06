@@ -32,7 +32,7 @@
 							</button>
 						</div>
 						<div class="text-gray-500 text-center fw-semibold fs-6">Not an user?
-							<router-link to="/signup" class="link-primary">Sign Up Here</router-link>
+							<RouterLink to="/signup" class="link-primary">Sign Up Here</RouterLink>
 						</div>
 					</form>
 				</div>

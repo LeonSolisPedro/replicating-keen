@@ -4,7 +4,7 @@
     <div class="card-header">
       <h2 class="card-title">Add Todo</h2>
       <div class="card-toolbar">
-        <router-link to="index" class="btn btn-flex btn-light">Return</router-link>
+        <RouterLink to="index" class="btn btn-flex btn-light">Return</RouterLink>
         <button @click.prevent="create()" class="btn btn-flex btn-primary">Add</button>
       </div>
     </div>

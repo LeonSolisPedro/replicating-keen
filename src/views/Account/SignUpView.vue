@@ -18,7 +18,7 @@
 							<h1 class="text-dark fw-bolder mb-3">SignUp View</h1>
 						</div>
 						<div class="text-gray-500 text-center fw-semibold fs-6">Already an user?
-							<router-link to="/login" class="link-primary">Login Here</router-link> instead
+							<RouterLink to="/login" class="link-primary">Login Here</RouterLink> instead
 						</div>
 					</form>
 				</div>

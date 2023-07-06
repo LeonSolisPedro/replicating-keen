@@ -18,7 +18,7 @@
           <div class="pb-10">
             <h1 id="overview" class="anchor fw-bold mb-5"><a href="#overview"></a> Overview</h1>
             <div class="py-5">
-              The following components, are plugins that will help you build <router-link to="datatables" target="_blank">cruds</router-link>, <router-link to="ktmenu/index" target="_blank">menus</router-link>, <router-link to="sweetalert2" target="_blank">alerts</router-link> and <router-link to="vuelidate" target="_blank">validations</router-link>.
+              The following components, are plugins that will help you build <RouterLink to="datatables" target="_blank">cruds</RouterLink>, <RouterLink to="ktmenu/index" target="_blank">menus</RouterLink>, <RouterLink to="sweetalert2" target="_blank">alerts</RouterLink> and <RouterLink to="vuelidate" target="_blank">validations</RouterLink>.
             </div>
             <div class="py-5">
               These plugins require some <span class="fw-bold text-gray-600">specific configuration</span> in order for them to work properly
@@ -27,7 +27,7 @@
               We recommend reading all the documentation, so you can configure each plugin, the correct way.
             </div>
             <div class="py-5">
-              There's also <router-link to="legacy/ktdrawer" target="_blank">legacy plugins</router-link>. plugins that do not make sense to use with Vue, but <span class="fw-bold text-gray-600">keen provides</span> in addition to its documentation<br>
+              There's also <RouterLink to="legacy/ktdrawer" target="_blank">legacy plugins</RouterLink>. plugins that do not make sense to use with Vue, but <span class="fw-bold text-gray-600">keen provides</span> in addition to its documentation<br>
             </div>
             <div class="py-5">
               Feel free to implement any plugin you want
@@ -51,7 +51,7 @@
             </h1>
           </div>
           <div class="text-center mb-1">
-            <router-link to="datatables" class="btn btn-sm btn-light">Explore now!</router-link>
+            <RouterLink to="datatables" class="btn btn-sm btn-light">Explore now!</RouterLink>
           </div>
         </div>
       </div>

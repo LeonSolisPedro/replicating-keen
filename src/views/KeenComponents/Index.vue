@@ -18,7 +18,7 @@
           <div class="pb-10">
             <h1 id="overview" class="anchor fw-bold mb-5"><a href="#overview"></a> Overview</h1>
             <div class="py-5">
-              In the following pages, you will explore keen components that will help you build <router-link to="inputgroup" target="_blank">inputs</router-link>, <router-link to="modal" target="_blank">modals</router-link>, <router-link to="alerts" target="_blank">alerts</router-link>, and <router-link to="toasts" target="_blank">toasts</router-link>
+              In the following pages, you will explore keen components that will help you build <RouterLink to="inputgroup" target="_blank">inputs</RouterLink>, <RouterLink to="modal" target="_blank">modals</RouterLink>, <RouterLink to="alerts" target="_blank">alerts</RouterLink>, and <RouterLink to="toasts" target="_blank">toasts</RouterLink>
             </div>
             <div class="py-5">
               These components have been <span class="fw-bold text-gray-600">heavily modified</span>, so they will look and feel different.
@@ -45,7 +45,7 @@
             </h1>
           </div>
           <div class="text-center mb-1">
-            <router-link to="utilities" class="btn btn-sm btn-light">Explore now!</router-link>
+            <RouterLink to="utilities" class="btn btn-sm btn-light">Explore now!</RouterLink>
           </div>
         </div>
       </div>

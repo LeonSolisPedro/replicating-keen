@@ -23,7 +23,7 @@
         </div>
         <div class="py-5">
           <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
-            &lt;vue-datatable /&gt;
+            &lt;VueDatatable /&gt;
             </pre>
         </div>
       </div>
@@ -35,10 +35,10 @@
           <a href="#basicexample"></a>Basic Example
         </h1>
         <div class="py-5">
-          If you plan to use DataTables for static data, use the vue-datatable component right away
+          If you plan to use DataTables for static data, use the VueDatatable component right away
         </div>
         <div class="py-5">
-        <!--begin::Highlight--><div class="highlight">  <button class="highlight-copy btn" data-bs-toggle="tooltip" data-bs-original-title="Copy code" data-kt-initialized="1">copy</button>    <div class="highlight-code"><pre class="language-html" tabindex="0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>vue-datatable</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>table table-row-dashed dt-custom<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <!--begin::Highlight--><div class="highlight">  <button class="highlight-copy btn" data-bs-toggle="tooltip" data-bs-original-title="Copy code" data-kt-initialized="1">copy</button>    <div class="highlight-code"><pre class="language-html" tabindex="0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>VueDatatable</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>table table-row-dashed dt-custom<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>thead</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">&gt;</span></span>Id<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">&gt;</span></span>
@@ -53,10 +53,10 @@
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">&gt;</span></span>Unemployment<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tbody</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>vue-datatable</span><span class="token punctuation">&gt;</span></span></code></pre>    </div></div><!--end::Highlight-->    </div>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>VueDatatable</span><span class="token punctuation">&gt;</span></span></code></pre>    </div></div><!--end::Highlight-->    </div>
         <div class="py-5">
           <div class="rounded border p-10">
-            <vue-datatable class="table table-row-dashed dt-custom">
+            <VueDatatable class="table table-row-dashed dt-custom">
               <thead>
                 <tr>
                   <th>Id</th>
@@ -71,7 +71,7 @@
                   <th>Unemployment</th>
                 </tr>
               </tbody>
-            </vue-datatable>
+            </VueDatatable>
           </div>
         </div>
       </div>
@@ -82,19 +82,19 @@
           <a href="#examplevfor"></a>Example with v-for
         </h1>
         <div class="py-5">
-          If you plan to use v-for inside the vue-datatable component, first, specify the <code>watchData</code> prop on the
-          vue-datatable component and specify the list that you want to iterate for.
+          If you plan to use v-for inside the VueDatatable component, first, specify the <code>watchData</code> prop on the
+          VueDatatable component and specify the list that you want to iterate for.
         </div>
         <div class="py-5">
           <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
-            &lt;vue-datatable :watchData="list1" /&gt;
+            &lt;VueDatatable :watchData="list1" /&gt;
             </pre>
         </div>
         <div class="py-5">
           After that, iterate the list with <code>v-for</code>
         </div>
         <div class="py-5">
-          <div class="highlight"> <button class="highlight-copy btn" data-bs-toggle="tooltip" data-bs-original-title="Copy code" data-kt-initialized="1">copy</button> <ul class="nav nav-pills" role="tablist"> <li class="nav-item" role="presentation"> <a class="nav-link active" data-bs-toggle="tab" href="#kt_highlight_63e537c8b9ae3" role="tab" aria-selected="true">HTML</a></li> <li class="nav-item" role="presentation"> <a class="nav-link " data-bs-toggle="tab" href="#kt_highlight_63e537c8b9aea" role="tab" aria-selected="false" tabindex="-1">Vue Script</a></li></ul> <div class="tab-content"><div class="tab-pane fade show active" id="kt_highlight_63e537c8b9ae3" role="tabpanel"><div class="highlight-code"><pre class="language-html" tabindex="0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>vue-datatable</span> <span class="token attr-name">:watchData</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list1<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>table table-row-dashed dt-custom<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+          <div class="highlight"> <button class="highlight-copy btn" data-bs-toggle="tooltip" data-bs-original-title="Copy code" data-kt-initialized="1">copy</button> <ul class="nav nav-pills" role="tablist"> <li class="nav-item" role="presentation"> <a class="nav-link active" data-bs-toggle="tab" href="#kt_highlight_63e537c8b9ae3" role="tab" aria-selected="true">HTML</a></li> <li class="nav-item" role="presentation"> <a class="nav-link " data-bs-toggle="tab" href="#kt_highlight_63e537c8b9aea" role="tab" aria-selected="false" tabindex="-1">Vue Script</a></li></ul> <div class="tab-content"><div class="tab-pane fade show active" id="kt_highlight_63e537c8b9ae3" role="tabpanel"><div class="highlight-code"><pre class="language-html" tabindex="0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>VueDatatable</span> <span class="token attr-name">:watchData</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list1<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>table table-row-dashed dt-custom<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>thead</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">&gt;</span></span>Id<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">&gt;</span></span>
@@ -109,7 +109,7 @@
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">&gt;</span></span>&#123;&#123; people.status &#123;&#123;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tbody</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>vue-datatable</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>VueDatatable</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary<span class="token punctuation">"</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>addData1()<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Add new Data<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span></code></pre></div></div><div class="tab-pane fade " id="kt_highlight_63e537c8b9aea" role="tabpanel"><div class="highlight-code"><pre class="language-javascript" tabindex="0"><code class="language-javascript"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
   <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">{</span>
@@ -141,7 +141,7 @@
         </div>
         <div class="py-5">
           <div class="rounded border p-10">
-            <vue-datatable :watchData="list1" class="table table-row-dashed dt-custom">
+            <VueDatatable :watchData="list1" class="table table-row-dashed dt-custom">
               <thead>
                 <tr>
                   <th>Id</th>
@@ -156,7 +156,7 @@
                   <th>{{ people.status }}</th>
                 </tr>
               </tbody>
-            </vue-datatable>
+            </VueDatatable>
             <button class="btn btn-primary" @click="addData1()">Add new Data</button>
           </div>
         </div>
@@ -178,7 +178,7 @@
         </div>
         <div class="py-5">
           <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
-            &lt;vue-datatable :manualMode="true" /&gt;
+            &lt;VueDatatable :manualMode="true" /&gt;
             </pre>
         </div>
         <div class="py-5">
@@ -186,7 +186,7 @@
         </div>
         <div class="py-5">
           <pre style="background-color: var(--kt-gray-100);padding-top: 18px;">
-            &lt;vue-datatable :manualMode="true" @vue:mounted="initDatatables" id="datatable1" /&gt;
+            &lt;VueDatatable :manualMode="true" @vue:mounted="initDatatables" id="datatable1" /&gt;
             </pre>
         </div>
         <div class="py-5">
@@ -206,7 +206,7 @@
             </pre>
         </div>
         <div class="py-5">
-          If you like to use <code>v-for</code> inside the vue-datatable component, make sure to watch for changes on the
+          If you like to use <code>v-for</code> inside the VueDatatable component, make sure to watch for changes on the
           list that you are iterating for.
         </div>
         <div class="py-5">
@@ -259,7 +259,7 @@
           This is the full working code of manual initialization
         </div>
         <div class="py-5">
-          <div class="highlight"> <button class="highlight-copy btn" data-bs-toggle="tooltip" data-bs-original-title="Copy code" data-kt-initialized="1">copy</button> <ul class="nav nav-pills" role="tablist"> <li class="nav-item" role="presentation"> <a class="nav-link active" data-bs-toggle="tab" href="#kt_highlight_63e537c8b9be3" role="tab" aria-selected="true">HTML</a></li> <li class="nav-item" role="presentation"> <a class="nav-link " data-bs-toggle="tab" href="#kt_highlight_63e537c8b9bea" role="tab" aria-selected="false" tabindex="-1">Vue Script</a></li></ul> <div class="tab-content"><div class="tab-pane fade show active" id="kt_highlight_63e537c8b9be3" role="tabpanel"><div class="highlight-code"><pre class="language-html" tabindex="0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>vue-datatable</span> <span class="token attr-name">:manualMode</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">@vue:</span>mounted</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>initDatatables<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>datatable1<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>table table-row-dashed dt-custom<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+          <div class="highlight"> <button class="highlight-copy btn" data-bs-toggle="tooltip" data-bs-original-title="Copy code" data-kt-initialized="1">copy</button> <ul class="nav nav-pills" role="tablist"> <li class="nav-item" role="presentation"> <a class="nav-link active" data-bs-toggle="tab" href="#kt_highlight_63e537c8b9be3" role="tab" aria-selected="true">HTML</a></li> <li class="nav-item" role="presentation"> <a class="nav-link " data-bs-toggle="tab" href="#kt_highlight_63e537c8b9bea" role="tab" aria-selected="false" tabindex="-1">Vue Script</a></li></ul> <div class="tab-content"><div class="tab-pane fade show active" id="kt_highlight_63e537c8b9be3" role="tabpanel"><div class="highlight-code"><pre class="language-html" tabindex="0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>VueDatatable</span> <span class="token attr-name">:manualMode</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">@vue:</span>mounted</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>initDatatables<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>datatable1<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>table table-row-dashed dt-custom<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>thead</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">&gt;</span></span>Id<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">&gt;</span></span>
@@ -274,7 +274,7 @@
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">&gt;</span></span>&#123;&#123; people.status &#123;&#123;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tbody</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>vue-datatable</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>VueDatatable</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary<span class="token punctuation">"</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>addData2()<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Add new Data<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span></code></pre></div></div><div class="tab-pane fade " id="kt_highlight_63e537c8b9bea" role="tabpanel"><div class="highlight-code"><pre class="language-javascript" tabindex="0"><code class="language-javascript"><span class="token keyword">import</span> $ <span class="token keyword">from</span> <span class="token string">"jquery"</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
@@ -336,7 +336,7 @@
         </div>
         <div class="py-5">
           <div class="rounded border p-10">
-            <vue-datatable :manualMode="true" @vue:mounted="initDatatables" id="datatable1" class="table table-row-dashed dt-custom">
+            <VueDatatable :manualMode="true" @vue:mounted="initDatatables" id="datatable1" class="table table-row-dashed dt-custom">
               <thead>
                 <tr>
                   <th>Id</th>
@@ -351,7 +351,7 @@
                   <th>{{ people.status }}</th>
                 </tr>
               </tbody>
-            </vue-datatable>
+            </VueDatatable>
             <button class="btn btn-primary" @click="addData2()">Add new Data</button>
           </div>
         </div>

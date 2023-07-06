@@ -845,7 +845,7 @@
     
     <!--begin::Block-->
     <div class="py-5">
-        Build a custom input control with <router-link to="/plugins/fontawesome" class="fw-semibold"> Fontawesome 6 </router-link>
+        Build a custom input control with <a href="https://fontawesome.com/docs/web/use-with/vue/add-icons" target="_blank" class="fw-semibold"> Fontawesome 6 </a>
     </div>
     <!--end::Block-->
 

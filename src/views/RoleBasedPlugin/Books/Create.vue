@@ -4,7 +4,7 @@
     <div class="card-header">
       <h2 class="card-title"></h2>
       <div class="card-toolbar">
-        <router-link to="index" class="btn btn-flex btn-light">Return</router-link>
+        <RouterLink to="index" class="btn btn-flex btn-light">Return</RouterLink>
       </div>
     </div>
 

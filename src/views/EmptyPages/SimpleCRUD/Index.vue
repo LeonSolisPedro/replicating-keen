@@ -4,12 +4,12 @@
     <div class="card-header">
       <h2 class="card-title">Todos</h2>
       <div class="card-toolbar">
-        <router-link to="create" class="btn btn-flex btn-primary">Add Todo</router-link>
+        <RouterLink to="create" class="btn btn-flex btn-primary">Add Todo</RouterLink>
       </div>
     </div>
 
     <div class="card-body">
-      <vue-datatable :watchData="lista" class="table table-row-dashed dt-custom">
+      <VueDatatable :watchData="lista" class="table table-row-dashed dt-custom">
         <thead>
           <tr>
             <th>Id</th>
@@ -29,14 +29,14 @@
                   Actions
                 </button>
                 <ul class="dropdown-menu">
-                  <li><router-link :to="'edit/' + todo.id" class="dropdown-item">Edit</router-link></li>
+                  <li><RouterLink :to="'edit/' + todo.id" class="dropdown-item">Edit</RouterLink></li>
                   <li><button @click="$globalDelete('/todos/', todo.id, 'Todo')" class="dropdown-item">Delete</button></li>
                 </ul>
               </div>
             </th>
           </tr>
         </tbody>
-      </vue-datatable>
+      </VueDatatable>
     </div>
 
   </div>

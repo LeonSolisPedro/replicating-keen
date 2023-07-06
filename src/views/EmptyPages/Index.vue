@@ -21,8 +21,8 @@
               <div class="py-5">
                 The following pages, are suitable for copying / pasting code:
                 <ul>
-                  <li><router-link to="simplecrud">Simple CRUD</router-link></li>
-                  <li><router-link to="simplecrudmodal">Simple CRUD with Modals</router-link></li>
+                  <li><RouterLink to="simplecrud" target="_blank">Simple CRUD</RouterLink></li>
+                  <li><RouterLink to="simplecrudmodal" target="_blank">Simple CRUD with Modals</RouterLink></li>
                 </ul>
               </div>
               <div class="py-5">
@@ -51,7 +51,7 @@
                 Empty pages for cruds, that will help you copy paste with ease!
               </h1>
               <div class="text-center mb-1">
-                <router-link class="btn btn-sm btn-light" to="simplecrud"> Copy Paste Now!</router-link>
+                <RouterLink class="btn btn-sm btn-light" to="simplecrud"> Copy Paste Now!</RouterLink>
               </div>
             </div>
           </div>

@@ -272,7 +272,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><router-link to="./books/index" class="text-gray-800 text-hover-primary">List of books</router-link></td>
+                    <td><RouterLink to="./books/index" class="text-gray-800 text-hover-primary">List of books</RouterLink></td>
                     <td class="fw-semibold text-gray-600">
                       <ul>
                         <li>admin@admin.com</li>
@@ -281,7 +281,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td><router-link to="./books/create" class="text-gray-800 text-hover-primary">Create a book</router-link></td>
+                    <td><RouterLink to="./books/create" class="text-gray-800 text-hover-primary">Create a book</RouterLink></td>
                     <td class="fw-semibold text-gray-600">
                       <ul>
                         <li>admin@admin.com</li>
@@ -289,7 +289,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td><router-link to="./books/edit/1" class="text-gray-800 text-hover-primary">Edit a book</router-link></td>
+                    <td><RouterLink to="./books/edit/1" class="text-gray-800 text-hover-primary">Edit a book</RouterLink></td>
                     <td class="fw-semibold text-gray-600">
                       <ul>
                         <li>admin@admin.com</li>
@@ -298,7 +298,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td><router-link to="./books/employeedashboard" class="text-gray-800 text-hover-primary">Employee Dashboard</router-link></td>
+                    <td><RouterLink to="./books/employeedashboard" class="text-gray-800 text-hover-primary">Employee Dashboard</RouterLink></td>
                     <td class="fw-semibold text-gray-600">
                       <ul>
                         <li>employee@wintercr.com</li>
@@ -306,7 +306,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td><router-link to="./books/viewreport" class="text-gray-800 text-hover-primary">View Report</router-link></td>
+                    <td><RouterLink to="./books/viewreport" class="text-gray-800 text-hover-primary">View Report</RouterLink></td>
                     <td class="fw-semibold text-gray-600">
                       <ul>
                         <li>everyone</li>

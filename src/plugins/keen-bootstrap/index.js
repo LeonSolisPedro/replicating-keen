@@ -54,7 +54,7 @@ export default {
     app.directive("ktdrawer", ktdrawer)
 
     //Adding Components
-    app.component("vue-datatable", defineAsyncComponent(() => import("./components/VueDatatable.vue")))
+    app.component("VueDatatable", defineAsyncComponent(() => import("./components/VueDatatable.vue")))
 
     //Adding global methods
     app.config.globalProperties.$globalDelete = async function (url, id, name, accessor) {
