@@ -20,14 +20,14 @@ import KTApp from "./src/js/components/appcustomvue"
 import KTBlockUI from "./src/js/components/blockui"
 import KTDrawer from "./src/js/components/drawer"
 import KTEventHandler from "./src/js/components/event-handler"
-import KTMenu from "./src/js/components/menu"                              
+import KTMenu from "./src/js/components/menu"
 import KTScroll from "./src/js/components/scroll"
 import KTToggle from "./src/js/components/toggle"
 import KTUtil from "./src/js/components/util"
 
 
 export default {
-  install(app){
+  install(app) {
 
     //Global Keen objects
     window.KTApp = KTApp
@@ -66,68 +66,66 @@ export default {
         confirmButtonText: "Yes, delete!",
         cancelButtonText: 'No, cancel!',
         showLoaderOnConfirm: true,
-        preConfirm(){
+        preConfirm() {
           const finalURL = /[^&?]*?=[^&?]*/.test(url) ? url + id : url.replace(/\/$/, "") + "/" + id;
           return axios.delete(finalURL).catch(() => {
             swal.showValidationMessage("An error has been ocurred, please try again")
           })
         }
       });
-      if(!question.isConfirmed) return
+      if (!question.isConfirmed) return
       const lista = listap?.split(".")[0] ?? "lista"
       const listaid = listap?.split(".")[1] ?? "id"
       const data = this.$data[lista]
       const index = data?.findIndex(x => x[listaid] === id)
-      if(data === undefined) return console.error(`Unable to find this.$data.${lista} on current component`)
-      if(index === -1) return console.error(`Property "${listaid} - ${id}", does not exist on this.$data.${lista}`)
+      if (data === undefined) return console.error(`Unable to find this.$data.${lista} on current component`)
+      if (index === -1) return console.error(`Property "${listaid} - ${id}", does not exist on this.$data.${lista}`)
       await swal.fire("Success", "Item deleted successfully", "success")
       data.splice(index, 1)
     }
     app.config.globalProperties.$setupLayout = function () {
-      document.body.classList.add("app-default")
-      document.body.setAttribute("data-kt-app-layout", "dark-sidebar")
-      document.body.setAttribute("data-kt-app-header-fixed", "true")
-      document.body.setAttribute("data-kt-app-sidebar-enabled", "true")
-      document.body.setAttribute("data-kt-app-sidebar-fixed", "true")
-      document.body.setAttribute("data-kt-app-sidebar-hoverable", "true")
-      document.body.setAttribute("data-kt-app-sidebar-push-header", "true")
-      document.body.setAttribute("data-kt-app-sidebar-push-toolbar", "true")
-      document.body.setAttribute("data-kt-app-sidebar-push-footer", "true")
-      document.body.setAttribute("data-kt-app-toolbar-enabled", "true")
-      document.body.id = "kt_app_body"
-      const approot = document.getElementById("app")
       const classes = ["d-flex", "flex-column", "flex-root", "app-root"]
-      approot.classList.add(...classes)
+      const attrs = {
+        "data-kt-app-layout": "dark-sidebar", "data-kt-app-header-fixed": "true",
+        "data-kt-app-sidebar-enabled": "true", "data-kt-app-sidebar-fixed": "true",
+        "data-kt-app-sidebar-hoverable": "true", "data-kt-app-sidebar-push-header": "true",
+        "data-kt-app-sidebar-push-toolbar": "true", "data-kt-app-sidebar-push-footer": "true",
+        "data-kt-app-toolbar-enabled":"true"
+      }
+      document.body.id = "kt_app_body"
+      document.body.classList.add("app-default")
+      Object.keys(attrs).forEach(key => document.body.setAttribute(key, attrs[key]));
+      const app = document.querySelector("#app")
+      app.classList.add(...classes)
     }
     app.config.globalProperties.$destroyLayout = function () {
-      document.body.classList.remove("app-default")
-      document.body.removeAttribute("data-kt-app-layout")
-      document.body.removeAttribute("data-kt-app-header-fixed")
-      document.body.removeAttribute("data-kt-app-sidebar-enabled")
-      document.body.removeAttribute("data-kt-app-sidebar-fixed")
-      document.body.removeAttribute("data-kt-app-sidebar-hoverable")
-      document.body.removeAttribute("data-kt-app-sidebar-push-header")
-      document.body.removeAttribute("data-kt-app-sidebar-push-toolbar")
-      document.body.removeAttribute("data-kt-app-sidebar-push-footer")
-      document.body.removeAttribute("data-kt-app-toolbar-enabled")
-      document.body.id = ""
-      const approot = document.getElementById("app")
       const classes = ["d-flex", "flex-column", "flex-root", "app-root"]
-      approot.classList.remove(...classes)
+      const attrs = {
+        "data-kt-app-layout": "dark-sidebar", "data-kt-app-header-fixed": "true",
+        "data-kt-app-sidebar-enabled": "true", "data-kt-app-sidebar-fixed": "true",
+        "data-kt-app-sidebar-hoverable": "true", "data-kt-app-sidebar-push-header": "true",
+        "data-kt-app-sidebar-push-toolbar": "true", "data-kt-app-sidebar-push-footer": "true",
+        "data-kt-app-toolbar-enabled":"true"
+      }
+      document.body.id = ""
+      document.body.classList.remove("app-default")
+      Object.keys(attrs).forEach(key => document.body.removeAttribute(key, attrs[key]));
+      const app = document.querySelector("#app")
+      app.classList.remove(...classes)
     }
     app.config.globalProperties.$setupAuthLayout = function () {
-      document.body.classList.add("app-blank")
-      document.body.id = "kt_body"
-      const approot = document.getElementById("app")
       const classes = ["d-flex", "flex-column", "flex-root"]
-      approot.classList.add(...classes)
+      document.body.id = "kt_body"
+      document.body.classList.add("app-blank")
+      const app = document.querySelector("#app")
+      app.classList.add(...classes)
     }
     app.config.globalProperties.$destroyAuthLayout = function () {
-      document.body.classList.remove("app-blank")
-      document.body.id = ""
-      const approot = document.getElementById("app")
       const classes = ["d-flex", "flex-column", "flex-root"]
-      approot.classList.remove(...classes)
+      document.body.id = ""
+      document.body.classList.remove("app-blank")
+      const app = document.querySelector("#app")
+      app.classList.remove(...classes)
     }
   }
 }
