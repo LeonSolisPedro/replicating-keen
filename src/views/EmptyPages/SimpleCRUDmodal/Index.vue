@@ -30,7 +30,7 @@
                 </button>
                 <ul class="dropdown-menu">
                   <li><button class="dropdown-item" @click="$refs.edit.openModal(todo.id)">Edit</button></li>
-                  <li><button @click="$globalDelete('/todos/', todo.id, 'Todo')" class="dropdown-item">Delete</button></li>
+                  <li><button @click="$globalDelete(todo.id, 'lista.id', '/todos/')" class="dropdown-item">Delete</button></li>
                 </ul>
               </div>
             </th>

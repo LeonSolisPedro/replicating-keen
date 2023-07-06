@@ -57,9 +57,9 @@ export default {
     app.component("VueDatatable", defineAsyncComponent(() => import("./components/VueDatatable.vue")))
 
     //Adding global methods
-    app.config.globalProperties.$globalDelete = async function (url, id, name, accessor) {
+    app.config.globalProperties.$globalDelete = async function (id, listap, url) {
       const question = await swal.fire({
-        title: `Do you want to delete the item: ${name}?`,
+        title: `Do you want to delete this item?`,
         text: "This action is irreversible",
         icon: "warning",
         showCancelButton: true,
@@ -74,15 +74,14 @@ export default {
         }
       });
       if(!question.isConfirmed) return
-      const accesorlista = accessor ? accessor.split(".")[0] : "lista"
-      const accesorid = accessor?.split(".")[1] ? accessor?.split(".")[1] : "id"
-      if(typeof this.$data[accesorlista] === "undefined") return console.error(`Unable to find this.$data.${accesorlista} on current component, please specify the data to continue...`)
-      if(this.$data[accesorlista].length === 0) return console.error(`You can't delete data on an empty array! this.$data.${accesorlista} is empty!`)
-      if(typeof this.$data[accesorlista][0][accesorid] === "undefined") return console.error(`Property "${accesorid}" does not exist on this.$data.${accesorlista}, please specify the correct id name`)
-      const index = this.$data[accesorlista].findIndex(item => item[accesorid] === id)
-      if(index === -1) return console.error(`Unable to remove data, The item with ${accesorid} ${id} does not exist in this.$data.${accesorlista}`)
-      await swal.fire("Success", `${name} deleted successfully`, "success")
-      this.$data[accesorlista].splice(index, 1)
+      const lista = listap?.split(".")[0] ?? "lista"
+      const listaid = listap?.split(".")[1] ?? "id"
+      const data = this.$data[lista]
+      const index = data?.findIndex(x => x[listaid] === id)
+      if(data === undefined) return console.error(`Unable to find this.$data.${lista} on current component`)
+      if(index === -1) return console.error(`Property "${listaid} - ${id}", does not exist on this.$data.${lista}`)
+      await swal.fire("Success", "Item deleted successfully", "success")
+      data.splice(index, 1)
     }
     app.config.globalProperties.$setupLayout = function () {
       document.body.classList.add("app-default")
